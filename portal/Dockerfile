@@ -35,4 +35,4 @@ ENV STREAMLIT_SERVER_HEADLESS=true \
     STREAMLIT_SERVER_ENABLECORS=false
 
 # Entrypoint to run the Streamlit app
-CMD ["streamlit", "run", "app.py"] 
+CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8501"]
