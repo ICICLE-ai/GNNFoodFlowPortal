@@ -1,6 +1,8 @@
 # GNN FOOD FLOW PORTAL
 This is a visualization tool for results from [GNN FoodFlow Model](https://github.com/GeoDS/GNNFoodFlow). This portal allows you to explore the data through an interactive map, and to download the filtered results for your own research.
 
+**Great News! The portal is now online at https://gnnfoodflowportal.pods.icicleai.tapis.io/**
+
 Tags: Smart-Foodsheds, AI4CI
 
 ## License
