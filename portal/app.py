@@ -130,7 +130,7 @@ st.markdown("""
   /* Welcome screen styling */
   .welcome-container {
     text-align: center;
-    padding: 5rem 3rem;
+    padding: 2.6rem 3rem;
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     border-radius: 24px;
     margin: 2rem 0;
@@ -387,10 +387,12 @@ st.markdown(
         <a href="{ICICLE_URL}" target="_blank" style="text-decoration:none;">
             <span style="display:inline-block; padding:8px 12px; border-radius:10px; background:linear-gradient(135deg,#f87171 0%, #dc2626 100%); color:#ffffff; font-weight:600; box-shadow:0 4px 12px rgba(239,68,68,0.18); border:1px solid rgba(255,255,255,0.2);"> ICICLE</span>
         </a>
+
     </div>
     """,
     unsafe_allow_html=True,
 )
+
 
 # Initialize session state for app state
 if 'app_started' not in st.session_state:
@@ -480,21 +482,30 @@ BNDJS = load_county_boundaries()
 # Welcome Screen or Main App
 if not st.session_state['app_started']:
     # 1:6:1 layout
+    # Place the logo and title in the center column (the "8" in 1:8:1), side by side, same height, without using the two "1" columns
     left, center, right = st.columns([1, 8, 1])
 
     with center:
-        # Hero Section
-        st.markdown("""
-        <div class="welcome-container">
-            <div class="welcome-title">🌾 The Food Story of Franklin County, Ohio</div>
-            <div class="welcome-subtitle">
-                Where Franklin County’s Food Comes From.
+        # Move the logo lower by adding vertical space above it
+        col_logo, col_title = st.columns([2, 6])
+        with col_logo:
+            st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
+            st.image(
+                "image/ICICLE.png",
+                use_container_width=True,
+            )
+        with col_title:
+            st.markdown("""
+            <div class="welcome-container" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                <div class="welcome-title" style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">🌾 The Food Story of Franklin County, Ohio</div>
+                <div class="welcome-subtitle" style="font-size:2rem; color:#334155; margin-bottom:0.25rem;">
+                    Where Franklin County’s Food Comes From.
+                </div>
+                <div class="welcome-why" style="font-size:1.5 rem; color:#64748b;">
+                    Why it matters: Disruptions hundreds of miles away can empty local shelves.
+                </div>
             </div>
-            <div class="welcome-why">
-                Why it matters: Disruptions hundreds of miles away can empty local shelves.
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
 
         # Franklin County locator mini‑map
 
@@ -636,7 +647,7 @@ if not st.session_state['app_started']:
                 tooltip={"html": "<b>{origin}</b><br/>Estimated kilotons: {kilotons}<br/>Estimated Share: {pct}%"}
             ), height=600)
 
-            st.caption("Flows to Franklin County (blue) from top origins (orange). Hover to see details.")
+            st.caption("Flows to Franklin County (blue) from top 10 origins (orange). Hover to see details.")
 
         with tab2:
             # Create a container with the background styling
@@ -761,7 +772,7 @@ if not st.session_state['app_started']:
                 initial_view_state=view03,
                 tooltip={"html": "<b>{origin}</b><br/>Estimated Kilokilotons: {kilotons}<br/>Estimated Share: {pct}%"}
             ), height=600)
-            st.caption("Flows to Franklin County (blue) from top origins (orange). Hover over to see more details.")
+            st.caption("Flows to Franklin County (blue) from top 10 origins (orange). Hover over to see more details.")
 
         with tab3:
             # Create a container with the background styling
@@ -780,8 +791,8 @@ if not st.session_state['app_started']:
                 st.markdown("""
                 <div style="padding: 0 1rem 0 0;">
                     <p style="font-size:1rem; color:#374151; line-height:1.6; margin:0;">
-                    The widest part of Franklin's diet comes not from Ohio at all, but from everywhere: Chicago, Phoenix, Los Angeles, New York, Houston, even Fort Lauderdale.
-                    These flows bring packaged foods, imports, and essentials that stock every aisle of the grocery store.
+                    Other foodstuffs (SCTG07) are the foods that make modern life delicious and convenient—think of the things you reach for every day that aren’t just raw ingredients. This category includes everything from milk and cream on your cereal to cheese on your pizza, along with your morning coffee. It also covers ice cream, jams, peanut butter, fruit juices, and a variety of oils and spreads.
+                    The widest part of Franklin's diet comes not from Ohio at all, but from everywhere: Chicago, Phoenix, Los Angeles, New York, Houston, even Fort Lauderdale. These flows bring packaged foods, imports, and essentials that stock every aisle of the grocery store.
                     <br><br>
                     It feels invisible—until disaster hits.
                     Wildfires in California, storm surges in New York Harbor, hurricanes sweeping the Gulf: all can empty Franklin's shelves, thousands of miles away from the disaster itself.
@@ -800,10 +811,16 @@ if not st.session_state['app_started']:
                     <div style="text-align:center; font-size: 0.9rem; color: #6b7280; font-weight: 500;">
                         Other Foodstuffs (SCTG07)
                         <br>
+                        <a href="https://www.nytimes.com/2017/02/13/well/eat/got-almond-milk-dairy-farms-protest-milk-label-on-nondairy-drinks.html"
+                            target="_blank"
+                            style="color:#2563eb;text-decoration:underline; font-size: 0.8rem;">
+                            Img Source 1
+                        </a>
+                        <br>
                         <a href="https://aswathicherkkil.medium.com/marketing-ready-to-eat-products-17eb60e8e13b"
                             target="_blank"
                             style="color:#2563eb;text-decoration:underline; font-size: 0.8rem;">
-                            Img Source
+                            Img Source 2
                         </a>
                     </div>
                     """,
@@ -887,7 +904,7 @@ if not st.session_state['app_started']:
                 initial_view_state=view07,
                 tooltip={"html": "<b>{origin}</b><br/>Estimated Kilotons: {kilotons}<br/>Estimated Share: {pct}%"}
             ), height=600)
-            st.caption("Flows to Franklin County (blue) from top origins (orange). Hover over to see more details.")
+            st.caption("Flows to Franklin County (blue) from top 10 origins (orange). Hover over to see more details.")
 
         # Call to action
         # Combine call-to-action and start button in a single centered block, with working Streamlit button
