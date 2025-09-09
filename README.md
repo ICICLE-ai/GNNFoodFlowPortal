@@ -20,7 +20,7 @@ Follow these steps to set up and run the GNN Food Flow Portal locally.
 git clone https://github.com/ICICLE-ai/GNNFoodFlowPortal.git
 
 cd GNNFoodFlowPortal
-
+cd portal
 ```
 
 ### 2. Create a Python environment & install dependencies
@@ -29,6 +29,7 @@ conda create -n gnnfoodflow python=3.10
 
 conda activate gnnfoodflow
 
+cd portal
 pip install -r requirements.txt
 ```
 ### 3. Prepare the data
@@ -37,6 +38,7 @@ This repo has included all necessary datasets for the portal
 
 ### 4. Run the portal locally
 ```bash
+cd portal
 streamlit run app.py
 ```
 
