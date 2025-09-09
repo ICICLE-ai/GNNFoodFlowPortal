@@ -1,7 +1,7 @@
 project:
   name: "GNN Food Flow Portal"
   description: "A web app for visualizing and analyzing county level food flow data."
-  version: "1.0.0"
+  version: "1.1.0"
 
 environment:
   python_version: "3.11"
@@ -20,6 +20,7 @@ environment:
     - Jinja2==3.1.6
     - jsonschema==4.23.0
     - jsonschema-specifications==2024.10.1
+    - matplotlib==3.10.0
     - MarkupSafe==3.0.2
     - narwhals==1.29.1
     - numpy==2.2.3
