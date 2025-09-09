@@ -819,7 +819,7 @@ if not st.session_state['app_started']:
                 {"origin": "Harris, TX (Houston)", "lat": 29.7604, "lon": -95.3698, "kilotons": 62472.0, "pct": 1.93},
                 {"origin": "Broward, FL (Fort Lauderdale)", "lat": 26.1901, "lon": -80.3659, "kilotons": 51277.5, "pct": 1.58},
                 {"origin": "Queens, NY (New York City)", "lat": 40.7282, "lon": -73.7949, "kilotons": 46579.8, "pct": 1.44},
-                {"origin": "Orange, CA", "lat": 33.7175, "lon": -117.8311, "kilotons": 44528.8, "pct": 1.37},
+                {"origin": "San Bernardino, CA", "lat": 34.6214, "lon": -116.3225, "kilotons": 44528.8, "pct": 1.37},
                 {"origin": "Clark, NV (Las Vegas)", "lat": 36.1699, "lon": -115.1398, "kilotons": 42667.0, "pct": 1.31},
                 {"origin": "Tarrant, TX (Dallas–Fort Worth)", "lat": 32.7688, "lon": -97.3093, "kilotons": 42022.5, "pct": 1.30},
             ])
