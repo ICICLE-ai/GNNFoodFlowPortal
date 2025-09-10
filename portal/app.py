@@ -130,7 +130,7 @@ st.markdown("""
   /* Welcome screen styling */
   .welcome-container {
     text-align: center;
-    padding: 2.6rem 3rem;
+    padding: 5rem 3rem;
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     border-radius: 24px;
     margin: 2rem 0;
@@ -486,26 +486,28 @@ if not st.session_state['app_started']:
     left, center, right = st.columns([1, 8, 1])
 
     with center:
-        # Move the logo lower by adding vertical space above it
-        col_logo, col_title = st.columns([2, 6])
-        with col_logo:
-            st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
-            st.image(
-                "image/ICICLE.png",
-                use_container_width=True,
-            )
-        with col_title:
-            st.markdown("""
-            <div class="welcome-container" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <div class="welcome-title" style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">🌾 The Food Story of Franklin County, Ohio</div>
-                <div class="welcome-subtitle" style="font-size:2rem; color:#334155; margin-bottom:0.25rem;">
-                    Where Franklin County’s Food Comes From.
+        st.markdown(
+            """
+            <div class="welcome-container" style="display: flex; align-items: center; height: 100%;">
+                <div style="flex: 0 0 30%;">
+                    <img src="https://raw.githubusercontent.com/ICICLE-ai/GNNFoodFlowPortal/main/portal/image/ICICLE.png"
+                        style="width:100%; height:auto; display:block;">
                 </div>
-                <div class="welcome-why" style="font-size:1.5 rem; color:#64748b;">
-                    Why it matters: Disruptions hundreds of miles away can empty local shelves.
+                <div style="flex: 1; margin-left: 2rem;">
+                    <div class="welcome-title" style="font-size:5rem; font-weight:700; margin-bottom:0.5rem;">
+                        🌾 The Food Story of Franklin County, Ohio
+                    </div>
+                    <div class="welcome-subtitle" style="font-size:3rem; color:#334155; margin-bottom:0.25rem;">
+                        Where Franklin County's Food Comes From.
+                    </div>
+                    <div class="welcome-why" style="font-size:2rem; color:#64748b;">
+                        Why it matters: Disruptions hundreds of miles away can empty local shelves.
+                    </div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
+            """,
+            unsafe_allow_html=True
+        )
 
         # Franklin County locator mini‑map
 
@@ -540,8 +542,8 @@ if not st.session_state['app_started']:
 
             with col_img:
                 st.image(
-                    "image/SCTG05.jpg",  # replace with your SCTG05 image path
-                    width='stretch'
+                    "image/SCTG05.jpg",
+                    use_container_width=True
                 )
                 st.markdown(
                     """
@@ -678,7 +680,7 @@ if not st.session_state['app_started']:
             with col_img:
                 st.image(
                     "image/SCTG03.jpg",
-                    width='stretch'
+                    use_container_width=True
                 )
                 st.markdown(
                     """
@@ -804,7 +806,7 @@ if not st.session_state['app_started']:
             with col_img:
                 st.image(
                     "image/SCTG07.jpg",
-                    width='stretch'
+                    use_container_width=True
                 )
                 st.markdown(
                     """
@@ -924,7 +926,7 @@ if not st.session_state['app_started']:
             btn_clicked = st.button(
                 "Explore the U.S. Map",
                 key="start_button",
-                width='stretch',
+                use_container_width=True,
                 type="primary"
             )
             st.markdown("</div>", unsafe_allow_html=True)
