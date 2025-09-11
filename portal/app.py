@@ -541,10 +541,10 @@ if not st.session_state['app_started']:
                 """, unsafe_allow_html=True)
 
             with col_img:
-                st.image(
-                    "image/SCTG05.jpg",
-                    use_container_width=True
-                )
+                try:
+                    st.image("image/SCTG05.jpg", width="stretch")
+                except TypeError:
+                    st.image("image/SCTG05.jpg", use_container_width=True)
                 st.markdown(
                     """
                     <div style="text-align:center; font-size: 0.9rem; color: #6b7280; font-weight: 500;">
@@ -678,10 +678,10 @@ if not st.session_state['app_started']:
                 """, unsafe_allow_html=True)
 
             with col_img:
-                st.image(
-                    "image/SCTG03.jpg",
-                    use_container_width=True
-                )
+                try:
+                    st.image("image/SCTG03.jpg", width="stretch")
+                except TypeError:
+                    st.image("image/SCTG03.jpg", use_container_width=True)
                 st.markdown(
                     """
                     <div style="text-align:center; font-size: 0.9rem; color: #6b7280; font-weight: 500;">
@@ -804,10 +804,10 @@ if not st.session_state['app_started']:
                 """, unsafe_allow_html=True)
 
             with col_img:
-                st.image(
-                    "image/SCTG07.jpg",
-                    use_container_width=True
-                )
+                try:
+                    st.image("image/SCTG07.jpg", width="stretch")
+                except TypeError:
+                    st.image("image/SCTG07.jpg", use_container_width=True)
                 st.markdown(
                     """
                     <div style="text-align:center; font-size: 0.9rem; color: #6b7280; font-weight: 500;">
@@ -937,7 +937,10 @@ else:
     # Main App Content
     # Sidebar
     with st.sidebar:
-        st.image("./image/image17.png")
+        try:
+            st.image("./image/image17.png", width="stretch")
+        except TypeError:
+            st.image("./image/image17.png", use_container_width=True)
 
         # Back to Welcome button
         if st.button("Back to the Story", key="back_button"):
