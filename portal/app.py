@@ -494,13 +494,13 @@ if not st.session_state['app_started']:
                         style="width:100%; height:auto; display:block;">
                 </div>
                 <div style="flex: 1; margin-left: 2rem;">
-                    <div class="welcome-title" style="font-size:5rem; font-weight:700; margin-bottom:0.5rem;">
+                    <div class="welcome-title" style="font-size:3.5rem; font-weight:700; margin-bottom:0.5rem;">
                         🌾 The Food Story of Franklin County, Ohio
                     </div>
-                    <div class="welcome-subtitle" style="font-size:3rem; color:#334155; margin-bottom:0.25rem;">
+                    <div class="welcome-subtitle" style="font-size:2rem; color:#334155; margin-bottom:0.25rem;">
                         Where Franklin County's Food Comes From.
                     </div>
-                    <div class="welcome-why" style="font-size:2rem; color:#64748b;">
+                    <div class="welcome-why" style="font-size:1.5rem; color:#64748b;">
                         Why it matters: Disruptions hundreds of miles away can empty local shelves.
                     </div>
                 </div>
@@ -530,7 +530,7 @@ if not st.session_state['app_started']:
             with col_text:
                 st.markdown("""
                 <div style="padding: 0 1rem 0 0;">
-                    <p style="font-size:1.5rem; color:#374151; line-height:1.6; margin:0;">
+                    <p style="font-size:1rem; color:#374151; line-height:1.6; margin:0;">
                     Franklin’s supply of meat, poultry, fish, and seafood does not only come from nearby farms.
                     It depends heavily on processing plants and cold-chain routes from Chicago, Detroit, Cincinnati, Philadelphia, New York, and other metropolitan hubs.
                     <br><br>
@@ -667,7 +667,7 @@ if not st.session_state['app_started']:
             with col_text:
                 st.markdown("""
                 <div style="padding: 0 1rem 0 0;">
-                    <p style="font-size:1.5rem; color:#374151; line-height:1.6; margin:0;">
+                    <p style="font-size:1rem; color:#374151; line-height:1.6; margin:0;">
                     Behind every loaf of bread or box of cereal in Franklin County is a web stretching to Chicago, Houston, Los Angeles, and Seattle.
                     These cities are the nation's food arteries, pushing vast flows of grain and other crops toward Ohio.
                     <br><br>
@@ -792,7 +792,7 @@ if not st.session_state['app_started']:
             with col_text:
                 st.markdown("""
                 <div style="padding: 0 1rem 0 0;">
-                    <p style="font-size:1.5rem; color:#374151; line-height:1.6; margin:0;">
+                    <p style="font-size:1rem; color:#374151; line-height:1.6; margin:0;">
                     Other foodstuffs (SCTG07) are the foods that make modern life delicious and convenient—think of the things you reach for every day that aren’t just raw ingredients. This category includes everything from milk and cream on your cereal to cheese on your pizza, along with your morning coffee. It also covers ice cream, jams, peanut butter, fruit juices, and a variety of oils and spreads.
                     The widest part of Franklin's diet comes not from Ohio at all, but from everywhere: Chicago, Phoenix, Los Angeles, New York, Houston, even Fort Lauderdale. These flows bring packaged foods, imports, and essentials that stock every aisle of the grocery store.
                     <br><br>
