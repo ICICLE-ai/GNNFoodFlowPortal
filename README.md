@@ -6,7 +6,7 @@ This is a visualization tool for results from [GNN FoodFlow Model](https://githu
 Tags: Smart-Foodsheds, AI4CI
 
 ## License
-MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Acknowledgements
 National Science Foundation (NSF) funded AI Institute for Intelligent Cyberinfrastructure with Computational Learning in the Environment (ICICLE) (OAC 2112606)
