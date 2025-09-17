@@ -174,24 +174,6 @@ st.markdown("""
     font-weight: 500;
   }
 
-  .start-button {
-    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-    color: white;
-    border: none;
-    padding: 1.25rem 3.5rem;
-    font-size: 1.4rem;
-    font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: 0 8px 30px rgba(5, 150, 105, 0.3);
-    letter-spacing: 0.02em;
-  }
-
-  .start-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(5, 150, 105, 0.4);
-  }
 
   /* Feature list styling */
   .feature-list {
@@ -371,6 +353,8 @@ st.markdown("""
       grid-template-columns: 1fr;
     }
   }
+
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -531,7 +515,7 @@ if not st.session_state['app_started']:
                 st.markdown("""
                 <div style="padding: 0 1rem 0 0;">
                     <p style="font-size:1rem; color:#374151; line-height:1.6; margin:0;">
-                    Franklin’s supply of meat, poultry, fish, and seafood does not only come from nearby farms.
+                    Franklin's supply of meat, poultry, fish, and seafood does not only come from nearby farms.
                     It depends heavily on processing plants and cold-chain routes from Chicago, Detroit, Cincinnati, Philadelphia, New York, and other metropolitan hubs.
                     <br><br>
                     These protein staples travel longer supply chains, requiring refrigeration every step of the way.
@@ -576,7 +560,7 @@ if not st.session_state['app_started']:
                 {"origin": "Macomb, MI",                "lat": 42.6730, "lon": -82.9199, "kilotons": 1503.3323, "pct": 0.576752},
             ])
 
-            # === “At a glance” + bar chart ===
+            # === "At a glance" + bar chart ===
             st.markdown("""
             <div style="margin-top:0.5rem; margin-bottom:0.5rem; color:#6b7280; font-weight:600;">At a glance</div>
             """, unsafe_allow_html=True)
@@ -793,7 +777,7 @@ if not st.session_state['app_started']:
                 st.markdown("""
                 <div style="padding: 0 1rem 0 0;">
                     <p style="font-size:1rem; color:#374151; line-height:1.6; margin:0;">
-                    Other foodstuffs (SCTG07) are the foods that make modern life delicious and convenient—think of the things you reach for every day that aren’t just raw ingredients. This category includes everything from milk and cream on your cereal to cheese on your pizza, along with your morning coffee. It also covers ice cream, jams, peanut butter, fruit juices, and a variety of oils and spreads.
+                    Other foodstuffs (SCTG07) are the foods that make modern life delicious and convenient—think of the things you reach for every day that aren't just raw ingredients. This category includes everything from milk and cream on your cereal to cheese on your pizza, along with your morning coffee. It also covers ice cream, jams, peanut butter, fruit juices, and a variety of oils and spreads.
                     The widest part of Franklin's diet comes not from Ohio at all, but from everywhere: Chicago, Phoenix, Los Angeles, New York, Houston, even Fort Lauderdale. These flows bring packaged foods, imports, and essentials that stock every aisle of the grocery store.
                     <br><br>
                     It feels invisible—until disaster hits.
@@ -910,29 +894,167 @@ if not st.session_state['app_started']:
 
         # Call to action
         # Combine call-to-action and start button in a single centered block, with working Streamlit button
+        st.markdown("<hr style='margin:2rem 0; border: none; border-top: 2px solid #e5e7eb;'/>", unsafe_allow_html=True)
 
+        st.markdown(
+            """
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; position:relative; left:2%;">
+                <h2 style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#059669 0%,#10b981 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0; margin-right:1rem; white-space:nowrap;">
+                    What's Next ?
+                </h2>
+                <span style="font-size:1.5rem; color:#6b7280; font-weight:500;">
+                    Let's jump into other perspectives of the national food system!
+                </span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
         with st.container():
-            st.markdown("""
-            <div style="margin:3rem 0; text-align:center; padding:2rem;
-                        background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);
-                        border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
-                <h2 style="margin-bottom:1rem; color:#059669;">From Local Farms to Global Ports</h2>
-                <p style="color:#4b5563; font-size:1.1rem; margin-bottom:2rem;">
-                    Franklin County's food system is woven into regional, national, and global flows.
-                    <br>
-                    Now, let's explore the interactive map and see these flows come alive.
-                </p>
-            """, unsafe_allow_html=True)
-            btn_clicked = st.button(
-                "Explore the U.S. Map",
-                key="start_button",
-                use_container_width=True,
-                type="primary"
-            )
-            st.markdown("</div>", unsafe_allow_html=True)
-            if btn_clicked:
-                st.session_state['app_started'] = True
-                st.rerun()
+            col1, col2, col3 = st.columns(3)
+
+            # Section 1: From Local Farm to National Foodflow (original, renamed)
+            with col1:
+                st.markdown("""
+                <div style="text-align:center; padding:2rem;
+                            background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);
+                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+                    <h2 style="margin-bottom:1rem; color:#059669; font-size:1.3rem;">From Local Farm to National Foodflow</h2>
+                    <p style="color:#4b5563; font-size:1.05rem; margin-bottom:2rem;">
+                        Now, let's explore the interactive map and see these flows come alive on a national scale.
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+                st.markdown("""
+                    <style>
+                    div[data-testid="stButton"] button[kind="primary"] {
+                        background: linear-gradient(135deg, #86efac 0%, #22c55e 100%) !important;
+                        color: white !important;
+                        border-radius: 12px !important;
+                        padding: 0.6rem 1rem !important;
+                        font-weight: 600 !important;
+                        box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3) !important;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    div[data-testid="stButton"] button[kind="primary"]:hover {
+                        background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+                        transform: translateY(-2px);
+                    }
+                    </style>
+                    """, unsafe_allow_html=True)
+                btn_clicked = st.button(
+                    "Explore the U.S. Map",
+                    key="start_button",
+                    use_container_width=True,
+                    type="primary"
+                )
+                if btn_clicked:
+                    st.session_state['app_started'] = True
+                    st.rerun()
+
+
+            # Section 2: From Local Farm to Local Household Grocery (regional supply)
+            with col2:
+                st.markdown("""
+                <div style="text-align:center; padding:2rem;
+                            background:linear-gradient(135deg,#f0f9ff 0%,#dbeafe 100%);
+                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+                    <h2 style="margin-bottom:1rem; color:#2563eb; font-size:1.3rem;">From Local Farm to Local Household Grocery</h2>
+                    <p style="color:#334155; font-size:1.05rem; margin-bottom:2rem;">
+                        Discover how local farms supply fresh produce to households and groceries in the region.
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+                st.markdown("""
+                    <style>
+                    div[data-testid="stLinkButton"] a[href="https://fass.pods.icicleai.tapis.io/"] {
+                        background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 100%) !important;
+                        color: white !important;         /* text color */
+                        border-radius: 12px !important;
+                        padding: 0.6rem 1rem !important;
+                        font-weight: 600 !important;
+                        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+                        transition: all 0.2s ease-in-out;
+                        border: none !important;
+                        outline: none !important;
+                    }
+                    div[data-testid="stLinkButton"] a[href="https://fass.pods.icicleai.tapis.io/"]:hover {
+                        background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+                        transform: translateY(-2px);
+                        border: none !important;
+                        outline: none !important;
+                    }
+                    /* Remove any border from the parent container as well */
+                    div[data-testid="stLinkButton"] {
+                        border: none !important;
+                        outline: none !important;
+                        box-shadow: none !important;
+                    }
+                    </style>
+                    """, unsafe_allow_html=True)
+
+                st.link_button(
+                    "Link to Local Food Ohio",
+                    "https://fass.pods.icicleai.tapis.io/",
+                    use_container_width=True,
+                    type="primary"
+                )
+
+            # Section 3: From Local Farm to Food Supply (Global Ports)
+            with col3:
+                st.markdown("""
+                <div style="text-align:center; padding:2rem;
+                            background:linear-gradient(135deg,#fef9c3 0%,#fde68a 100%);
+                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+                    <h2 style="margin-bottom:1rem; color:#b45309; font-size:1.3rem;">From Local Farm to Food Supply from Global Ports</h2>
+                    <p style="color:#92400e; font-size:1.05rem; margin-bottom:2rem;">
+                        Explore how food from Franklin County reaches global markets through major ports.
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+                st.markdown("""
+                    <style>
+                    div[data-testid="stLinkButton"] a[href="https://fss.pods.icicleai.tapis.io/"] {
+                        background: linear-gradient(135deg, #fef3c7 0%, #facc15 100%) !important;
+                        color: #b45309 !important;   /* text color */
+                        border-radius: 12px !important;
+                        padding: 0.6rem 1rem !important;
+                        font-weight: 600 !important;
+                        box-shadow: 0 4px 12px rgba(254, 243, 199, 0.3) !important;
+                        transition: all 0.2s ease-in-out;
+                        border: none !important;
+                        outline: none !important;
+                    }
+                    div[data-testid="stLinkButton"] a[href="https://fss.pods.icicleai.tapis.io/"]:hover {
+                        background: linear-gradient(135deg, #facc15 0%, #f59e0b 100%) !important;
+                        transform: translateY(-2px);
+                        border: none !important;
+                        outline: none !important;
+                    }
+                    /* Remove any border from the parent container as well */
+                    div[data-testid="stLinkButton"] {
+                        border: none !important;
+                        outline: none !important;
+                        box-shadow: none !important;
+                    }
+                    </style>
+                    """, unsafe_allow_html=True)
+
+                st.link_button(
+                    "Link to sandbox",
+                    "https://fss.pods.icicleai.tapis.io/",
+                    use_container_width=True,
+                    type="primary"
+                )
+
+        # st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
+        st.markdown(
+            """
+            <div style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:1rem;">
+                &copy; 2025 ICICLE AI. All rights reserved.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 else:
     # Main App Content
     # Sidebar
@@ -1209,7 +1331,15 @@ else:
             table['State'] = table[group_col].map(lambda f: META.loc[META.FIPS==f, 'State'].iat[0] if f in META.FIPS.values else "")
 
             st.table(table.rename(columns={group_col: 'FIPS', 'predicted_value_original': 'kilotons Shipped'}))
-
+        st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
+        st.markdown(
+            """
+            <div style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:1rem;">
+                &copy; 2025 ICICLE AI. All rights reserved.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     with tab2:
         st.markdown("## How to Use the Food Flow Portal")
 
@@ -1433,4 +1563,6 @@ else:
             """,
             unsafe_allow_html=True
         )
+
+
 
