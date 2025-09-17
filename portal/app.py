@@ -12,7 +12,7 @@ GITHUB_URL = "https://github.com/ICICLE-ai/GNNFoodFlowPortal"
 ICICLE_URL = "https://icicle.osu.edu/"
 
 _DOI_URL = "https://doi.org/10.1145/3748636.3764168"
-_FALLBACK_PDF = "https://github.com/ICICLE-ai/GNNFoodFlowPortal/blob/main/portal/files/ACM_SIGSPATIAL_GNN_Food_Flows.pdf"
+_FALLBACK_PDF = "https://github.com/ICICLE-ai/GNNFoodFlowPortal/blob/main/portal/files/ACM_SIGSPATIAL_GNN_Food_Flow.pdf"
 
 def _check_url_online(url):
     try:
