@@ -5,11 +5,23 @@ import pydeck as pdk
 import json
 import matplotlib.pyplot as plt
 import math
+import urllib.request
 
 # External links (configure as needed)
 GITHUB_URL = "https://github.com/ICICLE-ai/GNNFoodFlowPortal"
-DOCS_URL = "https://doi.org/10.1145/3748636.3764168"
 ICICLE_URL = "https://icicle.osu.edu/"
+
+_DOI_URL = "https://doi.org/10.1145/3748636.3764168"
+_FALLBACK_PDF = "https://github.com/ICICLE-ai/GNNFoodFlowPortal/blob/main/portal/files/ACM_SIGSPATIAL_GNN_Food_Flows.pdf"
+
+def _check_url_online(url):
+    try:
+        with urllib.request.urlopen(url, timeout=3) as resp:
+            return resp.status == 200
+    except Exception:
+        return False
+
+DOCS_URL = _DOI_URL if _check_url_online(_DOI_URL) else _FALLBACK_PDF
 
 st.set_page_config(
     page_title="FAF Food Flows Dashboard",
@@ -358,6 +370,38 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+  /* Import Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap');
+
+  /* Headings → Montserrat */
+  h1, h2, h3, h4, h5, h6,
+  .welcome-title, .welcome-subtitle, .welcome-why,
+  .feature-list h3,
+  .metric-card h1, .metric-card h2, .metric-card h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  /* Small text, captions, paragraphs → Roboto */
+  p, small, span, div, .stTable td, .stTable th,
+  .stCaption, [data-testid="stMetricLabel"], [data-testid="stMetricValue"] {
+    font-family: 'Roboto', sans-serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  /* Optional: tweak weights */
+  h1 { font-weight: 800; }
+  h2, h3 { font-weight: 600; }
+  p, small, span { font-weight: 400; }
+
+</style>
+""", unsafe_allow_html=True)
+
+
 # Global top-right links bar
 st.markdown(
     f"""
@@ -496,7 +540,7 @@ if not st.session_state['app_started']:
         # Franklin County locator mini‑map
 
         # Create tabs for different food categories
-        tab1, tab2, tab3 = st.tabs(["🥩 Meat, Poultry, Fish & Seafood", "🌽 Agricultural Products", "🍽️ Other Foodstuffs"])
+        tab1, tab2, tab3 = st.tabs(["Meat, Poultry, Fish & Seafood", "Agricultural Products", "Other Foodstuffs"])
 
         with tab1:
             # === Header: SCTG05 ===
@@ -504,7 +548,7 @@ if not st.session_state['app_started']:
             <div style="margin:1rem 0; padding:1.5rem; border-radius:16px;
                         background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);
                         box-shadow:0 6px 20px rgba(0,0,0,0.06);">
-                <h3>🥩 Meat, Poultry, Fish & Seafood (SCTG05)</h3>
+                <h3>Meat, Poultry, Fish & Seafood (SCTG05)</h3>
             </div>
             """, unsafe_allow_html=True)
 
@@ -641,7 +685,7 @@ if not st.session_state['app_started']:
             <div style="margin:1rem 0; padding:1.5rem; border-radius:16px;
                         background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);
                         box-shadow:0 6px 20px rgba(0,0,0,0.06);">
-                <h3>🌽 Agricultural Products (SCTG03)</h3>
+                <h3>Agricultural Products (SCTG03)</h3>
             </div>
             """, unsafe_allow_html=True)
 
@@ -766,7 +810,7 @@ if not st.session_state['app_started']:
             <div style="margin:1rem 0; padding:1.5rem; border-radius:16px;
                         background:linear-gradient(135deg,#fff7ed 0%,#ffedd5 100%);
                         box-shadow:0 6px 20px rgba(0,0,0,0.06);">
-                <h3>🍽️ Other Foodstuffs (SCTG07)</h3>
+                <h3>Other Foodstuffs (SCTG07)</h3>
             </div>
             """, unsafe_allow_html=True)
 
@@ -1040,7 +1084,7 @@ if not st.session_state['app_started']:
                     """, unsafe_allow_html=True)
 
                 st.link_button(
-                    "Link to sandbox",
+                    "Link to Food Supply Sandbox",
                     "https://fss.pods.icicleai.tapis.io/",
                     use_container_width=True,
                     type="primary"
