@@ -373,7 +373,7 @@ st.markdown("""
 st.markdown("""
 <style>
   /* Import Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap');
 
   /* Headings → Montserrat */
   h1, h2, h3, h4, h5, h6,
@@ -385,10 +385,10 @@ st.markdown("""
     font-style: normal;
   }
 
-  /* Small text, captions, paragraphs → Roboto */
+  /* Small text, captions, paragraphs → Manrope */
   p, small, span, div, .stTable td, .stTable th,
   .stCaption, [data-testid="stMetricLabel"], [data-testid="stMetricValue"] {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Manrope', sans-serif !important;
     font-optical-sizing: auto;
     font-style: normal;
   }
@@ -548,7 +548,7 @@ if not st.session_state['app_started']:
             <div style="margin:1rem 0; padding:1.5rem; border-radius:16px;
                         background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);
                         box-shadow:0 6px 20px rgba(0,0,0,0.06);">
-                <h3>Meat, Poultry, Fish & Seafood (SCTG05)</h3>
+                <h3 style="font-weight:800;">Meat, Poultry, Fish & Seafood (SCTG05)</h3>
             </div>
             """, unsafe_allow_html=True)
 
@@ -605,15 +605,48 @@ if not st.session_state['app_started']:
             ])
 
             # === "At a glance" + bar chart ===
+            st.markdown("<hr style='margin:2rem 0; border: none; border-top: 2px solid #e5e7eb;'/>", unsafe_allow_html=True)
+
             st.markdown("""
-            <div style="margin-top:0.5rem; margin-bottom:0.5rem; color:#6b7280; font-weight:600;">At a glance</div>
+            <div style="display: flex; justify-content: left; align-items: center;">
+                <h2 style="margin-top:0.5rem; margin-bottom:0.5rem; color:#6b7280; font-weight:800; font-size:2rem; color: #059669;">At a glance</h2>
+                    <span style="font-size:1.5rem; color:#6b7280; font-weight:600; margin-left: 1rem;">
+                    What's the top source of meat, poultry, fish, and seafood to Franklin County?
+                </span>
+            </div>
             """, unsafe_allow_html=True)
 
             col1, col2 = st.columns([1, 2])
             with col1:
-                st.metric("Top Source", sctg05_data.iloc[0]["origin"], f"{sctg05_data.iloc[0]['pct']:.2f}%")
-                st.metric("Top 10 Share", f"{sctg05_data['pct'].sum():.1f}%", "of total inflow")
+                st.markdown(
+                    """
+                    <div style="display: flex; flex-direction: column; justify-content: center; height: 180px; margin-top: 50px;">
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 1.6rem; color: #64748b; font-weight: 600;">Top Source:</span><br>
+                            <span style="font-size: 2.1rem; font-weight: 800; color: #059669;">{}</span><br>
+                            <span style="font-size: 2em; color: #059669; font-weight: 700;">{:.2f}%</span>
+                            <span style="font-size: 1.6rem; color: #6b7280;">of total inflow</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 1.6rem; color: #64748b; font-weight: 600;">Top 10 Share:</span><br>
+                            <span style="font-size: 2.1rem; font-weight: 800; color: #059669;">{:.1f}%</span>
+                            <span style="font-size: 1.6rem; color: #6b7280;">of total inflow</span>
+                        </div>
+                    </div>
+                    """.format(
+                        sctg05_data.iloc[0]["origin"],
+                        sctg05_data.iloc[0]["pct"],
+                        sctg05_data['pct'].sum()
+                    ),
+                    unsafe_allow_html=True
+                )
             with col2:
+                st.markdown(
+                    "<div style='font-size:1.5rem; font-weight:600; color:#64748b; margin-bottom:0.5rem;'>"
+                    "Top 10 Origins of Meat, Poultry, Fish, and Seafood to Franklin County (by estimated kilotons)"
+                    "</div>",
+                    unsafe_allow_html=True
+                )
                 sorted_data = sctg05_data.sort_values("kilotons", ascending=False)
 
                 # Add rank to origin name
@@ -621,7 +654,7 @@ if not st.session_state['app_started']:
 
                 st.bar_chart(sorted_data.set_index("label")["kilotons"])
 
-
+            st.markdown("<hr style='margin:2rem 0; border: none; border-top: 2px solid #e5e7eb;'/>", unsafe_allow_html=True)
             # === Mini map (PyDeck) ===
             arc_data = []
             for _, row in sctg05_data.iterrows():
@@ -685,7 +718,7 @@ if not st.session_state['app_started']:
             <div style="margin:1rem 0; padding:1.5rem; border-radius:16px;
                         background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);
                         box-shadow:0 6px 20px rgba(0,0,0,0.06);">
-                <h3>Agricultural Products (SCTG03)</h3>
+                <h3 style="font-weight:800;">Agricultural Products (SCTG03)</h3>
             </div>
             """, unsafe_allow_html=True)
 
@@ -739,19 +772,53 @@ if not st.session_state['app_started']:
                 {"origin": "Chesterfield, VA (Richmond Metro)", "lat": 37.3778, "lon": -77.5040, "kilotons": 24948.2, "pct": 1.51},
             ])
 
+            st.markdown("<hr style='margin:2rem 0; border: none; border-top: 2px solid #e5e7eb;'/>", unsafe_allow_html=True)
             st.markdown("""
-            <div style="margin-top:0.5rem; margin-bottom:0.5rem; color:#6b7280; font-weight:600;">At a glance</div>
+            <div style="display: flex; justify-content: left; align-items: center;">
+                <h2 style="margin-top:0.5rem; margin-bottom:0.5rem; color:#6b7280; font-weight:800; font-size:2rem; color: #059669;">At a glance</h2>
+                    <span style="font-size:1.5rem; color:#6b7280; font-weight:600; margin-left: 1rem;">
+                    What's the top source of agricultural products to Franklin County?
+                </span>
+            </div>
             """, unsafe_allow_html=True)
 
             col1, col2 = st.columns([1, 2])
             with col1:
-                st.metric("Top Source", sctg03_data.iloc[0]["origin"], f"{sctg03_data.iloc[0]['pct']:.2f}%")
-                st.metric("Top 10 Share", f"{sctg03_data['pct'].sum():.1f}%", "of total inflow")
+                st.markdown(
+                    """
+                    <div style="display: flex; flex-direction: column; justify-content: center; height: 180px; margin-top: 50px;">
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 1.6rem; color: #64748b; font-weight: 600;">Top Source:</span><br>
+                            <span style="font-size: 2.1rem; font-weight: 800; color: #059669;">{}</span><br>
+                            <span style="font-size: 2em; color: #059669; font-weight: 700;">{:.2f}%</span>
+                            <span style="font-size: 1.6rem; color: #6b7280;">of total inflow</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 1.6rem; color: #64748b; font-weight: 600;">Top 10 Share:</span><br>
+                            <span style="font-size: 2.1rem; font-weight: 800; color: #059669;">{:.1f}%</span>
+                            <span style="font-size: 1.6rem; color: #6b7280;">of total inflow</span>
+                        </div>
+                    </div>
+                    """.format(
+                        sctg03_data.iloc[0]["origin"],
+                        sctg03_data.iloc[0]["pct"],
+                        sctg03_data['pct'].sum()
+                    ),
+                    unsafe_allow_html=True
+                )
             with col2:
+                st.markdown(
+                    "<div style='font-size:1.5rem; font-weight:600; color:#64748b; margin-bottom:0.5rem;'>"
+                    "Top 10 Origins of Agricultural Products to Franklin County (by estimated kilotons)"
+                    "</div>",
+                    unsafe_allow_html=True
+                )
+
                 sorted_data = sctg03_data.sort_values("kilotons", ascending=False)
                 sorted_data["label"] = (sorted_data.index + 1).astype(str).str.zfill(len(str(len(sorted_data)))) + " - " + sorted_data["origin"]
                 st.bar_chart(sorted_data.set_index("label")["kilotons"])
 
+            st.markdown("<hr style='margin:2rem 0; border: none; border-top: 2px solid #e5e7eb;'/>", unsafe_allow_html=True)
             # Mini map
             arc_data03 = []
             for _, row in sctg03_data.iterrows():
@@ -810,7 +877,7 @@ if not st.session_state['app_started']:
             <div style="margin:1rem 0; padding:1.5rem; border-radius:16px;
                         background:linear-gradient(135deg,#fff7ed 0%,#ffedd5 100%);
                         box-shadow:0 6px 20px rgba(0,0,0,0.06);">
-                <h3>Other Foodstuffs (SCTG07)</h3>
+                <h3 style="font-weight:800;">Other Foodstuffs (SCTG07)</h3>
             </div>
             """, unsafe_allow_html=True)
 
@@ -871,19 +938,52 @@ if not st.session_state['app_started']:
                 {"origin": "Tarrant, TX (Dallas–Fort Worth)", "lat": 32.7688, "lon": -97.3093, "kilotons": 42022.5, "pct": 1.30},
             ])
 
+            st.markdown("<hr style='margin:2rem 0; border: none; border-top: 2px solid #e5e7eb;'/>", unsafe_allow_html=True)
             st.markdown("""
-            <div style="margin-top:0.5rem; margin-bottom:0.5rem; color:#6b7280; font-weight:600;">At a glance</div>
+            <div style="display: flex; justify-content: left; align-items: center;">
+                <h2 style="margin-top:0.5rem; margin-bottom:0.5rem; color:#6b7280; font-weight:800; font-size:2rem; color: #059669;">At a glance</h2>
+                    <span style="font-size:1.5rem; color:#6b7280; font-weight:600; margin-left: 1rem;">
+                    What's the top source of other foodstuffs to Franklin County?
+                </span>
+            </div>
             """, unsafe_allow_html=True)
 
             col1, col2 = st.columns([1, 2])
             with col1:
-                st.metric("Top Source", sctg07_data.iloc[0]["origin"], f"{sctg07_data.iloc[0]['pct']:.2f}%")
-                st.metric("Top 10 Share", f"{sctg07_data['pct'].sum():.1f}%", "of total inflow")
+                # Vertically center the metrics using a container with flexbox
+                st.markdown(
+                    """
+                    <div style="display: flex; flex-direction: column; justify-content: center; height: 180px; margin-top: 50px;">
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 1.6rem; color: #64748b; font-weight: 600;">Top Source</span><br>
+                            <span style="font-size: 2.1rem; font-weight: 800; color: #059669;">{}</span><br>
+                            <span style="font-size: 2em; color: #059669; font-weight: 700;">{:.2f}%</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 1.6rem; color: #64748b; font-weight: 600;">Top 10 Share</span><br>
+                            <span style="font-size: 2.1rem; font-weight: 800; color: #059669;">{:.1f}%</span>
+                            <span style="font-size: 1.6rem; color: #6b7280;">of total inflow</span>
+                        </div>
+                    </div>
+                    """.format(
+                        sctg07_data.iloc[0]["origin"],
+                        sctg07_data.iloc[0]["pct"],
+                        sctg07_data['pct'].sum()
+                    ),
+                    unsafe_allow_html=True
+                )
             with col2:
                 sorted_data = sctg07_data.sort_values("kilotons", ascending=False)
                 sorted_data["label"] = (sorted_data.index + 1).astype(str).str.zfill(len(str(len(sorted_data)))) + " - " + sorted_data["origin"]
+                st.markdown(
+                    "<div style='font-size:1.6rem; font-weight:600; color:#64748b; margin-bottom:0.5rem;'>"
+                    "Top 10 Origins of Other Foodstuffs to Franklin County (by estimated kilotons)"
+                    "</div>",
+                    unsafe_allow_html=True
+                )
                 st.bar_chart(sorted_data.set_index("label")["kilotons"])
 
+            st.markdown("<hr style='margin:2rem 0; border: none; border-top: 2px solid #e5e7eb;'/>", unsafe_allow_html=True)
             # Mini map
             arc_data07 = []
             for _, row in sctg07_data.iterrows():
@@ -942,7 +1042,7 @@ if not st.session_state['app_started']:
 
         st.markdown(
             """
-            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; position:relative; left:2%;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; position:relative;">
                 <h2 style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#059669 0%,#10b981 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:0; margin-right:1rem; white-space:nowrap;">
                     What's Next ?
                 </h2>
@@ -961,8 +1061,9 @@ if not st.session_state['app_started']:
                 st.markdown("""
                 <div style="text-align:center; padding:2rem;
                             background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);
-                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
-                    <h2 style="margin-bottom:1rem; color:#059669; font-size:1.3rem;">From Local Farm to National Foodflow</h2>
+                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);
+                            height: 250px;">
+                    <h2 style="margin-bottom:1rem; color:#059669; font-size:1.3rem;">From Local Farm to National Food Flows</h2>
                     <p style="color:#4b5563; font-size:1.05rem; margin-bottom:2rem;">
                         Now, let's explore the interactive map and see these flows come alive on a national scale.
                     </p>
@@ -1001,8 +1102,9 @@ if not st.session_state['app_started']:
                 st.markdown("""
                 <div style="text-align:center; padding:2rem;
                             background:linear-gradient(135deg,#f0f9ff 0%,#dbeafe 100%);
-                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
-                    <h2 style="margin-bottom:1rem; color:#2563eb; font-size:1.3rem;">From Local Farm to Local Household Grocery</h2>
+                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);
+                            height: 250px;">
+                    <h2 style="margin-bottom:1rem; color:#2563eb; font-size:1.3rem;">From Local Farm to Local Household Groceries</h2>
                     <p style="color:#334155; font-size:1.05rem; margin-bottom:2rem;">
                         Discover how local farms supply fresh produce to households and groceries in the region.
                     </p>
@@ -1048,8 +1150,9 @@ if not st.session_state['app_started']:
                 st.markdown("""
                 <div style="text-align:center; padding:2rem;
                             background:linear-gradient(135deg,#fef9c3 0%,#fde68a 100%);
-                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);">
-                    <h2 style="margin-bottom:1rem; color:#b45309; font-size:1.3rem;">From Local Farm to Food Supply from Global Ports</h2>
+                            border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);
+                            height: 250px;">
+                    <h2 style="margin-bottom:1rem; color:#b45309; font-size:1.3rem;">From Local Farm to Global Port Supplies</h2>
                     <p style="color:#92400e; font-size:1.05rem; margin-bottom:2rem;">
                         Explore how food from Franklin County reaches global markets through major ports.
                     </p>
@@ -1062,11 +1165,12 @@ if not st.session_state['app_started']:
                         color: #b45309 !important;   /* text color */
                         border-radius: 12px !important;
                         padding: 0.6rem 1rem !important;
-                        font-weight: 600 !important;
+                        font-weight: bold !important;
                         box-shadow: 0 4px 12px rgba(254, 243, 199, 0.3) !important;
                         transition: all 0.2s ease-in-out;
                         border: none !important;
                         outline: none !important;
+                        font-family: "Montserrat", sans-serif !important;
                     }
                     div[data-testid="stLinkButton"] a[href="https://fss.pods.icicleai.tapis.io/"]:hover {
                         background: linear-gradient(135deg, #facc15 0%, #f59e0b 100%) !important;
