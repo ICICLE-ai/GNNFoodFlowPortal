@@ -1106,7 +1106,7 @@ if not st.session_state['app_started']:
                             height: 250px;">
                     <h2 style="margin-bottom:1rem; color:#2563eb; font-size:1.3rem;">From Local Farm to Local Household Groceries</h2>
                     <p style="color:#334155; font-size:1.05rem; margin-bottom:2rem;">
-                        Discover how local farms supply fresh produce to households and groceries in the region.
+                        Simulate and plan how households access food in your region using agent-based modeling tools.
                     </p>
                 </div>
                 """, unsafe_allow_html=True)
@@ -1152,9 +1152,10 @@ if not st.session_state['app_started']:
                             background:linear-gradient(135deg,#fef9c3 0%,#fde68a 100%);
                             border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.08);
                             height: 250px;">
-                    <h2 style="margin-bottom:1rem; color:#b45309; font-size:1.3rem;">From Local Farm to Global Port Supplies</h2>
+                    <h2 style="margin-bottom:1rem; color:#b45309; font-size:1.3rem;">From Local Farm to Secure Food Supplies</h2>
                     <p style="color:#92400e; font-size:1.05rem; margin-bottom:2rem;">
-                        Explore how food from Franklin County reaches global markets through major ports.
+                        Discover privacy-preserving frameworks for food logistics optimization, enabling secure data sharing and integration among food organizations.
+                    </p>
                     </p>
                 </div>
                 """, unsafe_allow_html=True)
@@ -1198,7 +1199,7 @@ if not st.session_state['app_started']:
         st.markdown(
             """
             <div style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:1rem;">
-                &copy; 2025 ICICLE AI. All rights reserved.
+                &copy; 2025 ICICLE Democratizing AI. All rights reserved.
             </div>
             """,
             unsafe_allow_html=True
@@ -1483,7 +1484,7 @@ else:
         st.markdown(
             """
             <div style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:1rem;">
-                &copy; 2025 ICICLE AI. All rights reserved.
+                &copy; 2025 ICICLE Democratizing AI. All rights reserved.
             </div>
             """,
             unsafe_allow_html=True
