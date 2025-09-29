@@ -440,8 +440,7 @@ FAF_FILES = {
 
 @st.cache_data
 def load_sctg_data(file_name: str) -> pd.DataFrame:
-    url = f"https://github.com/ICICLE-ai/GNNFoodFlowPortal/blob/main/cleaned_data/{file_name}"
-    df = pd.read_csv(url)
+    df = pd.read_csv(f"./cleaned_data/{file_name}")
     df['origin'] = df['origin'].astype(str).str.zfill(5)
     df['dest']   = df['dest'].astype(str).str.zfill(5)
     df = df.query("exist_prob > 0.5 and predicted_value_original > 0")
