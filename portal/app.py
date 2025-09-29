@@ -440,7 +440,8 @@ FAF_FILES = {
 
 @st.cache_data
 def load_sctg_data(file_name: str) -> pd.DataFrame:
-    df = pd.read_csv(f"./cleaned_data/{file_name}")
+    url = f"https://github.com/ICICLE-ai/GNNFoodFlowPortal/blob/main/cleaned_data/{file_name}"
+    df = pd.read_csv(url)
     df['origin'] = df['origin'].astype(str).str.zfill(5)
     df['dest']   = df['dest'].astype(str).str.zfill(5)
     df = df.query("exist_prob > 0.5 and predicted_value_original > 0")
@@ -450,7 +451,7 @@ def load_sctg_data(file_name: str) -> pd.DataFrame:
 
 @st.cache_data
 def load_county_metadata() -> pd.DataFrame:
-    meta = pd.read_csv("cleaned_data/state_and_county_fips_master.csv")
+    meta = pd.read_csv("data/state_and_county_fips_master.csv")
     meta['fips'] = meta['fips'].astype(str).str.zfill(5)
     meta = meta.rename(columns={"fips": "FIPS", "name": "County", "state": "State"})
     return meta[['FIPS', 'County', 'State']]
@@ -729,8 +730,9 @@ if not st.session_state['app_started']:
                 st.markdown("""
                 <div style="padding: 0 1rem 0 0;">
                     <p style="font-size:1rem; color:#374151; line-height:1.6; margin:0;">
-                    Behind every loaf of bread or box of cereal in Franklin County is a web stretching to Chicago, Houston, Los Angeles, and Seattle.
-                    These cities are the nation's food arteries, pushing vast flows of grain and other crops toward Ohio.
+                    Agricultural Products (SCTG03) include a wide variety of crops and plant products that are essential to our food system and economy. This category covers everything from potatoes, tomatoes, onions, lettuce, peas, beans, and other fresh or dried vegetables, to fruits like oranges, apples, bananas, grapes, melons, and nuts. It also includes oil seeds such as soybeans, canola, sunflower, and cotton seeds, as well as peanuts, linseed, and mustard seeds. Other products in this group are live plants, bulbs, mushroom spawn, fresh-cut flowers, tobacco, raw cotton, unprocessed coffee and tea, sugar beet and cane, and various forestry products. These agricultural goods are the foundation for countless foods and materials we use every day.
+                    <br><br>
+                    These green goods are the foundation for countless foods and materials we use every day. They travel long distances to reach Franklin County, often from California, Texas, and other states.
                     <br><br>
                     It looks strong, but the dependence is sharp: when floods close the rail lines in Chicago, or hurricanes strike Houston, Franklin's steady stream of grain falters.
                     This isn't just a question of one meal—it's a reminder that systemic risks ripple through the heart of America's food supply.
