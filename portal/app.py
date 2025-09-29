@@ -429,18 +429,20 @@ if 'app_started' not in st.session_state:
 # Map size state (removed toggle functionality)
 
 FAF_FILES = {
-    "01 - Live Animals/Fish": "predicted_sctg_1.csv",
-    "02 - Cereal Grains": "predicted_sctg_2.csv",
-    "03 - Other Ag products.": "predicted_sctg_3.csv",
-    "04 - Animal Feed": "predicted_sctg_4.csv",
-    "05 - Meat/Seafood": "predicted_sctg_5.csv",
-    "06 - Milled Grain Prods.": "predicted_sctg_6.csv",
-    "07 - Other Foodstuffs": "predicted_sctg_7.csv"
+    "01 - Live Animals/Fish": "predicted_sctg_1.parquet",
+    "02 - Cereal Grains": "predicted_sctg_2.parquet",
+    "03 - Other Ag products.": "predicted_sctg_3.parquet",
+    "04 - Animal Feed": "predicted_sctg_4.parquet",
+    "05 - Meat/Seafood": "predicted_sctg_5.parquet",
+    "06 - Milled Grain Prods.": "predicted_sctg_6.parquet",
+    "07 - Other Foodstuffs": "predicted_sctg_7.parquet"
 }
 
 @st.cache_data
 def load_sctg_data(file_name: str) -> pd.DataFrame:
-    df = pd.read_csv(f"./cleaned_data/{file_name}")
+    url = f"cleaned_data/{file_name}"
+    df = pd.read_parquet(url)
+
     df['origin'] = df['origin'].astype(str).str.zfill(5)
     df['dest']   = df['dest'].astype(str).str.zfill(5)
     df = df.query("exist_prob > 0.5 and predicted_value_original > 0")
