@@ -27,7 +27,8 @@ def _check_url_online(url):
 DOCS_URL = _DOI_URL if _check_url_online(_DOI_URL) else _FALLBACK_PDF
 
 st.set_page_config(
-    page_title="FAF Food Flows Dashboard",
+    page_title="GNNFoodFlow Portal",
+    page_icon=str(Path(__file__).parent / "image" / "ICICLE.png"),
     layout="wide",
     initial_sidebar_state="expanded"
 )
