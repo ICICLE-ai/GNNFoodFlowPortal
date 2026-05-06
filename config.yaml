@@ -1,7 +1,7 @@
 project:
   name: "GNN Food Flow Portal"
-  description: "A web app for visualizing and analyzing county level food flow data."
-  version: "1.1.0"
+  description: "A web app for visualizing parallel model county-level food flow results and running multi-task GNN what-if scenario analysis."
+  version: "1.2.0"
 
 environment:
   python_version: "3.11"
@@ -40,9 +40,12 @@ environment:
     - shapely==2.0.7
     - six==1.17.0
     - smmap==5.0.2
+    - scikit-learn>=1.5.0
     - streamlit==1.43.0
     - tenacity==9.0.0
     - toml==0.10.2
+    - torch>=2.3.0
+    - torch-geometric>=2.5.0
     - tornado==6.4.2
     - typing_extensions==4.12.2
     - tzdata==2025.1
@@ -52,6 +55,17 @@ environment:
   port: 8501
 
 data:
+  parallel_model_results:
+    description: "Precomputed static results from parallel SCTG-specific models."
+    directory: "portal/cleaned_data"
+  multitask_whatif:
+    description: "Vendored multi-task GNN what-if demo assets used by the One-to-One and One-to-Many scenario portals."
+    directory: "portal/whatif_demo"
+    webapp_artifacts: "portal/whatif_demo/webapp/whatif_artifacts"
+    model_checkpoint: "portal/whatif_demo/models/best_multitask_sparse_gcn.pth"
+    inference_code:
+      - "portal/whatif_demo/webapp/whatif_engine.py"
+      - "portal/whatif_demo/code/model.py"
   data_features:
     - origin
     - dest

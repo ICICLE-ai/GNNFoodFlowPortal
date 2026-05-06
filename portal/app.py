@@ -6,6 +6,9 @@ import json
 import matplotlib.pyplot as plt
 import math
 import urllib.request
+from pathlib import Path
+
+from whatif_tabs import render_one_to_many_tab, render_one_to_one_tab
 
 # External links (configure as needed)
 GITHUB_URL = "https://github.com/ICICLE-ai/GNNFoodFlowPortal"
@@ -39,9 +42,13 @@ st.markdown("""
   }
 
   /* Hide default elements */
-  #MainMenu, footer, header {visibility:hidden;}
-  /* Re-enable sidebar toggle */
-  [data-testid="collapsedControl"] {display: block !important;}
+  #MainMenu, footer {visibility:hidden;}
+  /* Keep Streamlit's sidebar toggle available if the sidebar is collapsed. */
+  header {visibility: visible;}
+  [data-testid="collapsedControl"] {
+    display: block !important;
+    visibility: visible !important;
+  }
 
   /* Main container styling */
   .block-container {
@@ -317,6 +324,74 @@ st.markdown("""
     box-shadow: inset 0 -3px 0 #1d4ed8; /* subtle active underline */
   }
 
+  .stTabs [data-baseweb="tab"]:nth-child(4),
+  .stTabs [data-baseweb="tab"]:nth-child(5) {
+    background: linear-gradient(135deg, #14213d 0%, #006b3c 100%);
+    border-color: #006b3c;
+    color: #ffffff;
+    font-weight: 800;
+  }
+
+  .stTabs [data-baseweb="tab"]:nth-child(4)[aria-selected="true"],
+  .stTabs [data-baseweb="tab"]:nth-child(5)[aria-selected="true"] {
+    background: linear-gradient(135deg, #006b3c 0%, #c8a900 100%);
+    border-color: #c8a900;
+    color: #ffffff;
+    box-shadow: inset 0 -3px 0 #fef3c7;
+  }
+
+  .parallel-model-banner {
+    background: linear-gradient(135deg, #eef6ff 0%, #f8fafc 100%);
+    border: 1px solid #bfdbfe;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    color: #1e3a8a;
+    font-size: .9rem;
+    line-height: 1.55;
+    margin: -.5rem 0 1.2rem;
+    padding: .75rem 1rem;
+  }
+
+  div[data-testid="stSegmentedControl"] {
+    margin: 0 auto 1.25rem auto;
+  }
+
+  div[data-testid="stSegmentedControl"] [role="radiogroup"] {
+    background: rgba(255,255,255,.75);
+    border: 1px solid #dbe4ef;
+    border-radius: 10px;
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+  }
+
+  div[data-testid="stSegmentedControl"] label {
+    border-radius: 8px !important;
+    color: #475569 !important;
+    font-weight: 700 !important;
+    min-height: 38px;
+    padding: .35rem .75rem !important;
+  }
+
+  div[data-testid="stSegmentedControl"] label:has(input:checked) {
+    background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%) !important;
+    box-shadow: inset 0 -3px 0 #1d4ed8, 0 1px 4px rgba(15,23,42,.08);
+    color: #0f172a !important;
+  }
+
+  div[data-testid="stSegmentedControl"] label:nth-of-type(4),
+  div[data-testid="stSegmentedControl"] label:nth-of-type(5) {
+    background: linear-gradient(135deg, #14213d 0%, #006b3c 100%) !important;
+    color: #ffffff !important;
+  }
+
+  div[data-testid="stSegmentedControl"] label:nth-of-type(4):has(input:checked),
+  div[data-testid="stSegmentedControl"] label:nth-of-type(5):has(input:checked) {
+    background: linear-gradient(135deg, #006b3c 0%, #c8a900 100%) !important;
+    box-shadow: inset 0 -3px 0 #fef3c7, 0 1px 4px rgba(15,23,42,.14);
+    color: #ffffff !important;
+  }
+
   /* Download button styling */
   .stDownloadButton > button {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -398,6 +473,24 @@ st.markdown("""
   h2, h3 { font-weight: 600; }
   p, small, span { font-weight: 400; }
 
+  /* Preserve Streamlit's Material Symbols ligatures for expander arrows/icons. */
+  [class*="material-symbols"],
+  [class*="MaterialIcon"],
+  [data-testid="stIconMaterial"],
+  [data-testid="stExpander"] span[aria-hidden="true"] {
+    font-family: "Material Symbols Rounded", "Material Symbols Outlined", "Material Icons" !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: inherit !important;
+    line-height: 1 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    direction: ltr !important;
+    -webkit-font-feature-settings: "liga" !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -440,8 +533,18 @@ FAF_FILES = {
 
 @st.cache_data
 def load_sctg_data(file_name: str) -> pd.DataFrame:
-    url = f"cleaned_data/{file_name}"
-    df = pd.read_parquet(url)
+    local_path = Path("cleaned_data") / file_name
+    fallback_path = (
+        Path(__file__).resolve().parents[3]
+        / "GNNFoodFlowPortal"
+        / "portal"
+        / "cleaned_data"
+        / file_name
+    )
+    try:
+        df = pd.read_parquet(local_path)
+    except Exception:
+        df = pd.read_parquet(fallback_path)
 
     df['origin'] = df['origin'].astype(str).str.zfill(5)
     df['dest']   = df['dest'].astype(str).str.zfill(5)
@@ -504,10 +607,6 @@ def convert_sctg_to_trip(sctg_df, meta_df):
         "dest": sctg_df["dest"].tolist(),
         "predicted_value_original": sctg_df["predicted_value_original"].tolist()
     })
-
-# Load data
-META  = load_county_metadata()
-BNDJS = load_county_boundaries()
 
 # Welcome Screen or Main App
 if not st.session_state['app_started']:
@@ -1209,6 +1308,34 @@ if not st.session_state['app_started']:
         )
 else:
     # Main App Content
+    PAGE_OPTIONS = [
+        "Parallel Model Map",
+        "Parallel Model Guide",
+        "Parallel Model Download",
+        "Multi-task One-to-One",
+        "Multi-task One-to-Many",
+    ]
+    PARALLEL_FILTER_PAGES = {"Parallel Model Map", "Parallel Model Download"}
+    page = st.session_state.get("portal_page", PAGE_OPTIONS[0])
+
+    st.markdown("""
+    <div style="text-align: center; margin-bottom: 1rem;">
+        <h1>🌾 GNN Food Flow Portal</h1>
+        <p style="color: #6b7280; font-size: 1.1rem; margin-top: -0.5rem;">
+            Parallel model results plus GNNFoodFlow Multi-task what-if scenario portals
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    page = st.segmented_control(
+        "Portal section",
+        PAGE_OPTIONS,
+        default=page,
+        label_visibility="collapsed",
+        key="portal_page",
+    )
+    META = load_county_metadata() if page in PARALLEL_FILTER_PAGES else None
+
     # Sidebar
     with st.sidebar:
         try:
@@ -1223,119 +1350,120 @@ else:
 
         st.markdown("---")
 
-        st.markdown("## Filter Options")
-        if 'origin_lbl' not in st.session_state:
-            st.session_state['origin_lbl'] = None
-        if 'dest_lbl' not in st.session_state:
-            st.session_state['dest_lbl'] = "All"
+        if page in PARALLEL_FILTER_PAGES:
+            st.markdown("## Classic Map Filters")
+            st.caption("These controls only drive the parallel-model results tabs. The GNNFoodFlow Multi-task what-if tabs use their own county selectors and scenario controls.")
+            if 'origin_lbl' not in st.session_state:
+                st.session_state['origin_lbl'] = None
+            if 'dest_lbl' not in st.session_state:
+                st.session_state['dest_lbl'] = "All"
 
-        cat = st.selectbox("Food Category (SCTG)", list(FAF_FILES))
-        flows = load_sctg_data(FAF_FILES[cat])
+            cat = st.selectbox("Food Category (SCTG)", list(FAF_FILES))
+            flows = load_sctg_data(FAF_FILES[cat])
 
-        origins = sorted(flows['origin'].unique())
-        origin_lbls = [f"{f} - {META.loc[META.FIPS==f,'County'].iat[0]} - {META.loc[META.FIPS==f,'State'].iat[0]}"
-                       if f in META.FIPS.values else f for f in origins]
-        origin_lbls = ["All"] + origin_lbls
-        default_idx = origin_lbls.index("06037 - Los Angeles County - CA") if "06037 - Los Angeles County - CA" in origin_lbls else 0
+            origins = sorted(flows['origin'].unique())
+            origin_lbls = [f"{f} - {META.loc[META.FIPS==f,'County'].iat[0]} - {META.loc[META.FIPS==f,'State'].iat[0]}"
+                           if f in META.FIPS.values else f for f in origins]
+            origin_lbls = ["All"] + origin_lbls
+            default_idx = origin_lbls.index("06037 - Los Angeles County - CA") if "06037 - Los Angeles County - CA" in origin_lbls else 0
 
-        if st.session_state['origin_lbl'] is None:
-            st.session_state['origin_lbl'] = origin_lbls[default_idx]
-        origin_lbl = st.selectbox("Origin County", origin_lbls, index=origin_lbls.index(st.session_state['origin_lbl']) if st.session_state['origin_lbl'] in origin_lbls else default_idx, key="origin_select")
-        st.session_state['origin_lbl'] = origin_lbl
-        origin_fip = origin_lbl.split(" - ")[0] if origin_lbl != "All" else "All"
+            if st.session_state['origin_lbl'] is None:
+                st.session_state['origin_lbl'] = origin_lbls[default_idx]
+            origin_lbl = st.selectbox("Origin County", origin_lbls, index=origin_lbls.index(st.session_state['origin_lbl']) if st.session_state['origin_lbl'] in origin_lbls else default_idx, key="origin_select")
+            st.session_state['origin_lbl'] = origin_lbl
+            origin_fip = origin_lbl.split(" - ")[0] if origin_lbl != "All" else "All"
 
-        if origin_lbl == "All":
-            dests = sorted(flows['dest'].unique())
-            filt = flows.copy()
-        else:
-            dests = sorted(flows.query("origin == @origin_fip")['dest'].unique())
-            filt = flows.query("origin == @origin_fip")
-
-        dest_lbls = [f"{d} - {META.loc[META.FIPS==d,'County'].iat[0]} - {META.loc[META.FIPS==d,'State'].iat[0]}"
-                     if d in META.FIPS.values else d for d in dests]
-        dest_options = ["All"] + dest_lbls
-        if st.session_state['dest_lbl'] not in dest_options:
-            st.session_state['dest_lbl'] = "All"
-        dest_lbl = st.selectbox("Destination County", dest_options, index=dest_options.index(st.session_state['dest_lbl']), key="dest_select")
-        st.session_state['dest_lbl'] = dest_lbl
-        if dest_lbl != "All":
-            dest_fip = dest_lbl.split(" - ")[0]
-            filt = filt.query("dest == @dest_fip")
-
-        if st.button("\u21c6 Swap Origin and Destination"):
-            if st.session_state['dest_lbl'] == "All":
-                st.session_state['origin_lbl'] = "All"
-                st.session_state['dest_lbl'] = origin_lbl
+            if origin_lbl == "All":
+                dests = sorted(flows['dest'].unique())
+                filt = flows.copy()
             else:
-                st.session_state['origin_lbl'], st.session_state['dest_lbl'] = st.session_state['dest_lbl'], st.session_state['origin_lbl']
-            st.rerun()
+                dests = sorted(flows.query("origin == @origin_fip")['dest'].unique())
+                filt = flows.query("origin == @origin_fip")
 
-        st.markdown("## Trip Summary")
+            dest_lbls = [f"{d} - {META.loc[META.FIPS==d,'County'].iat[0]} - {META.loc[META.FIPS==d,'State'].iat[0]}"
+                         if d in META.FIPS.values else d for d in dests]
+            dest_options = ["All"] + dest_lbls
+            if st.session_state['dest_lbl'] not in dest_options:
+                st.session_state['dest_lbl'] = "All"
+            dest_lbl = st.selectbox("Destination County", dest_options, index=dest_options.index(st.session_state['dest_lbl']), key="dest_select")
+            st.session_state['dest_lbl'] = dest_lbl
+            if dest_lbl != "All":
+                dest_fip = dest_lbl.split(" - ")[0]
+                filt = filt.query("dest == @dest_fip")
 
-        # Create metric cards with better styling
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown(f"""
-            <div class="metric-card">
-                <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 700; color: #3b82f6; margin-bottom: 0.5rem;">
-                        {len(filt):,}
-                    </div>
-                    <div style="font-size: 0.9rem; color: #6b7280; font-weight: 500;">
-                        Number of Trips
+            if st.button("\u21c6 Swap Origin and Destination"):
+                if st.session_state['dest_lbl'] == "All":
+                    st.session_state['origin_lbl'] = "All"
+                    st.session_state['dest_lbl'] = origin_lbl
+                else:
+                    st.session_state['origin_lbl'], st.session_state['dest_lbl'] = st.session_state['dest_lbl'], st.session_state['origin_lbl']
+                st.rerun()
+
+            st.markdown("## Trip Summary")
+
+            # Create metric cards with better styling
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown(f"""
+                <div class="metric-card">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #3b82f6; margin-bottom: 0.5rem;">
+                            {len(filt):,}
+                        </div>
+                        <div style="font-size: 0.9rem; color: #6b7280; font-weight: 500;">
+                            Number of Trips
+                        </div>
                     </div>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
 
-        with col2:
-            st.markdown(f"""
-            <div class="metric-card">
-                <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 700; color: #059669; margin-bottom: 0.5rem;">
-                        {filt['predicted_value_original'].sum():,.0f}
-                    </div>
-                    <div style="font-size: 0.9rem; color: #6b7280; font-weight: 500;">
-                        Total Estimated Kilotons Shipped
+            with col2:
+                st.markdown(f"""
+                <div class="metric-card">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #059669; margin-bottom: 0.5rem;">
+                            {filt['predicted_value_original'].sum():,.0f}
+                        </div>
+                        <div style="font-size: 0.9rem; color: #6b7280; font-weight: 500;">
+                            Total Estimated Kilotons Shipped
+                        </div>
                     </div>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
-        top_n = st.slider("Top links to render", min_value=1, max_value=300, value=60, step=1)
+                """, unsafe_allow_html=True)
+            top_n = st.slider("Top links to render", min_value=1, max_value=300, value=60, step=1)
 
-        # Flow width scaling controls
-        flow_scale_mode = st.selectbox(
-            "Flow width scale",
-            ["Linear (with cap)", "Logarithmic"],
-            index=0,
-            help="Choose how to scale arc widths: cap large flows in linear mode or compress range with logarithmic scaling."
-        )
-        if flow_scale_mode == "Linear (with cap)":
-            suggested_cap = float(filt['predicted_value_original'].quantile(0.95)) if len(filt) > 0 else 1000.0
-            max_flow_cap = st.number_input(
-                "Max flow (Kilotons) cap",
-                min_value=1.0,
-                value=max(1.0, round(suggested_cap, 2)),
-                step=1000.0,
-                help="Any flow larger than this value will be drawn using this maximum width."
+            # Flow width scaling controls
+            flow_scale_mode = st.selectbox(
+                "Flow width scale",
+                ["Linear (with cap)", "Logarithmic"],
+                index=0,
+                help="Choose how to scale arc widths: cap large flows in linear mode or compress range with logarithmic scaling."
             )
+            if flow_scale_mode == "Linear (with cap)":
+                suggested_cap = float(filt['predicted_value_original'].quantile(0.95)) if len(filt) > 0 else 1000.0
+                max_flow_cap = st.number_input(
+                    "Max flow (Kilotons) cap",
+                    min_value=1.0,
+                    value=max(1.0, round(suggested_cap, 2)),
+                    step=1000.0,
+                    help="Any flow larger than this value will be drawn using this maximum width."
+                )
+            else:
+                max_flow_cap = None
         else:
-            max_flow_cap = None
+            st.markdown("## Multi-task What-if")
+            st.caption("The GNNFoodFlow Multi-task scenario tabs use their own controls in the main panel. Parallel model filters are hidden here to avoid unnecessary data loading.")
 
-    # Main panel
-    st.markdown("""
-    <div style="text-align: center; margin-bottom: 2rem;">
-        <h1>🌾 GNN Food Flow Portal</h1>
-        <p style="color: #6b7280; font-size: 1.1rem; margin-top: -0.5rem;">
-            Advanced Graph Neural Network Food Transportation Analysis
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Create tabs - REORDERED: Map first, then How to Use, then Download
-    tab1, tab2, tab3 = st.tabs(["Interactive Map", "How to Use", "Download"])
-
-    with tab1:
+    if page == "Parallel Model Map":
+        st.markdown(
+            """
+            <div class="parallel-model-banner">
+                <strong>Parallel model results.</strong>
+                This tab visualizes precomputed county flow outputs from the original parallel model.
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
         st.markdown(f"""
         <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
                     padding: 1.5rem;
@@ -1368,6 +1496,7 @@ else:
             width_scale_secondary = 1.0
             width_scale_glow = 1.2
 
+        BNDJS = load_county_boundaries()
         boundary_layer = pdk.Layer(
             "GeoJsonLayer", BNDJS,
             stroked=True, filled=True,
@@ -1492,7 +1621,17 @@ else:
             """,
             unsafe_allow_html=True
         )
-    with tab2:
+    elif page == "Parallel Model Guide":
+        st.markdown(
+            """
+            <div class="parallel-model-banner">
+                <strong>Parallel model results guide.</strong>
+                These instructions describe the precomputed parallel model map and downloads,
+                not the GNNFoodFlow Multi-task what-if scenario portals.
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
         st.markdown("## How to Use the Food Flow Portal")
 
         st.markdown("""
@@ -1550,7 +1689,17 @@ else:
         """)
 
 
-    with tab3:
+    elif page == "Parallel Model Download":
+        st.markdown(
+            """
+            <div class="parallel-model-banner">
+                <strong>Parallel model results download.</strong>
+                These exports come from the original precomputed parallel model output.
+                Multi-task what-if exports are available inside the two GNNFoodFlow Multi-task tabs.
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
         st.markdown("""
         <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
                     padding: 1.5rem;
@@ -1716,5 +1865,8 @@ else:
             unsafe_allow_html=True
         )
 
+    elif page == "Multi-task One-to-One":
+        render_one_to_one_tab()
 
-
+    elif page == "Multi-task One-to-Many":
+        render_one_to_many_tab()

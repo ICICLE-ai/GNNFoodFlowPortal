@@ -1,0 +1,3234 @@
+FIPS,NAME,FAF_Zone,FAF_Zone_D
+01005,Barbour,019,Rest of AL
+01023,Choctaw,019,Rest of AL
+01035,Conecuh,019,Rest of AL
+01051,Elmore,019,Rest of AL
+01065,Hale,019,Rest of AL
+01109,Pike,019,Rest of AL
+01113,Russell,019,Rest of AL
+01117,Shelby,011,Birmingham AL
+02016,Aleutians West,,
+04015,Mohave,049,Rest of AZ
+05011,Bradley,050,Arkansas
+05015,Carroll,050,Arkansas
+05019,Clark,050,Arkansas
+05025,Cleveland,050,Arkansas
+05063,Independence,050,Arkansas
+05067,Jackson,050,Arkansas
+05091,Miller,050,Arkansas
+05121,Randolph,050,Arkansas
+06001,Alameda,064,San Francisco CA
+06005,Amador,069,Rest of CA
+06013,Contra Costa,064,San Francisco CA
+06023,Humboldt,069,Rest of CA
+06037,Los Angeles,061,Los Angeles CA
+06047,Merced,069,Rest of CA
+06067,Sacramento,062,Sacramento CA
+06085,Santa Clara,064,San Francisco CA
+06115,Yuba,062,Sacramento CA
+08013,Boulder,081,Denver CO
+08029,Delta,089,Rest of CO
+08049,Grand,089,Rest of CO
+08091,Ouray,089,Rest of CO
+09009,New Haven,092,New York NY-NJ-CT-PA (CT Part)
+11001,District of Columbia,111,Washington DC-VA-MD-WV (DC Part)
+12009,Brevard,129,Rest of FL
+12023,Columbia,129,Rest of FL
+12039,Gadsden,129,Rest of FL
+12065,Jefferson,129,Rest of FL
+12073,Leon,129,Rest of FL
+12095,Orange,123,Orlando FL
+12107,Putnam,121,Jacksonville FL-GA  CFS Area (FL Part)
+12117,Seminole,123,Orlando FL
+12123,Taylor,129,Rest of FL
+12133,Washington,129,Rest of FL
+13009,Baldwin,139,Rest of GA
+13013,Barrow,131,Atlanta GA
+13027,Brooks,139,Rest of GA
+13073,Columbia,139,Rest of GA
+13103,Effingham,132,Savannah GA
+13149,Heard,131,Atlanta GA
+13179,Liberty,132,Savannah GA
+13189,McDuffie,139,Rest of GA
+13205,Mitchell,139,Rest of GA
+13229,Pierce,139,Rest of GA
+13267,Tattnall,139,Rest of GA
+13291,Union,139,Rest of GA
+13305,Wayne,139,Rest of GA
+13319,Wilkinson,139,Rest of GA
+15007,Kauai,159,Rest of HI
+16015,Boise,160,Idaho
+16027,Canyon,160,Idaho
+16037,Custer,160,Idaho
+16039,Elmore,160,Idaho
+16043,Fremont,160,Idaho
+16061,Lewis,160,Idaho
+16083,Twin Falls,160,Idaho
+16085,Valley,160,Idaho
+17097,Lake,171,Chicago IL-IN-WI (IL Part)
+17107,Logan,179,Rest of IL
+17197,Will,171,Chicago IL-IN-WI (IL Part)
+18007,Benton,189,Rest of IN
+18027,Daviess,189,Rest of IN
+18061,Harrison,189,Rest of IN
+18103,Miami,189,Rest of IN
+18123,Perry,189,Rest of IN
+18157,Tippecanoe,189,Rest of IN
+18175,Washington,189,Rest of IN
+19041,Clay,190,Iowa
+19045,Clinton,190,Iowa
+19111,Lee,190,Iowa
+19135,Monroe,190,Iowa
+20067,Grant,209,Rest of KS
+20095,Kingman,202,Wichita KS
+20199,Wallace,209,Rest of KS
+21013,Bell,219,Rest of KY
+21031,Butler,219,Rest of KY
+21065,Estill,219,Rest of KY
+21069,Fleming,219,Rest of KY
+21071,Floyd,219,Rest of KY
+21099,Hart,219,Rest of KY
+21109,Jackson,219,Rest of KY
+21127,Lawrence,219,Rest of KY
+21151,Madison,219,Rest of KY
+21155,Marion,219,Rest of KY
+21179,Nelson,212,Louisville KY-IN (KY Part)
+21195,Pike,219,Rest of KY
+21203,Rockcastle,219,Rest of KY
+21217,Taylor,219,Rest of KY
+21237,Wolfe,219,Rest of KY
+22001,Acadia,229,Rest of LA
+22013,Bienville,229,Rest of LA
+22029,Concordia,229,Rest of LA
+22031,De Soto,229,Rest of LA
+22033,East Baton Rouge,221,Baton Rouge LA
+22069,Natchitoches,229,Rest of LA
+22071,Orleans,223,New Orleans LA-MS (LA Part)
+22079,Rapides,229,Rest of LA
+22085,Sabine,229,Rest of LA
+22119,Webster,229,Rest of LA
+23015,Lincoln,230,Maine
+24003,Anne Arundel,241,Baltimore MD
+24013,Carroll,241,Baltimore MD
+24043,Washington,249,Rest of MD
+25017,Middlesex,251,Boston MA-RI-NH-CT (MA Part)
+26041,Delta,269,Rest of MI
+26099,Macomb,261,Detroit MI
+26103,Marquette,269,Rest of MI
+26109,Menominee,269,Rest of MI
+26135,Oscoda,269,Rest of MI
+26147,St. Clair,261,Detroit MI
+27023,Chippewa,279,Rest of MN
+27053,Hennepin,271,Minneapolis-St. Paul MN-WI (MN Part)
+27077,Lake of the Woods,279,Rest of MN
+27101,Murray,279,Rest of MN
+27129,Renville,279,Rest of MN
+27139,Scott,271,Minneapolis-St. Paul MN-WI (MN Part)
+27163,Washington,271,Minneapolis-St. Paul MN-WI (MN Part)
+28033,DeSoto,280,Mississippi
+28105,Oktibbeha,280,Mississippi
+28157,Wilkinson,280,Mississippi
+28163,Yazoo,280,Mississippi
+29023,Butler,299,Rest of MO
+29029,Camden,299,Rest of MO
+29031,Cape Girardeau,299,Rest of MO
+29033,Carroll,299,Rest of MO
+29157,Perry,299,Rest of MO
+29189,St. Louis,292,St. Louis MO-IL (MO Part)
+29199,Scotland,299,Rest of MO
+29207,Stoddard,299,Rest of MO
+30013,Cascade,300,Montana
+30015,Chouteau,300,Montana
+30023,Deer Lodge,300,Montana
+30029,Flathead,300,Montana
+30039,Granite,300,Montana
+30057,Madison,300,Montana
+30071,Phillips,300,Montana
+30087,Rosebud,300,Montana
+30105,Valley,300,Montana
+31059,Fillmore,319,Rest of NE
+31167,Stanton,319,Rest of NE
+34003,Bergen,341,New York NY-NJ-CT-PA (NJ Part)
+34007,Camden,342,Philadelphia PA-NJ-DE-MD (NJ Part)
+34013,Essex,341,New York NY-NJ-CT-PA (NJ Part)
+34019,Hunterdon,341,New York NY-NJ-CT-PA (NJ Part)
+35007,Colfax,350,New Mexico
+35011,De Baca,350,New Mexico
+35017,Grant,350,New Mexico
+35021,Harding,350,New Mexico
+35051,Sierra,350,New Mexico
+36013,Chautauqua,369,Rest of NY
+36019,Clinton,369,Rest of NY
+36043,Herkimer,369,Rest of NY
+36045,Jefferson,369,Rest of NY
+36065,Oneida,369,Rest of NY
+36077,Otsego,369,Rest of NY
+36091,Saratoga,361,Albany NY  CFS Area
+36115,Washington,361,Albany NY  CFS Area
+37027,Caldwell,379,Rest of NC
+37039,Cherokee,379,Rest of NC
+37049,Craven,379,Rest of NC
+37055,Dare,379,Rest of NC
+37059,Davie,372,Greensboro--Winston-Salem--High Point NC
+37093,Hoke,379,Rest of NC
+37103,Jones,379,Rest of NC
+37111,McDowell,379,Rest of NC
+37117,Martin,379,Rest of NC
+37119,Mecklenburg,371,Charlotte NC-SC (NC Part)
+37165,Scotland,379,Rest of NC
+37175,Transylvania,379,Rest of NC
+37199,Yancey,379,Rest of NC
+38017,Cass,380,North Dakota
+38037,Grant,380,North Dakota
+38099,Walsh,380,North Dakota
+38105,Williams,380,North Dakota
+39035,Cuyahoga,392,Cleveland OH
+39039,Defiance,399,Rest of OH
+39043,Erie,392,Cleveland OH
+39125,Paulding,399,Rest of OH
+40065,Jackson,409,Rest of OK
+40073,Kingfisher,409,Rest of OK
+40145,Wagoner,402,Tulsa OK
+41001,Baker,419,Rest of OR
+41021,Gilliam,419,Rest of OR
+41035,Klamath,419,Rest of OR
+41039,Lane,419,Rest of OR
+41043,Linn,411,Portland OR-WA (OR Part)
+41045,Malheur,419,Rest of OR
+41051,Multnomah,411,Portland OR-WA (OR Part)
+42005,Armstrong,422,Pittsburgh PA-OH-WV (PA Part)
+42029,Chester,421,Philadelphia PA-NJ-DE-MD (PA Part)
+42035,Clinton,429,Rest of PA
+42059,Greene,429,Rest of PA
+42063,Indiana,422,Pittsburgh PA-OH-WV (PA Part)
+42067,Juniata,429,Rest of PA
+42091,Montgomery,421,Philadelphia PA-NJ-DE-MD (PA Part)
+45005,Allendale,459,Rest of SC
+45025,Chesterfield,459,Rest of SC
+45043,Georgetown,459,Rest of SC
+45045,Greenville,452,Greenville SC
+45049,Hampton,459,Rest of SC
+45053,Jasper,459,Rest of SC
+45077,Pickens,452,Greenville SC
+45091,York,459,Rest of SC
+46093,Meade,460,South Dakota
+46095,Mellette,460,South Dakota
+46103,Pennington,460,South Dakota
+47019,Carter,479,Rest of TN
+47029,Cocke,473,Knoxville TN
+47033,Crockett,479,Rest of TN
+47049,Fentress,479,Rest of TN
+47073,Hawkins,479,Rest of TN
+47081,Hickman,472,Nashville TN
+47121,Meigs,479,Rest of TN
+47149,Rutherford,472,Nashville TN
+47159,Smith,472,Nashville TN
+48011,Armstrong,489,Rest of TX
+48023,Baylor,489,Rest of TX
+48035,Bosque,489,Rest of TX
+48055,Caldwell,481,Austin TX
+48083,Coleman,489,Rest of TX
+48103,Crane,489,Rest of TX
+48139,Ellis,484,Dallas-Fort Worth TX-OK (TX Part)
+48141,El Paso,485,El Paso TX-NM (TX Part)
+48155,Foard,489,Rest of TX
+48167,Galveston,486,Houston TX
+48213,Henderson,484,Dallas-Fort Worth TX-OK (TX Part)
+48225,Houston,489,Rest of TX
+48245,Jefferson,482,Beaumont TX
+48261,Kenedy,483,Corpus Christi TX
+48289,Leon,489,Rest of TX
+48333,Mills,489,Rest of TX
+48347,Nacogdoches,489,Rest of TX
+48361,Orange,482,Beaumont TX
+48371,Pecos,489,Rest of TX
+48395,Robertson,489,Rest of TX
+48413,Schleicher,489,Rest of TX
+48427,Starr,489,Rest of TX
+48449,Titus,489,Rest of TX
+48457,Tyler,489,Rest of TX
+48471,Walker,486,Houston TX
+48475,Ward,489,Rest of TX
+48499,Wood,489,Rest of TX
+49001,Beaver,499,Rest of UT
+49003,Box Elder,491,Salt Lake City UT
+49013,Duchesne,499,Rest of UT
+49025,Kane,499,Rest of UT
+49029,Morgan,491,Salt Lake City UT
+49035,Salt Lake,491,Salt Lake City UT
+49049,Utah,491,Salt Lake City UT
+51015,Augusta,519,Rest of VA
+51051,Dickenson,519,Rest of VA
+51053,Dinwiddie,511,Richmond VA
+51069,Frederick,519,Rest of VA
+51073,Gloucester,512,Virginia Beach-Norfolk VA-NC (VA Part)
+51085,Hanover,511,Richmond VA
+51099,King George,519,Rest of VA
+51131,Northampton,519,Rest of VA
+51143,Pittsylvania,519,Rest of VA
+51145,Powhatan,511,Richmond VA
+51159,Richmond,519,Rest of VA
+51165,Rockingham,519,Rest of VA
+51185,Tazewell,519,Rest of VA
+53005,Benton,539,Rest of WA
+53007,Chelan,539,Rest of WA
+53009,Clallam,539,Rest of WA
+53017,Douglas,539,Rest of WA
+53031,Jefferson,539,Rest of WA
+53037,Kittitas,539,Rest of WA
+53065,Stevens,539,Rest of WA
+54001,Barbour,540,West Virginia
+54005,Boone,540,West Virginia
+54039,Kanawha,540,West Virginia
+54045,Logan,540,West Virginia
+54063,Monroe,540,West Virginia
+54067,Nicholas,540,West Virginia
+54087,Roane,540,West Virginia
+55043,Grant,559,Rest of WI
+55113,Sawyer,559,Rest of WI
+56029,Park,560,Wyoming
+60010,Eastern,,
+60020,Manu'a,,
+69085,Northern Islands,,
+69100,Rota,,
+72023,Cabo Rojo,,
+72031,Carolina,,
+72037,Ceiba,,
+72039,Ciales,,
+72053,Fajardo,,
+72054,Florida,,
+72113,Ponce,,
+72127,San Juan,,
+72141,Utuado,,
+72147,Vieques,,
+72151,Yabucoa,,
+78010,St. Croix,,
+78020,St. John,,
+01049,DeKalb,019,Rest of AL
+01069,Houston,019,Rest of AL
+01087,Macon,019,Rest of AL
+01091,Marengo,019,Rest of AL
+01095,Marshall,019,Rest of AL
+01101,Montgomery,019,Rest of AL
+01115,St. Clair,011,Birmingham AL
+01119,Sumter,019,Rest of AL
+01121,Talladega,011,Birmingham AL
+01131,Wilcox,019,Rest of AL
+02105,Hoonah-Angoon,020,Alaska
+02240,Southeast Fairbanks,020,Alaska
+04005,Coconino,049,Rest of AZ
+04009,Graham,049,Rest of AZ
+04013,Maricopa,041,Phoenix AZ
+04027,Yuma,049,Rest of AZ
+05003,Ashley,050,Arkansas
+05007,Benton,050,Arkansas
+05013,Calhoun,050,Arkansas
+05021,Clay,050,Arkansas
+05061,Howard,050,Arkansas
+05075,Lawrence,050,Arkansas
+05093,Mississippi,050,Arkansas
+05095,Monroe,050,Arkansas
+05099,Nevada,050,Arkansas
+05117,Prairie,050,Arkansas
+05131,Sebastian,050,Arkansas
+05133,Sevier,050,Arkansas
+05147,Woodruff,050,Arkansas
+06045,Mendocino,069,Rest of CA
+06055,Napa,064,San Francisco CA
+06065,Riverside,061,Los Angeles CA
+06069,San Benito,064,San Francisco CA
+06073,San Diego,063,San Diego CA
+06097,Sonoma,064,San Francisco CA
+06101,Sutter,062,Sacramento CA
+06107,Tulare,069,Rest of CA
+06113,Yolo,062,Sacramento CA
+08023,Costilla,089,Rest of CO
+08031,Denver,081,Denver CO
+08037,Eagle,089,Rest of CO
+08071,Las Animas,089,Rest of CO
+08093,Park,081,Denver CO
+08105,Rio Grande,089,Rest of CO
+08113,San Miguel,089,Rest of CO
+09001,Fairfield,092,New York NY-NJ-CT-PA (CT Part)
+09011,New London,099,Rest of CT
+10005,Sussex,109,Rest of DE
+12017,Citrus,129,Rest of FL
+12033,Escambia,129,Rest of FL
+12041,Gilchrist,129,Rest of FL
+12047,Hamilton,129,Rest of FL
+12071,Lee,129,Rest of FL
+12077,Liberty,129,Rest of FL
+12086,Miami-Dade,122,Miami FL
+12093,Okeechobee,122,Miami FL
+12097,Osceola,123,Orlando FL
+13021,Bibb,139,Rest of GA
+13029,Bryan,132,Savannah GA
+20055,Finney,209,Rest of KS
+20143,Ottawa,209,Rest of KS
+20171,Scott,209,Rest of KS
+21005,Anderson,219,Rest of KY
+21011,Bath,219,Rest of KY
+21025,Breathitt,219,Rest of KY
+21029,Bullitt,212,Louisville KY-IN (KY Part)
+21033,Caldwell,219,Rest of KY
+21043,Carter,219,Rest of KY
+21049,Clark,219,Rest of KY
+21059,Daviess,219,Rest of KY
+21067,Fayette,219,Rest of KY
+21085,Grayson,219,Rest of KY
+21095,Harlan,219,Rest of KY
+21115,Johnson,219,Rest of KY
+21119,Knott,219,Rest of KY
+21121,Knox,219,Rest of KY
+21135,Lewis,219,Rest of KY
+21153,Magoffin,219,Rest of KY
+21159,Martin,219,Rest of KY
+21167,Mercer,219,Rest of KY
+21177,Muhlenberg,219,Rest of KY
+21181,Nicholas,219,Rest of KY
+21193,Perry,219,Rest of KY
+21231,Wayne,219,Rest of KY
+22035,East Carroll,229,Rest of LA
+22039,Evangeline,229,Rest of LA
+22053,Jefferson Davis,222,Lake Charles-Jennings LA
+22063,Livingston,221,Baton Rouge LA
+22067,Morehouse,229,Rest of LA
+22083,Richland,229,Rest of LA
+22103,St. Tammany,223,New Orleans LA-MS (LA Part)
+22111,Union,229,Rest of LA
+22127,Winn,229,Rest of LA
+23007,Franklin,230,Maine
+23017,Oxford,230,Maine
+23027,Waldo,230,Maine
+23031,York,230,Maine
+24001,Allegany,249,Rest of MD
+24005,Baltimore,241,Baltimore MD
+24017,Charles,242,Washington DC-VA-MD-WV (MD Part)
+24021,Frederick,242,Washington DC-VA-MD-WV (MD Part)
+24031,Montgomery,242,Washington DC-VA-MD-WV (MD Part)
+24041,Talbot,249,Rest of MD
+24045,Wicomico,249,Rest of MD
+25005,Bristol,251,Boston MA-RI-NH-CT (MA Part)
+25023,Plymouth,251,Boston MA-RI-NH-CT (MA Part)
+25025,Suffolk,251,Boston MA-RI-NH-CT (MA Part)
+26053,Gogebic,269,Rest of MI
+26063,Huron,269,Rest of MI
+26083,Keweenaw,269,Rest of MI
+26097,Mackinac,269,Rest of MI
+26115,Monroe,261,Detroit MI
+13051,Chatham,132,Savannah GA
+13075,Cook,139,Rest of GA
+13113,Fayette,131,Atlanta GA
+13123,Gilmer,139,Rest of GA
+13137,Habersham,139,Rest of GA
+13139,Hall,131,Atlanta GA
+13143,Haralson,131,Atlanta GA
+13151,Henry,131,Atlanta GA
+13181,Lincoln,139,Rest of GA
+13191,McIntosh,139,Rest of GA
+13195,Madison,131,Atlanta GA
+13227,Pickens,131,Atlanta GA
+13245,Richmond,139,Rest of GA
+13261,Sumter,139,Rest of GA
+13279,Toombs,139,Rest of GA
+13283,Treutlen,139,Rest of GA
+51111,Lunenburg,519,Rest of VA
+13289,Twiggs,139,Rest of GA
+51175,Southampton,519,Rest of VA
+13313,Whitfield,139,Rest of GA
+13317,Wilkes,139,Rest of GA
+15001,Hawaii,159,Rest of HI
+15009,Maui,159,Rest of HI
+16005,Bannock,160,Idaho
+16059,Lemhi,160,Idaho
+16073,Owyhee,160,Idaho
+16077,Power,160,Idaho
+16087,Washington,160,Idaho
+17027,Clinton,172,St. Louis MO-IL (IL Part)
+17031,Cook,171,Chicago IL-IN-WI (IL Part)
+17047,Edwards,179,Rest of IL
+17109,McDonough,179,Rest of IL
+17129,Menard,179,Rest of IL
+17175,Stark,179,Rest of IL
+17185,Wabash,179,Rest of IL
+18009,Blackford,189,Rest of IN
+18035,Delaware,182,Indianapolis IN
+18067,Howard,189,Rest of IN
+18083,Knox,189,Rest of IN
+18159,Tipton,189,Rest of IN
+19027,Carroll,190,Iowa
+19075,Grundy,190,Iowa
+19125,Marion,190,Iowa
+19147,Palo Alto,190,Iowa
+19187,Webster,190,Iowa
+35055,Taos,350,New Mexico
+36031,Essex,369,Rest of NY
+36105,Sullivan,369,Rest of NY
+36119,Westchester,363,New York NY-NJ-CT-PA (NY Part)
+37009,Ashe,379,Rest of NC
+37013,Beaufort,379,Rest of NC
+37017,Bladen,379,Rest of NC
+37053,Currituck,379,Rest of NC
+37057,Davidson,372,Greensboro--Winston-Salem--High Point NC
+37065,Edgecombe,379,Rest of NC
+37075,Graham,379,Rest of NC
+37085,Harnett,373,Raleigh-Durham NC
+37089,Henderson,379,Rest of NC
+37095,Hyde,379,Rest of NC
+37115,Madison,379,Rest of NC
+37123,Montgomery,379,Rest of NC
+37129,New Hanover,379,Rest of NC
+37133,Onslow,379,Rest of NC
+37137,Pamlico,379,Rest of NC
+37153,Richmond,379,Rest of NC
+37163,Sampson,379,Rest of NC
+37167,Stanly,371,Charlotte NC-SC (NC Part)
+37177,Tyrrell,379,Rest of NC
+38005,Benson,380,North Dakota
+38019,Cavalier,380,North Dakota
+38053,McKenzie,380,North Dakota
+38059,Morton,380,North Dakota
+38067,Pembina,380,North Dakota
+38077,Richland,380,North Dakota
+39061,Hamilton,391,Cincinnati OH-KY-IN (OH Part)
+39095,Lucas,399,Rest of OH
+39137,Putnam,399,Rest of OH
+39175,Wyandot,399,Rest of OH
+40013,Bryan,409,Rest of OK
+40027,Cleveland,401,Oklahoma City OK
+40057,Harmon,409,Rest of OK
+40067,Jefferson,409,Rest of OK
+40075,Kiowa,409,Rest of OK
+40087,McClain,401,Oklahoma City OK
+40095,Marshall,409,Rest of OK
+40125,Pottawatomie,401,Oklahoma City OK
+40135,Sequoyah,409,Rest of OK
+27011,Big Stone,279,Rest of MN
+27013,Blue Earth,279,Rest of MN
+27027,Clay,279,Rest of MN
+27031,Cook,279,Rest of MN
+27073,Lac qui Parle,279,Rest of MN
+27075,Lake,279,Rest of MN
+27089,Marshall,279,Rest of MN
+27097,Morrison,279,Rest of MN
+27113,Pennington,279,Rest of MN
+27127,Redwood,279,Rest of MN
+27171,Wright,271,Minneapolis-St. Paul MN-WI (MN Part)
+28001,Adams,280,Mississippi
+28029,Copiah,280,Mississippi
+28043,Grenada,280,Mississippi
+28083,Leflore,280,Mississippi
+28087,Lowndes,280,Mississippi
+28103,Noxubee,280,Mississippi
+28121,Rankin,280,Mississippi
+28141,Tishomingo,280,Mississippi
+28149,Warren,280,Mississippi
+28151,Washington,280,Mississippi
+29041,Chariton,299,Rest of MO
+29069,Dunklin,050,Arkansas
+29087,Holt,299,Rest of MO
+29113,Lincoln,292,St. Louis MO-IL (MO Part)
+29159,Pettis,299,Rest of MO
+29183,St. Charles,292,St. Louis MO-IL (MO Part)
+29195,Saline,299,Rest of MO
+29201,Scott,299,Rest of MO
+30011,Carter,300,Montana
+30027,Fergus,300,Montana
+30031,Gallatin,300,Montana
+30045,Judith Basin,300,Montana
+30049,Lewis and Clark,300,Montana
+30055,McCone,300,Montana
+30059,Meagher,300,Montana
+30073,Pondera,300,Montana
+30085,Roosevelt,300,Montana
+30099,Teton,300,Montana
+31069,Garden,319,Rest of NE
+31103,Keya Paha,319,Rest of NE
+31151,Saline,319,Rest of NE
+32003,Clark,321,Las Vegas NV-AZ (NV Part)
+32015,Lander,329,Rest of NV
+33007,Coos,339,Rest of NH
+33015,Rockingham,331,Boston MA-RI-NH-CT (NH Part)
+33017,Strafford,331,Boston MA-RI-NH-CT (NH Part)
+34001,Atlantic,342,Philadelphia PA-NJ-DE-MD (NJ Part)
+34005,Burlington,342,Philadelphia PA-NJ-DE-MD (NJ Part)
+34021,Mercer,341,New York NY-NJ-CT-PA (NJ Part)
+34025,Monmouth,341,New York NY-NJ-CT-PA (NJ Part)
+34029,Ocean,341,New York NY-NJ-CT-PA (NJ Part)
+34035,Somerset,341,New York NY-NJ-CT-PA (NJ Part)
+35015,Eddy,350,New Mexico
+35039,Rio Arriba,350,New Mexico
+41007,Clatsop,419,Rest of OR
+41017,Deschutes,419,Rest of OR
+41019,Douglas,419,Rest of OR
+42003,Allegheny,422,Pittsburgh PA-OH-WV (PA Part)
+42033,Clearfield,429,Rest of PA
+42041,Cumberland,429,Rest of PA
+42045,Delaware,421,Philadelphia PA-NJ-DE-MD (PA Part)
+42051,Fayette,422,Pittsburgh PA-OH-WV (PA Part)
+42061,Huntingdon,429,Rest of PA
+42071,Lancaster,429,Rest of PA
+42089,Monroe,423,New York NY-NJ-CT-PA (PA Part)
+42099,Perry,429,Rest of PA
+42127,Wayne,429,Rest of PA
+42133,York,429,Rest of PA
+44009,Washington,441,Boston MA-RI-NH-CT (RI Part)
+45003,Aiken,459,Rest of SC
+45007,Anderson,452,Greenville SC
+45017,Calhoun,459,Rest of SC
+45035,Dorchester,451,Charleston SC
+45041,Florence,459,Rest of SC
+45051,Horry,459,Rest of SC
+45055,Kershaw,459,Rest of SC
+51097,King and Queen,519,Rest of VA
+51107,Loudoun,513,Washington DC-VA-MD-WV (VA Part)
+51121,Montgomery,519,Rest of VA
+51137,Orange,519,Rest of VA
+51139,Page,519,Rest of VA
+51155,Pulaski,519,Rest of VA
+51163,Rockbridge,519,Rest of VA
+51179,Stafford,513,Washington DC-VA-MD-WV (VA Part)
+51187,Warren,513,Washington DC-VA-MD-WV (VA Part)
+51199,York,512,Virginia Beach-Norfolk VA-NC (VA Part)
+53047,Okanogan,539,Rest of WA
+53049,Pacific,539,Rest of WA
+53061,Snohomish,531,Seattle WA
+53071,Walla Walla,539,Rest of WA
+54003,Berkeley,540,West Virginia
+54007,Braxton,540,West Virginia
+54013,Calhoun,540,West Virginia
+54017,Doddridge,540,West Virginia
+54019,Fayette,540,West Virginia
+54027,Hampshire,540,West Virginia
+54037,Jefferson,540,West Virginia
+54041,Lewis,540,West Virginia
+54043,Lincoln,540,West Virginia
+54057,Mineral,540,West Virginia
+54065,Morgan,540,West Virginia
+54071,Pendleton,540,West Virginia
+54075,Pocahontas,540,West Virginia
+54093,Tucker,540,West Virginia
+54099,Wayne,540,West Virginia
+55007,Bayfield,559,Rest of WI
+55023,Crawford,559,Rest of WI
+55051,Iron,559,Rest of WI
+55057,Juneau,559,Rest of WI
+55107,Rusk,559,Rest of WI
+55121,Trempealeau,559,Rest of WI
+56003,Big Horn,560,Wyoming
+56013,Fremont,560,Wyoming
+56035,Sublette,560,Wyoming
+01041,Crenshaw,019,Rest of AL
+01099,Monroe,019,Rest of AL
+02100,Haines,020,Alaska
+04001,Apache,049,Rest of AZ
+05001,Arkansas,050,Arkansas
+05029,Conway,050,Arkansas
+05057,Hempstead,050,Arkansas
+05145,White,050,Arkansas
+06017,El Dorado,062,Sacramento CA
+06043,Mariposa,069,Rest of CA
+06071,San Bernardino,061,Los Angeles CA
+08035,Douglas,081,Denver CO
+10003,New Castle,101,Philadelphia PA-NJ-DE-MD (DE Part)
+12079,Madison,129,Rest of FL
+12113,Santa Rosa,129,Rest of FL
+13001,Appling,139,Rest of GA
+13135,Gwinnett,131,Atlanta GA
+13311,White,139,Rest of GA
+45059,Laurens,452,Greenville SC
+45065,McCormick,459,Rest of SC
+45075,Orangeburg,459,Rest of SC
+45079,Richland,459,Rest of SC
+45085,Sumter,459,Rest of SC
+46023,Charles Mix,460,South Dakota
+46041,Dewey,460,South Dakota
+46055,Haakon,460,South Dakota
+46075,Jones,460,South Dakota
+46127,Union,460,South Dakota
+46137,Ziebach,460,South Dakota
+47013,Campbell,473,Knoxville TN
+47021,Cheatham,472,Nashville TN
+47035,Cumberland,479,Rest of TN
+47037,Davidson,472,Nashville TN
+47041,DeKalb,479,Rest of TN
+47045,Dyer,479,Rest of TN
+47059,Greene,479,Rest of TN
+47065,Hamilton,479,Rest of TN
+47079,Henry,479,Rest of TN
+47093,Knox,473,Knoxville TN
+47107,McMinn,479,Rest of TN
+47117,Marshall,472,Nashville TN
+47141,Putnam,479,Rest of TN
+47143,Rhea,479,Rest of TN
+47155,Sevier,473,Knoxville TN
+47157,Shelby,471,Memphis TN-MS-AR (TN Part)
+47165,Sumner,472,Nashville TN
+47167,Tipton,471,Memphis TN-MS-AR (TN Part)
+48001,Anderson,489,Rest of TX
+48005,Angelina,489,Rest of TX
+48029,Bexar,488,San Antonio TX
+48033,Borden,489,Rest of TX
+48039,Brazoria,486,Houston TX
+48057,Calhoun,489,Rest of TX
+48109,Culberson,489,Rest of TX
+48119,Delta,489,Rest of TX
+48173,Glasscock,489,Rest of TX
+48187,Guadalupe,488,San Antonio TX
+48205,Hartley,489,Rest of TX
+48215,Hidalgo,489,Rest of TX
+48223,Hopkins,484,Dallas-Fort Worth TX-OK (TX Part)
+48263,Kent,489,Rest of TX
+48273,Kleberg,483,Corpus Christi TX
+48287,Lee,489,Rest of TX
+48315,Marion,489,Rest of TX
+48321,Matagorda,486,Houston TX
+48339,Montgomery,486,Houston TX
+48349,Navarro,484,Dallas-Fort Worth TX-OK (TX Part)
+48373,Polk,489,Rest of TX
+48377,Presidio,489,Rest of TX
+48383,Reagan,489,Rest of TX
+48387,Red River,489,Rest of TX
+48405,San Augustine,489,Rest of TX
+48429,Stephens,489,Rest of TX
+48453,Travis,481,Austin TX
+48455,Trinity,486,Houston TX
+48467,Van Zandt,489,Rest of TX
+48473,Waller,486,Houston TX
+48479,Webb,487,Laredo TX
+48491,Williamson,481,Austin TX
+49045,Tooele,491,Salt Lake City UT
+49051,Wasatch,491,Salt Lake City UT
+50027,Windsor,500,Vermont
+51007,Amelia,511,Richmond VA
+51017,Bath,519,Rest of VA
+51019,Bedford,519,Rest of VA
+51023,Botetourt,519,Rest of VA
+51036,Charles City,511,Richmond VA
+51041,Chesterfield,511,Richmond VA
+51057,Essex,519,Rest of VA
+51067,Franklin,519,Rest of VA
+51091,Highland,519,Rest of VA
+37125,Moore,379,Rest of NC
+40133,Seminole,409,Rest of OK
+35019,Guadalupe,350,New Mexico
+45027,Clarendon,459,Rest of SC
+45047,Greenwood,452,Greenville SC
+53073,Whatcom,539,Rest of WA
+47085,Humphreys,479,Rest of TN
+51063,Floyd,519,Rest of VA
+01043,Cullman,011,Birmingham AL
+02195,Petersburg,020,Alaska
+06091,Sierra,069,Rest of CA
+12083,Marion,129,Rest of FL
+13007,Baker,139,Rest of GA
+18125,Pike,189,Rest of IN
+21055,Crittenden,219,Rest of KY
+22017,Caddo,229,Rest of LA
+22115,Vernon,229,Rest of LA
+30005,Blaine,300,Montana
+36063,Niagara,362,Buffalo NY  CFS Area
+40089,McCurtain,409,Rest of OK
+44005,Newport,441,Boston MA-RI-NH-CT (RI Part)
+46117,Stanley,460,South Dakota
+47091,Johnson,479,Rest of TN
+48129,Donley,489,Rest of TX
+51117,Mecklenburg,519,Rest of VA
+53027,Grays Harbor,539,Rest of WA
+54059,Mingo,540,West Virginia
+02170,Matanuska-Susitna,020,Alaska
+06093,Siskiyou,069,Rest of CA
+10001,Kent,101,Philadelphia PA-NJ-DE-MD (DE Part)
+22043,Grant,229,Rest of LA
+23003,Aroostook,230,Maine
+13163,Jefferson,139,Rest of GA
+13251,Screven,139,Rest of GA
+13303,Washington,139,Rest of GA
+19039,Clarke,190,Iowa
+27021,Cass,279,Rest of MN
+28089,Madison,280,Mississippi
+30007,Broadwater,300,Montana
+30093,Silver Bow,300,Montana
+34011,Cumberland,342,Philadelphia PA-NJ-DE-MD (NJ Part)
+42031,Clarion,429,Rest of PA
+51191,Washington,519,Rest of VA
+45069,Marlboro,459,Rest of SC
+47055,Giles,479,Rest of TN
+47127,Moore,479,Rest of TN
+48345,Motley,489,Rest of TX
+51081,Greensville,519,Rest of VA
+01009,Blount,011,Birmingham AL
+01025,Clarke,019,Rest of AL
+01085,Lowndes,019,Rest of AL
+05073,Lafayette,050,Arkansas
+06053,Monterey,069,Rest of CA
+06099,Stanislaus,069,Rest of CA
+08067,La Plata,089,Rest of CO
+12045,Gulf,129,Rest of FL
+12121,Suwannee,129,Rest of FL
+16041,Franklin,160,Idaho
+16079,Shoshone,160,Idaho
+18021,Clay,189,Rest of IN
+19035,Cherokee,190,Iowa
+20033,Comanche,209,Rest of KS
+21147,McCreary,219,Rest of KY
+21175,Morgan,219,Rest of KY
+22005,Ascension,221,Baton Rouge LA
+22025,Catahoula,229,Rest of LA
+22037,East Feliciana,221,Baton Rouge LA
+22091,St. Helena,221,Baton Rouge LA
+22109,Terrebonne,229,Rest of LA
+24047,Worcester,249,Rest of MD
+26055,Grand Traverse,269,Rest of MI
+27015,Brown,279,Rest of MN
+27087,Mahnomen,279,Rest of MN
+28109,Pearl River,280,Mississippi
+29003,Andrew,291,Kansas City MO-KS (MO Part)
+29027,Callaway,299,Rest of MO
+30009,Carbon,300,Montana
+30033,Garfield,300,Montana
+30063,Missoula,300,Montana
+31057,Dundy,319,Rest of NE
+36009,Cattaraugus,362,Buffalo NY  CFS Area
+36071,Orange,363,New York NY-NJ-CT-PA (NY Part)
+36111,Ulster,363,New York NY-NJ-CT-PA (NY Part)
+37015,Bertie,379,Rest of NC
+37101,Johnston,373,Raleigh-Durham NC
+37131,Northampton,379,Rest of NC
+40113,Osage,402,Tulsa OK
+41015,Curry,419,Rest of OR
+42101,Philadelphia,421,Philadelphia PA-NJ-DE-MD (PA Part)
+42129,Westmoreland,422,Pittsburgh PA-OH-WV (PA Part)
+45009,Bamberg,459,Rest of SC
+45057,Lancaster,459,Rest of SC
+45087,Union,452,Greenville SC
+47025,Claiborne,479,Rest of TN
+47053,Gibson,479,Rest of TN
+47163,Sullivan,479,Rest of TN
+48003,Andrews,489,Rest of TX
+48089,Colorado,489,Rest of TX
+48135,Ector,489,Rest of TX
+48203,Harrison,489,Rest of TX
+48351,Newton,482,Beaumont TX
+48379,Rains,489,Rest of TX
+48409,San Patricio,483,Corpus Christi TX
+49007,Carbon,499,Rest of UT
+49019,Grand,499,Rest of UT
+51005,Alleghany,519,Rest of VA
+51029,Buckingham,519,Rest of VA
+51061,Fauquier,513,Washington DC-VA-MD-WV (VA Part)
+51141,Patrick,519,Rest of VA
+51167,Russell,519,Rest of VA
+51193,Westmoreland,519,Rest of VA
+53011,Clark,532,Portland OR-WA (WA Part)
+53033,King,531,Seattle WA
+55001,Adams,559,Rest of WI
+55029,Door,559,Rest of WI
+72097,Mayagüez,,
+05017,Chicot,050,Arkansas
+05041,Desha,050,Arkansas
+08051,Gunnison,089,Rest of CO
+22107,Tensas,229,Rest of LA
+22123,West Carroll,229,Rest of LA
+18179,Wells,183,Fort Wayne IN
+13215,Muscogee,139,Rest of GA
+13263,Talbot,139,Rest of GA
+13301,Warren,139,Rest of GA
+16031,Cassia,160,Idaho
+17125,Mason,179,Rest of IL
+18051,Gibson,189,Rest of IN
+20083,Hodgeman,209,Rest of KS
+21079,Garrard,219,Rest of KY
+21123,Larue,212,Louisville KY-IN (KY Part)
+21209,Scott,219,Rest of KY
+22065,Madison,229,Rest of LA
+22105,Tangipahoa,223,New Orleans LA-MS (LA Part)
+24037,St. Mary's,249,Rest of MD
+26047,Emmet,269,Rest of MI
+28061,Jasper,280,Mississippi
+27051,Grant,279,Rest of MN
+27137,St. Louis,279,Rest of MN
+28021,Claiborne,280,Mississippi
+28053,Humphreys,280,Mississippi
+28137,Tate,280,Mississippi
+30035,Glacier,300,Montana
+30061,Mineral,300,Montana
+31009,Blaine,319,Rest of NE
+32033,White Pine,329,Rest of NV
+34009,Cape May,342,Philadelphia PA-NJ-DE-MD (NJ Part)
+41003,Benton,411,Portland OR-WA (OR Part)
+42023,Cameron,429,Rest of PA
+42055,Franklin,429,Rest of PA
+44007,Providence,441,Boston MA-RI-NH-CT (RI Part)
+51149,Prince George,511,Richmond VA
+53067,Thurston,531,Seattle WA
+54023,Grant,540,West Virginia
+54109,Wyoming,540,West Virginia
+13107,Emanuel,139,Rest of GA
+16007,Bear Lake,160,Idaho
+45073,Oconee,452,Greenville SC
+47003,Bedford,472,Nashville TN
+47031,Coffee,479,Rest of TN
+47089,Jefferson,473,Knoxville TN
+47147,Robertson,472,Nashville TN
+48015,Austin,486,Houston TX
+48105,Crockett,489,Rest of TX
+48277,Lamar,489,Rest of TX
+48391,Refugio,489,Rest of TX
+48469,Victoria,489,Rest of TX
+51003,Albemarle,519,Rest of VA
+51031,Campbell,519,Rest of VA
+51059,Fairfax,513,Washington DC-VA-MD-WV (VA Part)
+35029,Luna,350,New Mexico
+08027,Custer,089,Rest of CO
+13265,Taliaferro,139,Rest of GA
+02050,Bethel,020,Alaska
+05039,Dallas,050,Arkansas
+06015,Del Norte,069,Rest of CA
+06039,Madera,065,Fresno CA
+06105,Trinity,069,Rest of CA
+08043,Fremont,089,Rest of CO
+08107,Routt,089,Rest of CO
+12069,Lake,123,Orlando FL
+12103,Pinellas,124,Tampa FL
+13033,Burke,139,Rest of GA
+13219,Oconee,131,Atlanta GA
+16035,Clearwater,160,Idaho
+16069,Nez Perce,160,Idaho
+18071,Jackson,182,Indianapolis IN
+19087,Henry,190,Iowa
+21003,Allen,219,Rest of KY
+21107,Hopkins,219,Rest of KY
+21165,Menifee,219,Rest of KY
+30043,Jefferson,300,Montana
+30081,Ravalli,300,Montana
+33009,Grafton,339,Rest of NH
+34027,Morris,341,New York NY-NJ-CT-PA (NJ Part)
+36075,Oswego,369,Rest of NY
+37021,Buncombe,379,Rest of NC
+37145,Person,373,Raleigh-Durham NC
+37193,Wilkes,379,Rest of NC
+39021,Champaign,394,Dayton OH
+40141,Tillman,409,Rest of OK
+41031,Jefferson,419,Rest of OR
+41047,Marion,411,Portland OR-WA (OR Part)
+42125,Washington,422,Pittsburgh PA-OH-WV (PA Part)
+45029,Colleton,459,Rest of SC
+45071,Newberry,459,Rest of SC
+46085,Lyman,460,South Dakota
+47057,Grainger,473,Knoxville TN
+47145,Roane,473,Knoxville TN
+47183,Weakley,479,Rest of TN
+48041,Brazos,489,Rest of TX
+48079,Cochran,489,Rest of TX
+48341,Moore,489,Rest of TX
+48419,Shelby,489,Rest of TX
+49005,Cache,499,Rest of UT
+49023,Juab,491,Salt Lake City UT
+51103,Lancaster,519,Rest of VA
+51157,Rappahannock,513,Washington DC-VA-MD-WV (VA Part)
+53019,Ferry,539,Rest of WA
+53075,Whitman,539,Rest of WA
+54083,Randolph,540,West Virginia
+55011,Buffalo,559,Rest of WI
+56033,Sheridan,560,Wyoming
+56039,Teton,560,Wyoming
+60050,Western,,
+78030,St. Thomas,,
+01073,Jefferson,011,Birmingham AL
+01129,Washington,019,Rest of AL
+02122,Kenai Peninsula,020,Alaska
+04025,Yavapai,049,Rest of AZ
+05085,Lonoke,050,Arkansas
+06063,Plumas,069,Rest of CA
+06089,Shasta,069,Rest of CA
+08033,Dolores,089,Rest of CO
+08069,Larimer,089,Rest of CO
+12029,Dixie,129,Rest of FL
+12089,Nassau,121,Jacksonville FL-GA  CFS Area (FL Part)
+20161,Riley,209,Rest of KS
+21063,Elliott,219,Rest of KY
+21097,Harrison,219,Rest of KY
+21133,Letcher,219,Rest of KY
+21187,Owen,219,Rest of KY
+22045,Iberia,229,Rest of LA
+22073,Ouachita,229,Rest of LA
+24011,Caroline,249,Rest of MD
+13153,Houston,139,Rest of GA
+13185,Lowndes,139,Rest of GA
+13213,Murray,139,Rest of GA
+13237,Putnam,139,Rest of GA
+17171,Scott,179,Rest of IL
+19063,Emmet,190,Iowa
+36017,Chenango,369,Rest of NY
+37019,Brunswick,379,Rest of NC
+37047,Columbus,379,Rest of NC
+37079,Greene,379,Rest of NC
+37147,Pitt,379,Rest of NC
+37173,Swain,379,Rest of NC
+39167,Washington,399,Rest of OH
+40023,Choctaw,409,Rest of OK
+35023,Hidalgo,350,New Mexico
+42017,Bucks,421,Philadelphia PA-NJ-DE-MD (PA Part)
+51101,King William,511,Richmond VA
+51147,Prince Edward,519,Rest of VA
+51195,Wise,519,Rest of VA
+54033,Harrison,540,West Virginia
+55037,Florence,559,Rest of WI
+55075,Marinette,559,Rest of WI
+01071,Jackson,019,Rest of AL
+13019,Berrien,139,Rest of GA
+45083,Spartanburg,452,Greenville SC
+48061,Cameron,489,Rest of TX
+48201,Harris,486,Houston TX
+48401,Rusk,489,Rest of TX
+48459,Upshur,489,Rest of TX
+51027,Buchanan,519,Rest of VA
+31073,Gosper,319,Rest of NE
+06009,Calaveras,069,Rest of CA
+26003,Alger,269,Rest of MI
+41023,Grant,419,Rest of OR
+17017,Cass,179,Rest of IL
+37139,Pasquotank,379,Rest of NC
+06011,Colusa,069,Rest of CA
+16029,Caribou,160,Idaho
+21089,Greenup,219,Rest of KY
+26089,Leelanau,269,Rest of MI
+26141,Presque Isle,269,Rest of MI
+32031,Washoe,329,Rest of NV
+38097,Traill,380,North Dakota
+47105,Loudon,473,Knoxville TN
+48175,Goliad,489,Rest of TX
+48503,Young,489,Rest of TX
+01013,Butler,019,Rest of AL
+01015,Calhoun,019,Rest of AL
+21235,Whitley,219,Rest of KY
+22057,Lafourche,229,Rest of LA
+24023,Garrett,249,Rest of MD
+26013,Baraga,269,Rest of MI
+26071,Iron,269,Rest of MI
+27119,Polk,279,Rest of MN
+27167,Wilkin,279,Rest of MN
+28051,Holmes,280,Mississippi
+29013,Bates,291,Kansas City MO-KS (MO Part)
+29095,Jackson,291,Kansas City MO-KS (MO Part)
+30053,Lincoln,300,Montana
+35033,Mora,350,New Mexico
+36059,Nassau,363,New York NY-NJ-CT-PA (NY Part)
+38003,Barnes,380,North Dakota
+38055,McLean,380,North Dakota
+40055,Greer,409,Rest of OK
+40117,Pawnee,402,Tulsa OK
+42043,Dauphin,429,Rest of PA
+42097,Northumberland,429,Rest of PA
+45015,Berkeley,451,Charleston SC
+47009,Blount,473,Knoxville TN
+47129,Morgan,473,Knoxville TN
+47187,Williamson,472,Nashville TN
+48065,Carson,489,Rest of TX
+48157,Fort Bend,486,Houston TX
+48207,Haskell,489,Rest of TX
+51093,Isle of Wight,512,Virginia Beach-Norfolk VA-NC (VA Part)
+51171,Shenandoah,519,Rest of VA
+53021,Franklin,539,Rest of WA
+53055,San Juan,539,Rest of WA
+66010,Guam,,
+01059,Franklin,019,Rest of AL
+02020,Anchorage,020,Alaska
+04021,Pinal,041,Phoenix AZ
+05069,Jefferson,050,Arkansas
+05107,Phillips,050,Arkansas
+06041,Marin,064,San Francisco CA
+08001,Adams,081,Denver CO
+27069,Kittson,279,Rest of MN
+12007,Bradford,129,Rest of FL
+13031,Bulloch,132,Savannah GA
+20195,Trego,209,Rest of KS
+21101,Henderson,219,Rest of KY
+21183,Ohio,219,Rest of KY
+22059,LaSalle,229,Rest of LA
+24027,Howard,241,Baltimore MD
+25015,Hampshire,259,Rest of MA
+26029,Charlevoix,269,Rest of MI
+13077,Coweta,131,Atlanta GA
+13157,Jackson,131,Atlanta GA
+13241,Rabun,139,Rest of GA
+17003,Alexander,179,Rest of IL
+17189,Washington,179,Rest of IL
+20003,Anderson,209,Rest of KS
+36113,Warren,361,Albany NY  CFS Area
+37031,Carteret,379,Rest of NC
+37113,Macon,379,Rest of NC
+38035,Grand Forks,380,North Dakota
+39123,Ottawa,399,Rest of OH
+39161,Van Wert,399,Rest of OH
+40101,Muskogee,402,Tulsa OK
+27107,Norman,279,Rest of MN
+28049,Hinds,280,Mississippi
+29171,Putnam,299,Rest of MO
+30075,Powder River,300,Montana
+32011,Eureka,329,Rest of NV
+34033,Salem,342,Philadelphia PA-NJ-DE-MD (NJ Part)
+01017,Chambers,019,Rest of AL
+01021,Chilton,011,Birmingham AL
+01027,Clay,019,Rest of AL
+01029,Cleburne,019,Rest of AL
+05005,Baxter,050,Arkansas
+05009,Boone,050,Arkansas
+05043,Drew,050,Arkansas
+05049,Fulton,050,Arkansas
+05053,Grant,050,Arkansas
+05077,Lee,050,Arkansas
+01037,Coosa,011,Birmingham AL
+01039,Covington,019,Rest of AL
+01061,Geneva,019,Rest of AL
+01075,Lamar,019,Rest of AL
+01093,Marion,019,Rest of AL
+01103,Morgan,019,Rest of AL
+01133,Winston,019,Rest of AL
+02070,Dillingham,020,Alaska
+02110,Juneau,020,Alaska
+02150,Kodiak Island,020,Alaska
+02220,Sitka,020,Alaska
+02261,Valdez-Cordova,020,Alaska
+04011,Greenlee,049,Rest of AZ
+04023,Santa Cruz,042,Tucson AZ
+08003,Alamosa,089,Rest of CO
+08015,Chaffee,089,Rest of CO
+08021,Conejos,089,Rest of CO
+08039,Elbert,081,Denver CO
+08059,Jefferson,081,Denver CO
+08073,Lincoln,089,Rest of CO
+08101,Pueblo,089,Rest of CO
+08121,Washington,089,Rest of CO
+08125,Yuma,089,Rest of CO
+09005,Litchfield,092,New York NY-NJ-CT-PA (CT Part)
+05101,Newton,050,Arkansas
+05105,Perry,050,Arkansas
+05115,Pope,050,Arkansas
+05129,Searcy,050,Arkansas
+05135,Sharp,050,Arkansas
+06021,Glenn,069,Rest of CA
+06025,Imperial,069,Rest of CA
+06061,Placer,062,Sacramento CA
+06109,Tuolumne,069,Rest of CA
+05149,Yell,050,Arkansas
+06031,Kings,069,Rest of CA
+06035,Lassen,069,Rest of CA
+06075,San Francisco,064,San Francisco CA
+09013,Tolland,091,Hartford CT
+12035,Flagler,123,Orlando FL
+12059,Holmes,129,Rest of FL
+13063,Clayton,131,Atlanta GA
+13069,Coffee,139,Rest of GA
+13083,Dade,139,Rest of GA
+13093,Dooly,139,Rest of GA
+13111,Fannin,139,Rest of GA
+12087,Monroe,129,Rest of FL
+12109,St. Johns,121,Jacksonville FL-GA  CFS Area (FL Part)
+12111,St. Lucie,122,Miami FL
+12115,Sarasota,129,Rest of FL
+13003,Atkinson,139,Rest of GA
+13023,Bleckley,139,Rest of GA
+13037,Calhoun,139,Rest of GA
+13053,Chattahoochee,139,Rest of GA
+13059,Clarke,131,Atlanta GA
+16019,Bonneville,160,Idaho
+16021,Boundary,160,Idaho
+16033,Clark,160,Idaho
+16045,Gem,160,Idaho
+16051,Jefferson,160,Idaho
+16065,Madison,160,Idaho
+13117,Forsyth,131,Atlanta GA
+13145,Harris,139,Rest of GA
+13159,Jasper,131,Atlanta GA
+13169,Jones,139,Rest of GA
+13197,Marion,139,Rest of GA
+13233,Polk,131,Atlanta GA
+13239,Quitman,139,Rest of GA
+13243,Randolph,139,Rest of GA
+13257,Stephens,139,Rest of GA
+13287,Turner,139,Rest of GA
+13295,Walker,139,Rest of GA
+15003,Honolulu,151,Honolulu HI
+16009,Benewah,160,Idaho
+17115,Macon,179,Rest of IL
+17121,Marion,172,St. Louis MO-IL (IL Part)
+17131,Mercer,179,Rest of IL
+17135,Montgomery,179,Rest of IL
+17145,Perry,179,Rest of IL
+17149,Pike,179,Rest of IL
+17159,Richland,179,Rest of IL
+17173,Shelby,179,Rest of IL
+17177,Stephenson,179,Rest of IL
+17183,Vermilion,179,Rest of IL
+17187,Warren,179,Rest of IL
+18017,Cass,189,Rest of IN
+18031,Decatur,182,Indianapolis IN
+16075,Payette,160,Idaho
+17005,Bond,172,St. Louis MO-IL (IL Part)
+17011,Bureau,171,Chicago IL-IN-WI (IL Part)
+17015,Carroll,179,Rest of IL
+17021,Christian,179,Rest of IL
+17029,Coles,179,Rest of IL
+17053,Ford,179,Rest of IL
+17059,Gallatin,179,Rest of IL
+17063,Grundy,171,Chicago IL-IN-WI (IL Part)
+17067,Hancock,179,Rest of IL
+17073,Henry,179,Rest of IL
+17091,Kankakee,171,Chicago IL-IN-WI (IL Part)
+18129,Posey,189,Rest of IN
+18133,Putnam,182,Indianapolis IN
+18143,Scott,189,Rest of IN
+18171,Warren,189,Rest of IN
+18177,Wayne,189,Rest of IN
+18181,White,189,Rest of IN
+19001,Adair,190,Iowa
+19007,Appanoose,190,Iowa
+19017,Bremer,190,Iowa
+19025,Calhoun,190,Iowa
+18037,Dubois,189,Rest of IN
+18041,Fayette,189,Rest of IN
+18055,Greene,189,Rest of IN
+18065,Henry,182,Indianapolis IN
+18075,Jay,189,Rest of IN
+18085,Kosciusko,189,Rest of IN
+18091,LaPorte,181,Chicago IL-IN-WI (IN Part)
+18095,Madison,182,Indianapolis IN
+18097,Marion,182,Indianapolis IN
+18099,Marshall,189,Rest of IN
+18101,Martin,189,Rest of IN
+18109,Morgan,182,Indianapolis IN
+18111,Newton,181,Chicago IL-IN-WI (IN Part)
+18115,Ohio,189,Rest of IN
+18119,Owen,189,Rest of IN
+18121,Parke,189,Rest of IN
+19049,Dallas,190,Iowa
+19055,Delaware,190,Iowa
+19073,Greene,190,Iowa
+19079,Hamilton,190,Iowa
+19083,Hardin,190,Iowa
+19097,Jackson,190,Iowa
+19103,Johnson,190,Iowa
+20087,Jefferson,209,Rest of KS
+20089,Jewell,209,Rest of KS
+20091,Johnson,201,Kansas City MO-KS (KS Part)
+20097,Kiowa,209,Rest of KS
+20101,Lane,209,Rest of KS
+20105,Lincoln,209,Rest of KS
+20109,Logan,209,Rest of KS
+20111,Lyon,209,Rest of KS
+20113,McPherson,209,Rest of KS
+20125,Montgomery,209,Rest of KS
+19117,Lucas,190,Iowa
+19127,Marshall,190,Iowa
+19131,Mitchell,190,Iowa
+19141,O'Brien,190,Iowa
+19159,Ringgold,190,Iowa
+19165,Shelby,190,Iowa
+19169,Story,190,Iowa
+19175,Union,190,Iowa
+19189,Winnebago,190,Iowa
+20001,Allen,209,Rest of KS
+20009,Barton,209,Rest of KS
+20015,Butler,202,Wichita KS
+20029,Cloud,209,Rest of KS
+20043,Doniphan,201,Kansas City MO-KS (KS Part)
+20049,Elk,209,Rest of KS
+20053,Ellsworth,209,Rest of KS
+20057,Ford,209,Rest of KS
+20063,Gove,209,Rest of KS
+20073,Greenwood,209,Rest of KS
+20077,Harper,209,Rest of KS
+20085,Jackson,209,Rest of KS
+29167,Polk,299,Rest of MO
+29173,Ralls,299,Rest of MO
+29177,Ray,291,Kansas City MO-KS (MO Part)
+36069,Ontario,364,Rochester NY
+36073,Orleans,364,Rochester NY
+39169,Wayne,399,Rest of OH
+40007,Beaver,409,Rest of OK
+27005,Becker,279,Rest of MN
+27019,Carver,271,Minneapolis-St. Paul MN-WI (MN Part)
+27029,Clearwater,279,Rest of MN
+29203,Shannon,299,Rest of MO
+29223,Wayne,299,Rest of MO
+29510,St. Louis,292,St. Louis MO-IL (MO Part)
+30019,Daniels,300,Montana
+36079,Putnam,363,New York NY-NJ-CT-PA (NY Part)
+36097,Schuyler,369,Rest of NY
+20141,Osborne,209,Rest of KS
+20159,Rice,209,Rest of KS
+20169,Saline,209,Rest of KS
+20175,Seward,209,Rest of KS
+20183,Smith,209,Rest of KS
+20189,Stevens,209,Rest of KS
+27033,Cottonwood,279,Rest of MN
+27043,Faribault,279,Rest of MN
+27071,Koochiching,279,Rest of MN
+30067,Park,300,Montana
+30095,Stillwater,300,Montana
+30101,Toole,300,Montana
+36107,Tioga,369,Rest of NY
+36121,Wyoming,369,Rest of NY
+37121,Mitchell,379,Rest of NC
+37141,Pender,379,Rest of NC
+20193,Thomas,209,Rest of KS
+21017,Bourbon,219,Rest of KY
+21021,Boyle,219,Rest of KY
+21041,Carroll,219,Rest of KY
+27081,Lincoln,279,Rest of MN
+27091,Martin,279,Rest of MN
+27095,Mille Lacs,271,Minneapolis-St. Paul MN-WI (MN Part)
+27109,Olmsted,279,Rest of MN
+27125,Red Lake,279,Rest of MN
+31003,Antelope,319,Rest of NE
+31023,Butler,319,Rest of NE
+31029,Chase,319,Rest of NE
+31031,Cherry,319,Rest of NE
+37001,Alamance,372,Greensboro--Winston-Salem--High Point NC
+37025,Cabarrus,371,Charlotte NC-SC (NC Part)
+21045,Casey,219,Rest of KY
+21075,Fulton,219,Rest of KY
+21083,Graves,219,Rest of KY
+27133,Rock,279,Rest of MN
+27153,Todd,279,Rest of MN
+27157,Wabasha,279,Rest of MN
+28013,Calhoun,280,Mississippi
+31035,Clay,319,Rest of NE
+31037,Colfax,319,Rest of NE
+31039,Cuming,319,Rest of NE
+31041,Custer,319,Rest of NE
+37035,Catawba,379,Rest of NC
+37097,Iredell,371,Charlotte NC-SC (NC Part)
+21103,Henry,212,Louisville KY-IN (KY Part)
+21113,Jessamine,219,Rest of KY
+21141,Logan,219,Rest of KY
+28023,Clarke,280,Mississippi
+28037,Franklin,280,Mississippi
+28041,Greene,280,Mississippi
+31047,Dawson,319,Rest of NE
+31051,Dixon,319,Rest of NE
+37169,Stokes,372,Greensboro--Winston-Salem--High Point NC
+37179,Union,371,Charlotte NC-SC (NC Part)
+21137,Lincoln,219,Rest of KY
+21171,Monroe,219,Rest of KY
+28047,Harrison,280,Mississippi
+28067,Jones,280,Mississippi
+31053,Dodge,311,Omaha NE-IA (NE Part)
+31055,Douglas,311,Omaha NE-IA (NE Part)
+37189,Watauga,379,Rest of NC
+38007,Billings,380,North Dakota
+38023,Divide,380,North Dakota
+21199,Pulaski,219,Rest of KY
+21213,Simpson,219,Rest of KY
+28071,Lafayette,280,Mississippi
+28075,Lauderdale,280,Mississippi
+28085,Lincoln,280,Mississippi
+31065,Furnas,319,Rest of NE
+31071,Garfield,319,Rest of NE
+31081,Hamilton,319,Rest of NE
+38027,Eddy,380,North Dakota
+38045,LaMoure,380,North Dakota
+38051,McIntosh,380,North Dakota
+21227,Warren,219,Rest of KY
+22003,Allen,229,Rest of LA
+22021,Caldwell,229,Rest of LA
+28091,Marion,280,Mississippi
+28095,Monroe,280,Mississippi
+28115,Pontotoc,280,Mississippi
+31089,Holt,319,Rest of NE
+31095,Jefferson,319,Rest of NE
+31109,Lancaster,319,Rest of NE
+38061,Mountrail,380,North Dakota
+38065,Oliver,380,North Dakota
+22023,Cameron,222,Lake Charles-Jennings LA
+22041,Franklin,229,Rest of LA
+22051,Jefferson,223,New Orleans LA-MS (LA Part)
+22075,Plaquemines,223,New Orleans LA-MS (LA Part)
+22095,St. John the Baptist,223,New Orleans LA-MS (LA Part)
+22125,West Feliciana,221,Baton Rouge LA
+23021,Piscataquis,230,Maine
+24009,Calvert,242,Washington DC-VA-MD-WV (MD Part)
+28129,Smith,280,Mississippi
+28133,Sunflower,280,Mississippi
+28153,Wayne,280,Mississippi
+28159,Winston,280,Mississippi
+28161,Yalobusha,280,Mississippi
+31119,Madison,319,Rest of NE
+31123,Morrill,319,Rest of NE
+31133,Pawnee,319,Rest of NE
+31137,Phelps,319,Rest of NE
+38089,Stark,380,North Dakota
+38095,Towner,380,North Dakota
+38101,Ward,380,North Dakota
+38103,Wells,380,North Dakota
+23011,Kennebec,230,Maine
+24019,Dorchester,249,Rest of MD
+25003,Berkshire,259,Rest of MA
+25011,Franklin,259,Rest of MA
+25021,Norfolk,251,Boston MA-RI-NH-CT (MA Part)
+29001,Adair,299,Rest of MO
+29005,Atchison,299,Rest of MO
+29009,Barry,299,Rest of MO
+31153,Sarpy,311,Omaha NE-IA (NE Part)
+31161,Sheridan,319,Rest of NE
+31171,Thomas,319,Rest of NE
+39001,Adams,399,Rest of OH
+39007,Ashtabula,392,Cleveland OH
+39009,Athens,399,Rest of OH
+26017,Bay,269,Rest of MI
+26023,Branch,269,Rest of MI
+26027,Cass,269,Rest of MI
+29011,Barton,299,Rest of MO
+29017,Bollinger,299,Rest of MO
+29021,Buchanan,291,Kansas City MO-KS (MO Part)
+31177,Washington,311,Omaha NE-IA (NE Part)
+32009,Esmeralda,329,Rest of NV
+32013,Humboldt,329,Rest of NV
+39013,Belmont,399,Rest of OH
+39017,Butler,391,Cincinnati OH-KY-IN (OH Part)
+39019,Carroll,392,Cleveland OH
+26037,Clinton,269,Rest of MI
+26051,Gladwin,269,Rest of MI
+26061,Houghton,269,Rest of MI
+29035,Carter,299,Rest of MO
+29047,Clay,291,Kansas City MO-KS (MO Part)
+29061,Daviess,299,Rest of MO
+29067,Douglas,299,Rest of MO
+32023,Nye,321,Las Vegas NV-AZ (NV Part)
+32510,Carson City,329,Rest of NV
+33003,Carroll,339,Rest of NH
+39025,Clermont,391,Cincinnati OH-KY-IN (OH Part)
+39053,Gallia,399,Rest of OH
+39067,Harrison,399,Rest of OH
+26065,Ingham,269,Rest of MI
+26075,Jackson,269,Rest of MI
+26079,Kalkaska,269,Rest of MI
+26095,Luce,269,Rest of MI
+26119,Montmorency,269,Rest of MI
+29077,Greene,299,Rest of MO
+29081,Harrison,299,Rest of MO
+29085,Hickory,299,Rest of MO
+33013,Merrimack,331,Boston MA-RI-NH-CT (NH Part)
+34037,Sussex,341,New York NY-NJ-CT-PA (NJ Part)
+39073,Hocking,393,Columbus OH
+39077,Huron,392,Cleveland OH
+39083,Knox,393,Columbus OH
+39091,Logan,393,Columbus OH
+26131,Ontonagon,269,Rest of MI
+26133,Osceola,269,Rest of MI
+26143,Roscommon,269,Rest of MI
+26149,St. Joseph,269,Rest of MI
+29105,Laclede,299,Rest of MO
+29109,Lawrence,299,Rest of MO
+29119,McDonald,299,Rest of MO
+35003,Catron,350,New Mexico
+35037,Quay,350,New Mexico
+35047,San Miguel,350,New Mexico
+35057,Torrance,350,New Mexico
+39097,Madison,393,Columbus OH
+39107,Mercer,399,Rest of OH
+39121,Noble,399,Rest of OH
+39131,Pike,399,Rest of OH
+26155,Shiawassee,269,Rest of MI
+26159,Van Buren,269,Rest of MI
+26165,Wexford,269,Rest of MI
+27001,Aitkin,279,Rest of MN
+29125,Maries,299,Rest of MO
+29133,Mississippi,299,Rest of MO
+29149,Oregon,299,Rest of MO
+35061,Valencia,350,New Mexico
+36033,Franklin,369,Rest of NY
+36051,Livingston,364,Rochester NY
+36057,Montgomery,361,Albany NY  CFS Area
+36067,Onondaga,369,Rest of NY
+39135,Preble,399,Rest of OH
+39155,Trumbull,399,Rest of OH
+39159,Union,393,Columbus OH
+39163,Vinton,399,Rest of OH
+20131,Nemaha,209,Rest of KS
+40017,Canadian,401,Oklahoma City OK
+46089,McPherson,460,South Dakota
+46097,Miner,460,South Dakota
+46099,Minnehaha,460,South Dakota
+46107,Potter,460,South Dakota
+48365,Panola,489,Rest of TX
+48385,Real,489,Rest of TX
+48399,Runnels,489,Rest of TX
+48423,Smith,489,Rest of TX
+55015,Calumet,559,Rest of WI
+55021,Columbia,559,Rest of WI
+55025,Dane,559,Rest of WI
+40021,Cherokee,402,Tulsa OK
+40031,Comanche,409,Rest of OK
+40035,Craig,409,Rest of OK
+46109,Roberts,460,South Dakota
+46111,Sanborn,460,South Dakota
+46121,Todd,460,South Dakota
+48441,Taylor,489,Rest of TX
+48451,Tom Green,489,Rest of TX
+48481,Wharton,486,Houston TX
+48485,Wichita,489,Rest of TX
+55039,Fond du Lac,559,Rest of WI
+55059,Kenosha,559,Rest of WI
+55067,Langlade,559,Rest of WI
+40041,Delaware,409,Rest of OK
+40045,Ellis,409,Rest of OK
+46125,Turner,460,South Dakota
+47039,Decatur,479,Rest of TN
+48489,Willacy,489,Rest of TX
+48497,Wise,484,Dallas-Fort Worth TX-OK (TX Part)
+48507,Zavala,489,Rest of TX
+55073,Marathon,559,Rest of WI
+55077,Marquette,559,Rest of WI
+55085,Oneida,559,Rest of WI
+55089,Ozaukee,551,Milwaukee WI
+40069,Johnston,409,Rest of OK
+40093,Major,409,Rest of OK
+40103,Noble,409,Rest of OK
+47043,Dickson,472,Nashville TN
+49009,Daggett,499,Rest of UT
+49021,Iron,499,Rest of UT
+49027,Millard,499,Rest of UT
+50009,Essex,500,Vermont
+55105,Rock,559,Rest of WI
+55119,Taylor,559,Rest of WI
+55123,Vernon,559,Rest of WI
+40107,Okfuskee,409,Rest of OK
+40121,Pittsburg,409,Rest of OK
+47087,Jackson,479,Rest of TN
+47101,Lewis,479,Rest of TN
+50019,Orleans,500,Vermont
+50025,Windham,500,Vermont
+55127,Walworth,551,Milwaukee WI
+56001,Albany,560,Wyoming
+72079,Lajas,,
+40127,Pushmataha,409,Rest of OK
+40131,Rogers,402,Tulsa OK
+47115,Marion,479,Rest of TN
+47125,Montgomery,479,Rest of TN
+51011,Appomattox,519,Rest of VA
+51025,Brunswick,519,Rest of VA
+51153,Prince William,513,Washington DC-VA-MD-WV (VA Part)
+51181,Surry,519,Rest of VA
+72011,Añasco,,
+72013,Arecibo,,
+40151,Woods,409,Rest of OK
+41011,Coos,419,Rest of OR
+47139,Polk,479,Rest of TN
+47153,Sequatchie,479,Rest of TN
+51043,Clarke,513,Washington DC-VA-MD-WV (VA Part)
+51049,Cumberland,519,Rest of VA
+72045,Comerío,,
+72047,Corozal,,
+72051,Dorado,,
+41025,Harney,419,Rest of OR
+41027,Hood River,419,Rest of OR
+41049,Morrow,419,Rest of OR
+47169,Trousdale,472,Nashville TN
+47177,Warren,479,Rest of TN
+48017,Bailey,489,Rest of TX
+51075,Goochland,511,Richmond VA
+56005,Campbell,560,Wyoming
+56015,Goshen,560,Wyoming
+56019,Johnson,560,Wyoming
+41059,Umatilla,419,Rest of OR
+42001,Adams,429,Rest of PA
+48045,Briscoe,489,Rest of TX
+48049,Brown,489,Rest of TX
+48069,Castro,489,Rest of TX
+48093,Comanche,489,Rest of TX
+51079,Greene,519,Rest of VA
+72017,Barceloneta,,
+72019,Barranquitas,,
+42011,Berks,421,Philadelphia PA-NJ-DE-MD (PA Part)
+42019,Butler,422,Pittsburgh PA-OH-WV (PA Part)
+42053,Forest,429,Rest of PA
+48097,Cooke,484,Dallas-Fort Worth TX-OK (TX Part)
+48107,Crosby,489,Rest of TX
+51135,Nottoway,519,Rest of VA
+51197,Wythe,519,Rest of VA
+72057,Guayama,,
+72059,Guayanilla,,
+42073,Lawrence,422,Pittsburgh PA-OH-WV (PA Part)
+42083,McKean,429,Rest of PA
+42105,Potter,429,Rest of PA
+42115,Susquehanna,429,Rest of PA
+42121,Venango,429,Rest of PA
+48113,Dallas,484,Dallas-Fort Worth TX-OK (TX Part)
+48127,Dimmit,489,Rest of TX
+48131,Duval,489,Rest of TX
+48143,Erath,489,Rest of TX
+51540,Charlottesville,519,Rest of VA
+51570,Colonial Heights,511,Richmond VA
+51610,Falls Church,513,Washington DC-VA-MD-WV (VA Part)
+51630,Fredericksburg,513,Washington DC-VA-MD-WV (VA Part)
+51685,Manassas Park,513,Washington DC-VA-MD-WV (VA Part)
+56041,Uinta,560,Wyoming
+56045,Weston,560,Wyoming
+60030,Rose Island,,
+60040,Swains Island,,
+69120,Tinian,,
+72001,Adjuntas,,
+44001,Bristol,441,Boston MA-RI-NH-CT (RI Part)
+45001,Abbeville,452,Greenville SC
+48145,Falls,489,Rest of TX
+48149,Fayette,489,Rest of TX
+48161,Freestone,489,Rest of TX
+48163,Frio,489,Rest of TX
+48165,Gaines,489,Rest of TX
+48179,Gray,489,Rest of TX
+51720,Norton,519,Rest of VA
+51740,Portsmouth,512,Virginia Beach-Norfolk VA-NC (VA Part)
+51790,Staunton,519,Rest of VA
+51810,Virginia Beach,512,Virginia Beach-Norfolk VA-NC (VA Part)
+72021,Bayamón,,
+72025,Caguas,,
+72033,Cataño,,
+45039,Fairfield,459,Rest of SC
+48183,Gregg,489,Rest of TX
+48189,Hale,489,Rest of TX
+48221,Hood,484,Dallas-Fort Worth TX-OK (TX Part)
+48227,Howard,489,Rest of TX
+51830,Williamsburg,512,Virginia Beach-Norfolk VA-NC (VA Part)
+53013,Columbia,539,Rest of WA
+53029,Island,531,Seattle WA
+53035,Kitsap,531,Seattle WA
+53041,Lewis,531,Seattle WA
+53051,Pend Oreille,539,Rest of WA
+72061,Guaynabo,,
+72065,Hatillo,,
+45081,Saluda,459,Rest of SC
+46005,Beadle,460,South Dakota
+46011,Brookings,460,South Dakota
+48231,Hunt,484,Dallas-Fort Worth TX-OK (TX Part)
+48251,Johnson,484,Dallas-Fort Worth TX-OK (TX Part)
+53059,Skamania,532,Portland OR-WA (WA Part)
+54011,Cabell,540,West Virginia
+54015,Clay,540,West Virginia
+72005,Aguadilla,,
+72007,Aguas Buenas,,
+46015,Brule,460,South Dakota
+46035,Davison,460,South Dakota
+46039,Deuel,460,South Dakota
+46049,Faulk,460,South Dakota
+48275,Knox,489,Rest of TX
+48279,Lamb,489,Rest of TX
+48285,Lavaca,489,Rest of TX
+48303,Lubbock,489,Rest of TX
+54049,Marion,540,West Virginia
+54073,Pleasants,540,West Virginia
+72035,Cayey,,
+72041,Cidra,,
+46059,Hand,460,South Dakota
+46063,Harding,460,South Dakota
+46073,Jerauld,460,South Dakota
+46077,Kingsbury,460,South Dakota
+46087,McCook,460,South Dakota
+48309,McLennan,489,Rest of TX
+48337,Montague,489,Rest of TX
+48355,Nueces,483,Corpus Christi TX
+54097,Upshur,540,West Virginia
+54101,Webster,540,West Virginia
+55005,Barron,559,Rest of WI
+72069,Humacao,,
+72077,Juncos,,
+13047,Catoosa,139,Rest of GA
+20051,Ellis,209,Rest of KS
+20059,Franklin,201,Kansas City MO-KS (KS Part)
+20065,Graham,209,Rest of KS
+20069,Gray,209,Rest of KS
+23009,Hancock,230,Maine
+23019,Penobscot,230,Maine
+24015,Cecil,249,Rest of MD
+24025,Harford,241,Baltimore MD
+24035,Queen Anne's,241,Baltimore MD
+25001,Barnstable,251,Boston MA-RI-NH-CT (MA Part)
+25009,Essex,251,Boston MA-RI-NH-CT (MA Part)
+13167,Johnson,139,Rest of GA
+13175,Laurens,139,Rest of GA
+05065,Izard,050,Arkansas
+05071,Johnson,050,Arkansas
+20117,Marshall,209,Rest of KS
+20123,Mitchell,209,Rest of KS
+20127,Morris,209,Rest of KS
+20129,Morton,209,Rest of KS
+20137,Norton,209,Rest of KS
+25013,Hampden,259,Rest of MA
+26001,Alcona,269,Rest of MI
+72083,Las Marías,,
+72087,Loíza,,
+05079,Lincoln,050,Arkansas
+05083,Logan,050,Arkansas
+20139,Osage,209,Rest of KS
+20147,Phillips,209,Rest of KS
+20151,Pratt,209,Rest of KS
+20157,Republic,209,Rest of KS
+20163,Rooks,209,Rest of KS
+26005,Allegan,262,Grand Rapids MI
+26009,Antrim,269,Rest of MI
+72089,Luquillo,,
+72093,Maricao,,
+72099,Moca,,
+05089,Marion,050,Arkansas
+05123,St. Francis,050,Arkansas
+20167,Russell,209,Rest of KS
+20173,Sedgwick,202,Wichita KS
+20177,Shawnee,209,Rest of KS
+20181,Sherman,209,Rest of KS
+26011,Arenac,269,Rest of MI
+26015,Barry,262,Grand Rapids MI
+72101,Morovis,,
+72103,Naguabo,,
+72105,Naranjito,,
+05127,Scott,050,Arkansas
+05137,Stone,050,Arkansas
+20185,Stafford,209,Rest of KS
+20191,Sumner,202,Wichita KS
+20201,Washington,209,Rest of KS
+20205,Wilson,209,Rest of KS
+26021,Berrien,269,Rest of MI
+26025,Calhoun,269,Rest of MI
+26035,Clare,269,Rest of MI
+26039,Crawford,269,Rest of MI
+72111,Peñuelas,,
+72121,Sabana Grande,,
+05141,Van Buren,050,Arkansas
+06049,Modoc,069,Rest of CA
+06087,Santa Cruz,064,San Francisco CA
+06103,Tehama,069,Rest of CA
+06111,Ventura,061,Los Angeles CA
+08009,Baca,089,Rest of CO
+08011,Bent,089,Rest of CO
+20209,Wyandotte,201,Kansas City MO-KS (KS Part)
+21001,Adair,219,Rest of KY
+21015,Boone,211,Cincinnati OH-KY-IN (KY Part)
+26043,Dickinson,269,Rest of MI
+26049,Genesee,261,Detroit MI
+26059,Hillsdale,269,Rest of MI
+72123,Salinas,,
+72131,San Sebastián,,
+08014,Broomfield,081,Denver CO
+08017,Cheyenne,089,Rest of CO
+08041,El Paso,089,Rest of CO
+21019,Boyd,219,Rest of KY
+21039,Carlisle,219,Rest of KY
+26067,Ionia,262,Grand Rapids MI
+26073,Isabella,269,Rest of MI
+26081,Kent,262,Grand Rapids MI
+26087,Lapeer,261,Detroit MI
+72133,Santa Isabel,,
+72135,Toa Alta,,
+72137,Toa Baja,,
+08047,Gilpin,081,Denver CO
+08061,Kiowa,089,Rest of CO
+08075,Logan,089,Rest of CO
+21047,Christian,219,Rest of KY
+21053,Clinton,219,Rest of KY
+26091,Lenawee,261,Detroit MI
+26093,Livingston,261,Detroit MI
+26101,Manistee,269,Rest of MI
+26117,Montcalm,262,Grand Rapids MI
+72149,Villalba,,
+72153,Yauco,,
+08081,Moffat,089,Rest of CO
+08085,Montrose,089,Rest of CO
+08089,Otero,089,Rest of CO
+08099,Prowers,089,Rest of CO
+21077,Gallatin,211,Cincinnati OH-KY-IN (KY Part)
+21081,Grant,211,Cincinnati OH-KY-IN (KY Part)
+26121,Muskegon,262,Grand Rapids MI
+27007,Beltrami,279,Rest of MN
+13055,Chattooga,139,Rest of GA
+01053,Escambia,019,Rest of AL
+01057,Fayette,019,Rest of AL
+08103,Rio Blanco,089,Rest of CO
+08109,Saguache,089,Rest of CO
+08119,Teller,089,Rest of CO
+09003,Hartford,091,Hartford CT
+12001,Alachua,129,Rest of FL
+21087,Green,219,Rest of KY
+21105,Hickman,219,Rest of KY
+21129,Lee,219,Rest of KY
+13057,Cherokee,131,Atlanta GA
+13061,Clay,139,Rest of GA
+01067,Henry,019,Rest of AL
+01077,Lauderdale,019,Rest of AL
+09015,Windham,099,Rest of CT
+12011,Broward,122,Miami FL
+21143,Lyon,219,Rest of KY
+21149,McLean,219,Rest of KY
+21169,Metcalfe,219,Rest of KY
+13065,Clinch,139,Rest of GA
+13071,Colquitt,139,Rest of GA
+01083,Limestone,019,Rest of AL
+01111,Randolph,019,Rest of AL
+01125,Tuscaloosa,019,Rest of AL
+12015,Charlotte,129,Rest of FL
+12021,Collier,129,Rest of FL
+12027,DeSoto,129,Rest of FL
+21173,Montgomery,219,Rest of KY
+21191,Pendleton,211,Cincinnati OH-KY-IN (KY Part)
+13085,Dawson,131,Atlanta GA
+13089,DeKalb,131,Atlanta GA
+13171,Lamar,131,Atlanta GA
+02013,Aleutians East,020,Alaska
+02060,Bristol Bay,020,Alaska
+02068,Denali,020,Alaska
+02188,Northwest Arctic,020,Alaska
+02230,Skagway,020,Alaska
+02275,Wrangell,020,Alaska
+12051,Hendry,129,Rest of FL
+12061,Indian River,122,Miami FL
+12063,Jackson,129,Rest of FL
+21201,Robertson,219,Rest of KY
+21207,Russell,219,Rest of KY
+13091,Dodge,139,Rest of GA
+13099,Early,139,Rest of GA
+04003,Cochise,049,Rest of AZ
+04017,Navajo,049,Rest of AZ
+05023,Cleburne,050,Arkansas
+12067,Lafayette,129,Rest of FL
+12081,Manatee,129,Rest of FL
+21211,Shelby,212,Louisville KY-IN (KY Part)
+21219,Todd,219,Rest of KY
+13101,Echols,139,Rest of GA
+13109,Evans,139,Rest of GA
+05031,Craighead,050,Arkansas
+05037,Cross,050,Arkansas
+05047,Franklin,050,Arkansas
+12099,Palm Beach,122,Miami FL
+13011,Banks,139,Rest of GA
+21225,Union,219,Rest of KY
+22049,Jackson,229,Rest of LA
+13115,Floyd,139,Rest of GA
+13129,Gordon,131,Atlanta GA
+05051,Garland,050,Arkansas
+05055,Greene,050,Arkansas
+13015,Bartow,131,Atlanta GA
+13035,Butts,131,Atlanta GA
+13043,Candler,139,Rest of GA
+22089,St. Charles,223,New Orleans LA-MS (LA Part)
+22093,St. James,223,New Orleans LA-MS (LA Part)
+22121,West Baton Rouge,221,Baton Rouge LA
+13147,Hart,139,Rest of GA
+13161,Jeff Davis,139,Rest of GA
+72081,Lares,,
+13177,Lee,139,Rest of GA
+17099,LaSalle,171,Chicago IL-IN-WI (IL Part)
+17103,Lee,179,Rest of IL
+17105,Livingston,179,Rest of IL
+19057,Des Moines,190,Iowa
+19061,Dubuque,190,Iowa
+19067,Floyd,190,Iowa
+37005,Alleghany,379,Rest of NC
+37037,Chatham,373,Raleigh-Durham NC
+13187,Lumpkin,139,Rest of GA
+13201,Miller,139,Rest of GA
+13207,Monroe,139,Rest of GA
+17113,McLean,179,Rest of IL
+17123,Marshall,179,Rest of IL
+17133,Monroe,172,St. Louis MO-IL (IL Part)
+19071,Fremont,190,Iowa
+19077,Guthrie,190,Iowa
+19081,Hancock,190,Iowa
+19089,Howard,190,Iowa
+37041,Chowan,379,Rest of NC
+37061,Duplin,379,Rest of NC
+13211,Morgan,131,Atlanta GA
+13225,Peach,139,Rest of GA
+17137,Morgan,179,Rest of IL
+17141,Ogle,179,Rest of IL
+17147,Piatt,179,Rest of IL
+17151,Pope,179,Rest of IL
+19095,Iowa,190,Iowa
+19099,Jasper,190,Iowa
+19101,Jefferson,190,Iowa
+19105,Jones,190,Iowa
+19109,Kossuth,190,Iowa
+37071,Gaston,371,Charlotte NC-SC (NC Part)
+37081,Guilford,372,Greensboro--Winston-Salem--High Point NC
+13231,Pike,131,Atlanta GA
+13235,Pulaski,139,Rest of GA
+13249,Schley,139,Rest of GA
+17157,Randolph,179,Rest of IL
+17165,Saline,179,Rest of IL
+19113,Linn,190,Iowa
+19115,Louisa,190,Iowa
+19133,Monona,190,Iowa
+19137,Montgomery,190,Iowa
+37143,Perquimans,379,Rest of NC
+13255,Spalding,131,Atlanta GA
+13259,Stewart,139,Rest of GA
+17167,Sangamon,179,Rest of IL
+17179,Tazewell,179,Rest of IL
+19139,Muscatine,190,Iowa
+19143,Osceola,190,Iowa
+19153,Polk,190,Iowa
+19157,Poweshiek,190,Iowa
+37149,Polk,379,Rest of NC
+13275,Thomas,139,Rest of GA
+13285,Troup,131,Atlanta GA
+17181,Union,179,Rest of IL
+17191,Wayne,179,Rest of IL
+17195,Whiteside,179,Rest of IL
+19161,Sac,190,Iowa
+19167,Sioux,190,Iowa
+19171,Tama,190,Iowa
+19173,Taylor,190,Iowa
+37171,Surry,372,Greensboro--Winston-Salem--High Point NC
+37181,Vance,373,Raleigh-Durham NC
+13293,Upson,131,Atlanta GA
+13299,Ware,139,Rest of GA
+17203,Woodford,179,Rest of IL
+18001,Adams,183,Fort Wayne IN
+18005,Bartholomew,182,Indianapolis IN
+18015,Carroll,189,Rest of IN
+19181,Warren,190,Iowa
+19185,Wayne,190,Iowa
+19191,Winneshiek,190,Iowa
+19195,Worth,190,Iowa
+37185,Warren,379,Rest of NC
+37187,Washington,379,Rest of NC
+13307,Webster,139,Rest of GA
+13321,Worth,139,Rest of GA
+18019,Clark,189,Rest of IN
+18029,Dearborn,189,Rest of IN
+19197,Wright,190,Iowa
+20013,Brown,209,Rest of KS
+20017,Chase,209,Rest of KS
+20021,Cherokee,209,Rest of KS
+20023,Cheyenne,209,Rest of KS
+37191,Wayne,379,Rest of NC
+38001,Adams,380,North Dakota
+16001,Ada,160,Idaho
+16053,Jerome,160,Idaho
+16063,Lincoln,160,Idaho
+18033,DeKalb,183,Fort Wayne IN
+18039,Elkhart,189,Rest of IN
+18043,Floyd,189,Rest of IN
+20027,Clay,209,Rest of KS
+20031,Coffey,209,Rest of KS
+20037,Crawford,209,Rest of KS
+20045,Douglas,201,Kansas City MO-KS (KS Part)
+38009,Bottineau,380,North Dakota
+39027,Clinton,391,Cincinnati OH-KY-IN (OH Part)
+39031,Coshocton,399,Rest of OH
+39033,Crawford,399,Rest of OH
+16071,Oneida,160,Idaho
+16081,Teton,160,Idaho
+18045,Fountain,189,Rest of IN
+18049,Fulton,189,Rest of IN
+18057,Hamilton,182,Indianapolis IN
+18059,Hancock,182,Indianapolis IN
+35049,Santa Fe,350,New Mexico
+35059,Union,350,New Mexico
+36003,Allegany,369,Rest of NY
+39037,Darke,394,Dayton OH
+39041,Delaware,393,Columbus OH
+39057,Greene,394,Dayton OH
+17009,Brown,179,Rest of IL
+17013,Calhoun,172,St. Louis MO-IL (IL Part)
+18069,Huntington,183,Fort Wayne IN
+18073,Jasper,181,Chicago IL-IN-WI (IN Part)
+18077,Jefferson,189,Rest of IN
+18127,Porter,181,Chicago IL-IN-WI (IN Part)
+18131,Pulaski,189,Rest of IN
+36007,Broome,369,Rest of NY
+36011,Cayuga,369,Rest of NY
+39065,Hardin,399,Rest of OH
+39069,Henry,399,Rest of OH
+39071,Highland,399,Rest of OH
+39079,Jackson,399,Rest of OH
+17019,Champaign,179,Rest of IL
+17023,Clark,179,Rest of IL
+17033,Crawford,179,Rest of IL
+18139,Rush,189,Rest of IN
+18141,St. Joseph,189,Rest of IN
+18149,Starke,189,Rest of IN
+18155,Switzerland,189,Rest of IN
+18169,Wabash,189,Rest of IN
+36015,Chemung,369,Rest of NY
+36021,Columbia,361,Albany NY  CFS Area
+39085,Lake,392,Cleveland OH
+39089,Licking,393,Columbus OH
+39099,Mahoning,399,Rest of OH
+17041,Douglas,179,Rest of IL
+17051,Fayette,179,Rest of IL
+17055,Franklin,179,Rest of IL
+18163,Vanderburgh,189,Rest of IN
+18165,Vermillion,189,Rest of IN
+36027,Dutchess,363,New York NY-NJ-CT-PA (NY Part)
+36039,Greene,369,Rest of NY
+39103,Medina,392,Cleveland OH
+39105,Meigs,399,Rest of OH
+39117,Morrow,393,Columbus OH
+17057,Fulton,179,Rest of IL
+17061,Greene,179,Rest of IL
+18173,Warrick,189,Rest of IN
+19005,Allamakee,190,Iowa
+36041,Hamilton,369,Rest of NY
+36093,Schenectady,361,Albany NY  CFS Area
+38011,Bowman,380,North Dakota
+38015,Burleigh,380,North Dakota
+38021,Dickey,380,North Dakota
+17069,Hardin,179,Rest of IL
+17071,Henderson,179,Rest of IL
+17075,Iroquois,179,Rest of IL
+19013,Black Hawk,190,Iowa
+19019,Buchanan,190,Iowa
+19023,Butler,190,Iowa
+19029,Cass,190,Iowa
+19037,Chickasaw,190,Iowa
+36095,Schoharie,361,Albany NY  CFS Area
+36099,Seneca,364,Rochester NY
+37033,Caswell,379,Rest of NC
+38033,Golden Valley,380,North Dakota
+38039,Griggs,380,North Dakota
+38043,Kidder,380,North Dakota
+38047,Logan,380,North Dakota
+17085,Jo Daviess,179,Rest of IL
+17089,Kane,171,Chicago IL-IN-WI (IL Part)
+19043,Clayton,190,Iowa
+19047,Crawford,190,Iowa
+19053,Decatur,190,Iowa
+36109,Tompkins,369,Rest of NY
+37003,Alexander,379,Rest of NC
+38049,McHenry,380,North Dakota
+38063,Nelson,380,North Dakota
+38081,Sargent,380,North Dakota
+38087,Slope,380,North Dakota
+29107,Lafayette,291,Kansas City MO-KS (MO Part)
+29111,Lewis,299,Rest of MO
+31149,Rock,319,Rest of NE
+31159,Seward,319,Rest of NE
+31165,Sioux,319,Rest of NE
+45037,Edgefield,459,Rest of SC
+51115,Mathews,512,Virginia Beach-Norfolk VA-NC (VA Part)
+27055,Houston,279,Rest of MN
+27059,Isanti,271,Minneapolis-St. Paul MN-WI (MN Part)
+27065,Kanabec,279,Rest of MN
+27083,Lyon,279,Rest of MN
+29117,Livingston,299,Rest of MO
+29121,Macon,299,Rest of MO
+29131,Miller,299,Rest of MO
+31173,Thurston,319,Rest of NE
+31175,Valley,319,Rest of NE
+31179,Wayne,319,Rest of NE
+31183,Wheeler,319,Rest of NE
+39127,Perry,393,Columbus OH
+39129,Pickaway,393,Columbus OH
+39133,Portage,392,Cleveland OH
+27085,McLeod,271,Minneapolis-St. Paul MN-WI (MN Part)
+27093,Meeker,279,Rest of MN
+27099,Mower,279,Rest of MN
+27117,Pipestone,279,Rest of MN
+27121,Pope,279,Rest of MN
+29135,Moniteau,299,Rest of MO
+29141,Morgan,299,Rest of MO
+29145,Newton,299,Rest of MO
+32017,Lincoln,329,Rest of NV
+32021,Mineral,329,Rest of NV
+32027,Pershing,329,Rest of NV
+32029,Storey,329,Rest of NV
+39143,Sandusky,399,Rest of OH
+39147,Seneca,399,Rest of OH
+39151,Stark,392,Cleveland OH
+27123,Ramsey,271,Minneapolis-St. Paul MN-WI (MN Part)
+27131,Rice,271,Minneapolis-St. Paul MN-WI (MN Part)
+27135,Roseau,279,Rest of MN
+29147,Nodaway,299,Rest of MO
+29151,Osage,299,Rest of MO
+33001,Belknap,331,Boston MA-RI-NH-CT (NH Part)
+33005,Cheshire,339,Rest of NH
+39153,Summit,392,Cleveland OH
+39157,Tuscarawas,392,Cleveland OH
+39165,Warren,391,Cincinnati OH-KY-IN (OH Part)
+27141,Sherburne,271,Minneapolis-St. Paul MN-WI (MN Part)
+27147,Steele,279,Rest of MN
+27151,Swift,279,Rest of MN
+29165,Platte,291,Kansas City MO-KS (MO Part)
+29169,Pulaski,299,Rest of MO
+29175,Randolph,299,Rest of MO
+35001,Bernalillo,350,New Mexico
+35005,Chaves,350,New Mexico
+35006,Cibola,350,New Mexico
+35009,Curry,350,New Mexico
+39171,Williams,399,Rest of OH
+40001,Adair,409,Rest of OK
+40005,Atoka,409,Rest of OK
+40009,Beckham,409,Rest of OK
+27155,Traverse,279,Rest of MN
+27159,Wadena,279,Rest of MN
+27169,Winona,279,Rest of MN
+29185,St. Clair,299,Rest of MO
+29205,Shelby,299,Rest of MO
+29211,Sullivan,299,Rest of MO
+29215,Texas,299,Rest of MO
+35013,Doña Ana,350,New Mexico
+35028,Los Alamos,350,New Mexico
+40019,Carter,409,Rest of OK
+40033,Cotton,409,Rest of OK
+40037,Creek,402,Tulsa OK
+28005,Amite,280,Mississippi
+28019,Choctaw,280,Mississippi
+29219,Warren,292,St. Louis MO-IL (MO Part)
+29221,Washington,299,Rest of MO
+29225,Webster,299,Rest of MO
+30017,Custer,300,Montana
+35031,McKinley,350,New Mexico
+35035,Otero,350,New Mexico
+40039,Custer,409,Rest of OK
+40043,Dewey,409,Rest of OK
+40047,Garfield,409,Rest of OK
+40053,Grant,409,Rest of OK
+28025,Clay,280,Mississippi
+28031,Covington,280,Mississippi
+28035,Forrest,280,Mississippi
+30021,Dawson,300,Montana
+30025,Fallon,300,Montana
+30037,Golden Valley,300,Montana
+30051,Liberty,300,Montana
+40153,Woodward,409,Rest of OK
+41009,Columbia,411,Portland OR-WA (OR Part)
+40061,Haskell,409,Rest of OK
+40071,Kay,409,Rest of OK
+28039,George,280,Mississippi
+28059,Jackson,280,Mississippi
+30065,Musselshell,300,Montana
+30079,Prairie,300,Montana
+30097,Sweet Grass,300,Montana
+41071,Yamhill,411,Portland OR-WA (OR Part)
+42007,Beaver,422,Pittsburgh PA-OH-WV (PA Part)
+40081,Lincoln,401,Oklahoma City OK
+40085,Love,409,Rest of OK
+28063,Jefferson,280,Mississippi
+28065,Jefferson Davis,280,Mississippi
+28069,Kemper,280,Mississippi
+30103,Treasure,300,Montana
+30107,Wheatland,300,Montana
+30109,Wibaux,300,Montana
+42009,Bedford,429,Rest of PA
+42013,Blair,429,Rest of PA
+40091,McIntosh,409,Rest of OK
+40105,Nowata,409,Rest of OK
+40111,Okmulgee,402,Tulsa OK
+28073,Lamar,280,Mississippi
+28077,Lawrence,280,Mississippi
+28097,Montgomery,280,Mississippi
+28101,Newton,280,Mississippi
+31001,Adams,319,Rest of NE
+31011,Boone,319,Rest of NE
+31015,Boyd,319,Rest of NE
+42021,Cambria,429,Rest of PA
+42037,Columbia,429,Rest of PA
+42047,Elk,429,Rest of PA
+40115,Ottawa,409,Rest of OK
+40119,Payne,409,Rest of OK
+28107,Panola,280,Mississippi
+28113,Pike,280,Mississippi
+28117,Prentiss,280,Mississippi
+28125,Sharkey,280,Mississippi
+31019,Buffalo,319,Rest of NE
+31021,Burt,319,Rest of NE
+42065,Jefferson,429,Rest of PA
+42069,Lackawanna,429,Rest of PA
+40123,Pontotoc,409,Rest of OK
+40129,Roger Mills,409,Rest of OK
+28127,Simpson,280,Mississippi
+28135,Tallahatchie,280,Mississippi
+28145,Union,280,Mississippi
+31067,Gage,319,Rest of NE
+31077,Greeley,319,Rest of NE
+31083,Harlan,319,Rest of NE
+31091,Hooker,319,Rest of NE
+31093,Howard,319,Rest of NE
+42079,Luzerne,429,Rest of PA
+42081,Lycoming,429,Rest of PA
+40143,Tulsa,402,Tulsa OK
+40149,Washita,409,Rest of OK
+28155,Webster,280,Mississippi
+29039,Cedar,299,Rest of MO
+29051,Cole,299,Rest of MO
+31101,Keith,319,Rest of NE
+31111,Lincoln,319,Rest of NE
+31115,Loup,319,Rest of NE
+31121,Merrick,319,Rest of NE
+42107,Schuylkill,429,Rest of PA
+42117,Tioga,429,Rest of PA
+42119,Union,429,Rest of PA
+27017,Carlton,279,Rest of MN
+27035,Crow Wing,279,Rest of MN
+27041,Douglas,279,Rest of MN
+29059,Dallas,299,Rest of MO
+29063,DeKalb,291,Kansas City MO-KS (MO Part)
+29065,Dent,299,Rest of MO
+29075,Gentry,299,Rest of MO
+29079,Grundy,299,Rest of MO
+31125,Nance,319,Rest of NE
+31127,Nemaha,319,Rest of NE
+31131,Otoe,319,Rest of NE
+42123,Warren,429,Rest of PA
+44003,Kent,441,Boston MA-RI-NH-CT (RI Part)
+27045,Fillmore,279,Rest of MN
+27049,Goodhue,271,Minneapolis-St. Paul MN-WI (MN Part)
+29083,Henry,299,Rest of MO
+29093,Iron,299,Rest of MO
+29097,Jasper,299,Rest of MO
+31139,Pierce,319,Rest of NE
+31141,Platte,319,Rest of NE
+31145,Red Willow,319,Rest of NE
+45011,Barnwell,459,Rest of SC
+45023,Chester,459,Rest of SC
+39119,Muskingum,393,Columbus OH
+51169,Scott,519,Rest of VA
+55125,Vilas,559,Rest of WI
+55129,Washburn,559,Rest of WI
+55131,Washington,551,Milwaukee WI
+55139,Winnebago,559,Rest of WI
+47103,Lincoln,479,Rest of TN
+47109,McNairy,479,Rest of TN
+49055,Wayne,499,Rest of UT
+50003,Bennington,500,Vermont
+51173,Smyth,519,Rest of VA
+51510,Alexandria,513,Washington DC-VA-MD-WV (VA Part)
+51530,Buena Vista,519,Rest of VA
+55141,Wood,559,Rest of WI
+56007,Carbon,560,Wyoming
+56011,Crook,560,Wyoming
+56017,Hot Springs,560,Wyoming
+47113,Madison,479,Rest of TN
+47131,Obion,479,Rest of TN
+50007,Chittenden,500,Vermont
+50011,Franklin,500,Vermont
+50023,Washington,500,Vermont
+51550,Chesapeake,512,Virginia Beach-Norfolk VA-NC (VA Part)
+51580,Covington,519,Rest of VA
+51600,Fairfax,513,Washington DC-VA-MD-WV (VA Part)
+51620,Franklin,519,Rest of VA
+51640,Galax,519,Rest of VA
+56023,Lincoln,560,Wyoming
+56031,Platte,560,Wyoming
+56037,Sweetwater,560,Wyoming
+01007,Bibb,011,Birmingham AL
+47133,Overton,479,Rest of TN
+47161,Stewart,479,Rest of TN
+51013,Arlington,513,Washington DC-VA-MD-WV (VA Part)
+51045,Craig,519,Rest of VA
+51650,Hampton,512,Virginia Beach-Norfolk VA-NC (VA Part)
+51680,Lynchburg,519,Rest of VA
+51683,Manassas,513,Washington DC-VA-MD-WV (VA Part)
+01019,Cherokee,019,Rest of AL
+01031,Coffee,019,Rest of AL
+01123,Tallapoosa,011,Birmingham AL
+02185,North Slope,020,Alaska
+47175,Van Buren,479,Rest of TN
+51077,Grayson,519,Rest of VA
+39075,Holmes,399,Rest of OH
+51710,Norfolk,512,Virginia Beach-Norfolk VA-NC (VA Part)
+51730,Petersburg,511,Richmond VA
+51750,Radford,519,Rest of VA
+06007,Butte,069,Rest of CA
+06029,Kern,069,Rest of CA
+06095,Solano,064,San Francisco CA
+08063,Kit Carson,089,Rest of CO
+08115,Sedgwick,089,Rest of CO
+47181,Wayne,479,Rest of TN
+48009,Archer,489,Rest of TX
+48013,Atascosa,488,San Antonio TX
+48037,Bowie,489,Rest of TX
+48043,Brewster,489,Rest of TX
+48053,Burnet,489,Rest of TX
+48067,Cass,489,Rest of TX
+48071,Chambers,486,Houston TX
+28045,Hancock,280,Mississippi
+24510,Baltimore,241,Baltimore MD
+51770,Roanoke,519,Rest of VA
+51775,Salem,519,Rest of VA
+51840,Winchester,519,Rest of VA
+12019,Clay,121,Jacksonville FL-GA  CFS Area (FL Part)
+12049,Hardee,129,Rest of FL
+13079,Crawford,139,Rest of GA
+13165,Jenkins,139,Rest of GA
+48077,Clay,489,Rest of TX
+48081,Coke,489,Rest of TX
+48085,Collin,484,Dallas-Fort Worth TX-OK (TX Part)
+19059,Dickinson,190,Iowa
+19183,Washington,190,Iowa
+20075,Hamilton,209,Rest of KS
+20145,Pawnee,209,Rest of KS
+53001,Adams,539,Rest of WA
+53063,Spokane,539,Rest of WA
+55003,Ashland,559,Rest of WI
+13193,Macon,139,Rest of GA
+13223,Paulding,131,Atlanta GA
+48087,Collingsworth,489,Rest of TX
+48095,Concho,489,Rest of TX
+48111,Dallam,489,Rest of TX
+48115,Dawson,489,Rest of TX
+48123,DeWitt,489,Rest of TX
+48125,Dickens,489,Rest of TX
+48195,Hansford,489,Rest of TX
+42015,Bradford,429,Rest of PA
+46029,Codington,460,South Dakota
+48021,Bastrop,481,Austin TX
+48193,Hamilton,489,Rest of TX
+54055,Mercer,540,West Virginia
+54061,Monongalia,540,West Virginia
+13253,Seminole,139,Rest of GA
+13277,Tift,139,Rest of GA
+45089,Williamsburg,459,Rest of SC
+46003,Aurora,460,South Dakota
+46007,Bennett,460,South Dakota
+48181,Grayson,484,Dallas-Fort Worth TX-OK (TX Part)
+48197,Hardeman,489,Rest of TX
+29155,Pemiscot,299,Rest of MO
+31097,Johnson,319,Rest of NE
+35041,Roosevelt,350,New Mexico
+53053,Pierce,531,Seattle WA
+48171,Gillespie,489,Rest of TX
+54089,Summers,540,West Virginia
+55009,Brown,559,Rest of WI
+46013,Brown,460,South Dakota
+46017,Buffalo,460,South Dakota
+46019,Butte,460,South Dakota
+48209,Hays,481,Austin TX
+48211,Hemphill,489,Rest of TX
+48233,Hutchinson,489,Rest of TX
+48235,Irion,489,Rest of TX
+48243,Jeff Davis,489,Rest of TX
+48249,Jim Wells,483,Corpus Christi TX
+21185,Oldham,212,Louisville KY-IN (KY Part)
+26123,Newaygo,269,Rest of MI
+26137,Otsego,269,Rest of MI
+27047,Freeborn,279,Rest of MN
+55013,Burnett,559,Rest of WI
+55017,Chippewa,559,Rest of WI
+55019,Clark,559,Rest of WI
+46027,Clay,460,South Dakota
+46033,Custer,460,South Dakota
+46043,Douglas,460,South Dakota
+46047,Fall River,460,South Dakota
+48253,Jones,489,Rest of TX
+48257,Kaufman,484,Dallas-Fort Worth TX-OK (TX Part)
+48267,Kimble,489,Rest of TX
+48505,Zapata,489,Rest of TX
+50015,Lamoille,500,Vermont
+55063,La Crosse,559,Rest of WI
+55031,Douglas,559,Rest of WI
+55033,Dunn,559,Rest of WI
+46051,Grant,460,South Dakota
+46061,Hanson,460,South Dakota
+46079,Lake,460,South Dakota
+46081,Lawrence,460,South Dakota
+48271,Kinney,489,Rest of TX
+48281,Lampasas,489,Rest of TX
+48291,Liberty,486,Houston TX
+55115,Shawano,559,Rest of WI
+48393,Roberts,489,Rest of TX
+48415,Scurry,489,Rest of TX
+05081,Little River,050,Arkansas
+08097,Pitkin,089,Rest of CO
+13127,Glynn,139,Rest of GA
+55041,Forest,559,Rest of WI
+55045,Green,559,Rest of WI
+55047,Green Lake,559,Rest of WI
+46135,Yankton,460,South Dakota
+47007,Bledsoe,479,Rest of TN
+48295,Lipscomb,489,Rest of TX
+48297,Live Oak,489,Rest of TX
+48307,McCulloch,489,Rest of TX
+28003,Alcorn,280,Mississippi
+28123,Scott,280,Mississippi
+29115,Linn,299,Rest of MO
+31063,Frontier,319,Rest of NE
+31181,Webster,319,Rest of NE
+55061,Kewaunee,559,Rest of WI
+55065,Lafayette,559,Rest of WI
+55071,Manitowoc,559,Rest of WI
+47011,Bradley,479,Rest of TN
+47023,Chester,479,Rest of TN
+48325,Medina,488,San Antonio TX
+48329,Midland,489,Rest of TX
+48335,Mitchell,489,Rest of TX
+48353,Nolan,489,Rest of TX
+48357,Ochiltree,489,Rest of TX
+48367,Parker,484,Dallas-Fort Worth TX-OK (TX Part)
+56043,Washakie,560,Wyoming
+72071,Isabela,,
+12075,Levy,129,Rest of FL
+20071,Greeley,209,Rest of KS
+55079,Milwaukee,551,Milwaukee WI
+55087,Outagamie,559,Rest of WI
+47027,Clay,479,Rest of TN
+47047,Fayette,471,Memphis TN-MS-AR (TN Part)
+47069,Hardeman,479,Rest of TN
+48369,Parmer,489,Rest of TX
+48381,Randall,489,Rest of TX
+48397,Rockwall,484,Dallas-Fort Worth TX-OK (TX Part)
+48417,Shackelford,489,Rest of TX
+48421,Sherman,489,Rest of TX
+48431,Sterling,489,Rest of TX
+48435,Sutton,489,Rest of TX
+13247,Rockdale,131,Atlanta GA
+17077,Jackson,179,Rest of IL
+55091,Pepin,559,Rest of WI
+55093,Pierce,559,Rest of WI
+55097,Portage,559,Rest of WI
+47071,Hardin,479,Rest of TN
+47075,Haywood,479,Rest of TN
+48445,Terry,489,Rest of TX
+48477,Washington,486,Houston TX
+48483,Wheeler,489,Rest of TX
+48487,Wilbarger,489,Rest of TX
+37151,Randolph,372,Greensboro--Winston-Salem--High Point NC
+38079,Rolette,380,North Dakota
+39023,Clark,394,Dayton OH
+39139,Richland,399,Rest of OH
+55101,Racine,551,Milwaukee WI
+55103,Richland,559,Rest of WI
+47083,Houston,479,Rest of TN
+47095,Lake,479,Rest of TN
+48493,Wilson,488,San Antonio TX
+49041,Sevier,499,Rest of UT
+20197,Wabaunsee,209,Rest of KS
+21157,Marshall,219,Rest of KY
+37183,Wake,373,Raleigh-Durham NC
+38013,Burke,380,North Dakota
+38041,Hettinger,380,North Dakota
+72063,Gurabo,,
+72075,Juana Díaz,,
+28017,Chickasaw,280,Mississippi
+28099,Neshoba,280,Mississippi
+40077,Latimer,409,Rest of OK
+40109,Oklahoma,401,Oklahoma City OK
+18047,Franklin,189,Rest of IN
+18079,Jennings,182,Indianapolis IN
+18093,Lawrence,189,Rest of IN
+18105,Monroe,189,Rest of IN
+38069,Pierce,380,North Dakota
+39005,Ashland,399,Rest of OH
+39015,Brown,391,Cincinnati OH-KY-IN (OH Part)
+72085,Las Piedras,,
+72109,Patillas,,
+13081,Crisp,139,Rest of GA
+17095,Knox,179,Rest of IL
+18011,Boone,182,Indianapolis IN
+18135,Randolph,189,Rest of IN
+18117,Orange,189,Rest of IN
+18137,Ripley,189,Rest of IN
+18167,Vigo,189,Rest of IN
+19065,Fayette,190,Iowa
+19093,Ida,190,Iowa
+39029,Columbiana,399,Rest of OH
+39059,Guernsey,393,Columbus OH
+39087,Lawrence,399,Rest of OH
+72119,Río Grande,,
+72129,San Lorenzo,,
+19123,Mahaska,190,Iowa
+20007,Barber,209,Rest of KS
+36089,St. Lawrence,369,Rest of NY
+19121,Madison,190,Iowa
+19151,Pocahontas,190,Iowa
+19179,Wapello,190,Iowa
+20005,Atchison,201,Kansas City MO-KS (KS Part)
+20081,Haskell,209,Rest of KS
+20093,Kearny,209,Rest of KS
+39145,Scioto,399,Rest of OH
+40003,Alfalfa,409,Rest of OK
+40059,Harper,409,Rest of OK
+13017,Ben Hill,139,Rest of GA
+21091,Hancock,219,Rest of KY
+38025,Dunn,380,North Dakota
+39045,Fairfield,393,Columbus OH
+39109,Miami,394,Dayton OH
+20103,Leavenworth,201,Kansas City MO-KS (KS Part)
+20121,Miami,201,Kansas City MO-KS (KS Part)
+20179,Sheridan,209,Rest of KS
+40083,Logan,401,Oklahoma City OK
+40137,Stephens,409,Rest of OK
+41029,Jackson,419,Rest of OR
+26125,Oakland,261,Detroit MI
+17117,Macoupin,172,St. Louis MO-IL (IL Part)
+19015,Boone,190,Iowa
+40015,Caddo,409,Rest of OK
+40099,Murray,409,Rest of OK
+28015,Carroll,280,Mississippi
+20207,Woodson,209,Rest of KS
+21061,Edmonson,219,Rest of KY
+21117,Kenton,211,Cincinnati OH-KY-IN (KY Part)
+41041,Lincoln,419,Rest of OR
+41053,Polk,411,Portland OR-WA (OR Part)
+20035,Cowley,202,Wichita KS
+37105,Lee,373,Raleigh-Durham NC
+29055,Crawford,299,Rest of MO
+29137,Monroe,299,Rest of MO
+31169,Thayer,319,Rest of NE
+42113,Sullivan,429,Rest of PA
+54009,Brooke,540,West Virginia
+21233,Webster,219,Rest of KY
+23029,Washington,230,Maine
+42025,Carbon,423,New York NY-NJ-CT-PA (PA Part)
+42077,Lehigh,423,New York NY-NJ-CT-PA (PA Part)
+13131,Grady,139,Rest of GA
+13173,Lanier,139,Rest of GA
+55069,Lincoln,559,Rest of WI
+46065,Hughes,460,South Dakota
+48019,Bandera,488,San Antonio TX
+48101,Cottle,489,Rest of TX
+26031,Cheboygan,269,Rest of MI
+26113,Missaukee,269,Rest of MI
+26129,Ogemaw,269,Rest of MI
+45033,Dillon,459,Rest of SC
+46053,Gregory,460,South Dakota
+16047,Gooding,160,Idaho
+17001,Adams,179,Rest of IL
+17039,De Witt,179,Rest of IL
+48259,Kendall,488,San Antonio TX
+48463,Uvalde,489,Rest of TX
+50021,Rutland,500,Vermont
+02164,Lake and Peninsula,020,Alaska
+26151,Sanilac,269,Rest of MI
+26161,Washtenaw,261,Detroit MI
+27039,Dodge,279,Rest of MN
+46091,Marshall,460,South Dakota
+46102,Oglala Lakota,460,South Dakota
+46115,Spink,460,South Dakota
+17087,Johnson,179,Rest of IL
+17163,St. Clair,172,St. Louis MO-IL (IL Part)
+01127,Walker,011,Birmingham AL
+04019,Pima,042,Tucson AZ
+27063,Jackson,279,Rest of MN
+27115,Pine,279,Rest of MN
+46129,Walworth,460,South Dakota
+47077,Henderson,479,Rest of TN
+48031,Blanco,489,Rest of TX
+48117,Deaf Smith,489,Rest of TX
+18089,Lake,181,Chicago IL-IN-WI (IN Part)
+18107,Montgomery,182,Indianapolis IN
+18161,Union,189,Rest of IN
+19021,Buena Vista,190,Iowa
+05033,Crawford,050,Arkansas
+05125,Saline,050,Arkansas
+27143,Sibley,271,Minneapolis-St. Paul MN-WI (MN Part)
+28057,Itawamba,280,Mississippi
+28081,Lee,280,Mississippi
+28139,Tippah,280,Mississippi
+48147,Fannin,484,Dallas-Fort Worth TX-OK (TX Part)
+48159,Franklin,489,Rest of TX
+19069,Franklin,190,Iowa
+19107,Keokuk,190,Iowa
+19145,Page,190,Iowa
+19193,Woodbury,190,Iowa
+08025,Crowley,089,Rest of CO
+12005,Bay,129,Rest of FL
+29015,Benton,299,Rest of MO
+29043,Christian,299,Rest of MO
+29101,Johnson,291,Kansas City MO-KS (MO Part)
+29129,Mercer,299,Rest of MO
+48265,Kerr,489,Rest of TX
+48293,Limestone,489,Rest of TX
+48437,Swisher,489,Rest of TX
+49039,Sanpete,499,Rest of UT
+50005,Caledonia,500,Vermont
+20039,Decatur,209,Rest of KS
+20099,Labette,209,Rest of KS
+20115,Marion,209,Rest of KS
+20165,Rush,209,Rest of KS
+12091,Okaloosa,129,Rest of FL
+13005,Bacon,139,Rest of GA
+13045,Carroll,131,Atlanta GA
+29153,Ozark,299,Rest of MO
+29186,Ste. Genevieve,299,Rest of MO
+29213,Taney,299,Rest of MO
+51089,Henry,519,Rest of VA
+51595,Emporia,519,Rest of VA
+51678,Lexington,519,Rest of VA
+21037,Campbell,211,Cincinnati OH-KY-IN (KY Part)
+21161,Mason,211,Cincinnati OH-KY-IN (KY Part)
+13087,Decatur,139,Rest of GA
+16055,Kootenai,160,Idaho
+17025,Clay,179,Rest of IL
+30091,Sheridan,300,Montana
+31033,Cheyenne,319,Rest of NE
+31045,Dawes,319,Rest of NE
+31075,Grant,319,Rest of NE
+31105,Kimball,319,Rest of NE
+51760,Richmond,511,Richmond VA
+53023,Garfield,539,Rest of WA
+22007,Assumption,229,Rest of LA
+22027,Claiborne,229,Rest of LA
+26007,Alpena,269,Rest of MI
+26085,Lake,269,Rest of MI
+17049,Effingham,179,Rest of IL
+17083,Jersey,172,St. Louis MO-IL (IL Part)
+31129,Nuckolls,319,Rest of NE
+31157,Scotts Bluff,319,Rest of NE
+31185,York,319,Rest of NE
+33019,Sullivan,339,Rest of NH
+53069,Wahkiakum,539,Rest of WA
+54053,Mason,540,West Virginia
+54077,Preston,540,West Virginia
+26139,Ottawa,262,Grand Rapids MI
+26157,Tuscola,269,Rest of MI
+17111,McHenry,171,Chicago IL-IN-WI (IL Part)
+17139,Moultrie,179,Rest of IL
+17193,White,179,Rest of IL
+36037,Genesee,364,Rochester NY
+36049,Lewis,369,Rest of NY
+37073,Gates,379,Rest of NC
+55053,Jackson,559,Rest of WI
+55081,Monroe,559,Rest of WI
+55137,Waushara,559,Rest of WI
+56025,Natrona,560,Wyoming
+27009,Benton,271,Minneapolis-St. Paul MN-WI (MN Part)
+27057,Hubbard,279,Rest of MN
+27105,Nobles,279,Rest of MN
+27149,Stevens,279,Rest of MN
+26057,Gratiot,269,Rest of MI
+40139,Texas,409,Rest of OK
+27025,Chisago,271,Minneapolis-St. Paul MN-WI (MN Part)
+48331,Milam,489,Rest of TX
+48363,Palo Pinto,484,Dallas-Fort Worth TX-OK (TX Part)
+38031,Foster,380,North Dakota
+38075,Renville,380,North Dakota
+38093,Stutsman,380,North Dakota
+39003,Allen,399,Rest of OH
+39063,Hancock,399,Rest of OH
+72073,Jayuya,,
+72091,Manatí,,
+27079,Le Sueur,271,Minneapolis-St. Paul MN-WI (MN Part)
+27111,Otter Tail,279,Rest of MN
+27165,Watonwan,279,Rest of MN
+48439,Tarrant,484,Dallas-Fort Worth TX-OK (TX Part)
+49031,Piute,499,Rest of UT
+23005,Cumberland,230,Maine
+39101,Marion,393,Columbus OH
+39149,Shelby,394,Dayton OH
+40011,Blaine,409,Rest of OK
+40049,Garvin,409,Rest of OK
+72107,Orocovis,,
+72125,San Germán,,
+28079,Leake,280,Mississippi
+28111,Perry,280,Mississippi
+29045,Clark,299,Rest of MO
+29073,Gasconade,299,Rest of MO
+35043,Sandoval,350,New Mexico
+37045,Cleveland,371,Charlotte NC-SC (NC Part)
+40097,Mayes,409,Rest of OK
+41063,Wallowa,419,Rest of OR
+72143,Vega Alta,,
+01045,Dale,019,Rest of AL
+29103,Knox,299,Rest of MO
+29127,Marion,299,Rest of MO
+29161,Phelps,299,Rest of MO
+29179,Reynolds,299,Rest of MO
+48059,Callahan,489,Rest of TX
+01011,Bullock,019,Rest of AL
+01079,Lawrence,019,Rest of AL
+42039,Crawford,429,Rest of PA
+42087,Mifflin,429,Rest of PA
+46021,Campbell,460,South Dakota
+01105,Perry,019,Rest of AL
+02290,Yukon-Koyukuk,020,Alaska
+05027,Columbia,050,Arkansas
+29209,Stone,299,Rest of MO
+31079,Hall,319,Rest of NE
+31107,Knox,319,Rest of NE
+31135,Perkins,319,Rest of NE
+05097,Montgomery,050,Arkansas
+13097,Douglas,131,Atlanta GA
+13155,Irwin,139,Rest of GA
+46067,Hutchinson,460,South Dakota
+46101,Moody,460,South Dakota
+46119,Sully,460,South Dakota
+05059,Hot Spring,050,Arkansas
+18025,Crawford,189,Rest of IN
+18053,Grant,189,Rest of IN
+31163,Sherman,319,Rest of NE
+32007,Elko,329,Rest of NV
+13281,Towns,139,Rest of GA
+16011,Bingham,160,Idaho
+17035,Cumberland,179,Rest of IL
+47015,Cannon,472,Nashville TN
+47111,Macon,472,Nashville TN
+21163,Meade,212,Louisville KY-IN (KY Part)
+21215,Spencer,212,Louisville KY-IN (KY Part)
+23013,Knox,230,Maine
+34039,Union,341,New York NY-NJ-CT-PA (NJ Part)
+35027,Lincoln,350,New Mexico
+17101,Lawrence,179,Rest of IL
+18013,Brown,182,Indianapolis IN
+18087,LaGrange,189,Rest of IN
+18113,Noble,183,Fort Wayne IN
+18151,Steuben,183,Fort Wayne IN
+48137,Edwards,489,Rest of TX
+48153,Floyd,489,Rest of TX
+48169,Garza,489,Rest of TX
+13273,Terrell,139,Rest of GA
+13297,Walton,131,Atlanta GA
+41069,Wheeler,419,Rest of OR
+42085,Mercer,429,Rest of PA
+19031,Cedar,190,Iowa
+19155,Pottawattamie,190,Iowa
+20019,Chautauqua,209,Rest of KS
+48217,Hill,489,Rest of TX
+48255,Karnes,489,Rest of TX
+05113,Polk,050,Arkansas
+05143,Washington,050,Arkansas
+08095,Phillips,089,Rest of CO
+42109,Snyder,429,Rest of PA
+51183,Sussex,511,Richmond VA
+20079,Harvey,202,Wichita KS
+20107,Linn,201,Kansas City MO-KS (KS Part)
+20155,Reno,209,Rest of KS
+21223,Trimble,212,Louisville KY-IN (KY Part)
+48299,Llano,489,Rest of TX
+48375,Potter,489,Rest of TX
+48461,Upton,489,Rest of TX
+48495,Winkler,489,Rest of TX
+49053,Washington,499,Rest of UT
+25019,Nantucket,259,Rest of MA
+26019,Benzie,269,Rest of MI
+26045,Eaton,269,Rest of MI
+51590,Danville,519,Rest of VA
+51690,Martinsville,519,Rest of VA
+51820,Waynesboro,519,Rest of VA
+28147,Walthall,280,Mississippi
+29007,Audrain,299,Rest of MO
+29025,Caldwell,291,Kansas City MO-KS (MO Part)
+29053,Cooper,299,Rest of MO
+51021,Bland,519,Rest of VA
+51065,Fluvanna,519,Rest of VA
+15005,Kalawao,159,Rest of HI
+16067,Minidoka,160,Idaho
+17037,DeKalb,171,Chicago IL-IN-WI (IL Part)
+54051,Marshall,540,West Virginia
+54079,Putnam,540,West Virginia
+29091,Howell,299,Rest of MO
+29139,Montgomery,299,Rest of MO
+29181,Ripley,299,Rest of MO
+31013,Box Butte,319,Rest of NE
+51520,Bristol,519,Rest of VA
+51700,Newport News,512,Virginia Beach-Norfolk VA-NC (VA Part)
+08123,Weld,081,Denver CO
+12003,Baker,121,Jacksonville FL-GA  CFS Area (FL Part)
+13025,Brantley,139,Rest of GA
+20061,Geary,209,Rest of KS
+55027,Dodge,551,Milwaukee WI
+55055,Jefferson,551,Milwaukee WI
+31027,Cedar,319,Rest of NE
+31043,Dakota,319,Rest of NE
+31061,Franklin,319,Rest of NE
+53003,Asotin,539,Rest of WA
+53039,Klickitat,539,Rest of WA
+26077,Kalamazoo,269,Rest of MI
+26107,Mecosta,262,Grand Rapids MI
+13067,Cobb,131,Atlanta GA
+17007,Boone,179,Rest of IL
+55083,Oconto,559,Rest of WI
+05111,Poinsett,050,Arkansas
+31099,Kearney,319,Rest of NE
+31143,Polk,319,Rest of NE
+32005,Douglas,329,Rest of NV
+54035,Jackson,540,West Virginia
+55049,Iowa,559,Rest of WI
+17065,Hamilton,179,Rest of IL
+17093,Kendall,171,Chicago IL-IN-WI (IL Part)
+17127,Massac,179,Rest of IL
+12101,Pasco,124,Tampa FL
+46009,Bon Homme,460,South Dakota
+46037,Day,460,South Dakota
+46069,Hyde,460,South Dakota
+48047,Brooks,489,Rest of TX
+35025,Lea,350,New Mexico
+36005,Bronx,363,New York NY-NJ-CT-PA (NY Part)
+55095,Polk,559,Rest of WI
+55133,Waukesha,551,Milwaukee WI
+20133,Neosho,209,Rest of KS
+20187,Stanton,209,Rest of KS
+21009,Barren,219,Rest of KY
+21035,Calloway,219,Rest of KY
+47061,Grundy,479,Rest of TN
+47179,Washington,479,Rest of TN
+36055,Monroe,364,Rochester NY
+36101,Steuben,369,Rest of NY
+72003,Aguada,,
+72015,Arroyo,,
+72029,Canóvanas,,
+13095,Dougherty,139,Rest of GA
+13125,Glascock,139,Rest of GA
+48075,Childress,489,Rest of TX
+48177,Gonzales,489,Rest of TX
+48191,Hall,489,Rest of TX
+48219,Hockley,489,Rest of TX
+48247,Jim Hogg,489,Rest of TX
+48305,Lynn,489,Rest of TX
+37063,Durham,373,Raleigh-Durham NC
+37107,Lenoir,379,Rest of NC
+72043,Coamo,,
+72055,Guánica,,
+17143,Peoria,179,Rest of IL
+17199,Williamson,179,Rest of IL
+28119,Quitman,280,Mississippi
+29037,Cass,291,Kansas City MO-KS (MO Part)
+29163,Pike,299,Rest of MO
+29217,Vernon,299,Rest of MO
+72095,Maunabo,,
+72117,Rincón,,
+72145,Vega Baja,,
+02198,Prince of Wales-Hyder,020,Alaska
+29089,Howard,299,Rest of MO
+29123,Madison,299,Rest of MO
+29187,St. Francois,292,St. Louis MO-IL (MO Part)
+29229,Wright,299,Rest of MO
+47017,Carroll,479,Rest of TN
+47051,Franklin,479,Rest of TN
+30111,Yellowstone,300,Montana
+31025,Cass,311,Omaha NE-IA (NE Part)
+05035,Crittenden,050,Arkansas
+08045,Garfield,089,Rest of CO
+18153,Sullivan,189,Rest of IN
+18183,Whitley,183,Fort Wayne IN
+19033,Cerro Gordo,190,Iowa
+19091,Humboldt,190,Iowa
+47099,Lawrence,472,Nashville TN
+47137,Pickett,479,Rest of TN
+31049,Deuel,319,Rest of NE
+31085,Hayes,319,Rest of NE
+31147,Richardson,319,Rest of NE
+08079,Mineral,089,Rest of CO
+12043,Glades,129,Rest of FL
+12085,Martin,122,Miami FL
+19119,Lyon,190,Iowa
+19149,Plymouth,190,Iowa
+47171,Unicoi,479,Rest of TN
+48027,Bell,489,Rest of TX
+48185,Grimes,489,Rest of TX
+48239,Jackson,489,Rest of TX
+48283,La Salle,489,Rest of TX
+48319,Mason,489,Rest of TX
+32019,Lyon,329,Rest of NV
+34017,Hudson,341,New York NY-NJ-CT-PA (NJ Part)
+20119,Meade,209,Rest of KS
+20153,Rawlins,209,Rest of KS
+21023,Bracken,211,Cincinnati OH-KY-IN (KY Part)
+19177,Van Buren,190,Iowa
+20011,Bourbon,209,Rest of KS
+20041,Dickinson,209,Rest of KS
+35053,Socorro,350,New Mexico
+48359,Oldham,489,Rest of TX
+48425,Somervell,484,Dallas-Fort Worth TX-OK (TX Part)
+50013,Grand Isle,500,Vermont
+36023,Cortland,369,Rest of NY
+36087,Rockland,363,New York NY-NJ-CT-PA (NY Part)
+37011,Avery,379,Rest of NC
+21057,Cumberland,219,Rest of KY
+21111,Jefferson,212,Louisville KY-IN (KY Part)
+36085,Richmond,363,New York NY-NJ-CT-PA (NY Part)
+36117,Wayne,364,Rochester NY
+51071,Giles,519,Rest of VA
+55135,Waupaca,559,Rest of WI
+37077,Granville,373,Raleigh-Durham NC
+37135,Orange,373,Raleigh-Durham NC
+38091,Steele,380,North Dakota
+21145,McCracken,219,Rest of KY
+21221,Trigg,219,Rest of KY
+26069,Iosco,269,Rest of MI
+26111,Midland,269,Rest of MI
+37109,Lincoln,371,Charlotte NC-SC (NC Part)
+37197,Yadkin,372,Greensboro--Winston-Salem--High Point NC
+17201,Winnebago,179,Rest of IL
+31017,Brown,319,Rest of NE
+39011,Auglaize,399,Rest of OH
+39049,Franklin,393,Columbus OH
+13119,Franklin,139,Rest of GA
+13199,Meriwether,131,Atlanta GA
+38029,Emmons,380,North Dakota
+38057,Mercer,380,North Dakota
+01081,Lee,019,Rest of AL
+21073,Franklin,219,Rest of KY
+39111,Monroe,399,Rest of OH
+39173,Wood,399,Rest of OH
+41037,Lake,419,Rest of OR
+16057,Latah,160,Idaho
+17045,Edgar,179,Rest of IL
+17079,Jasper,179,Rest of IL
+38083,Sheridan,380,North Dakota
+39051,Fulton,399,Rest of OH
+39081,Jefferson,399,Rest of OH
+17169,Schuyler,179,Rest of IL
+19011,Benton,190,Iowa
+41057,Tillamook,419,Rest of OR
+46045,Edmunds,460,South Dakota
+17119,Madison,172,St. Louis MO-IL (IL Part)
+17155,Putnam,171,Chicago IL-IN-WI (IL Part)
+18023,Clinton,189,Rest of IN
+18063,Hendricks,182,Indianapolis IN
+39113,Montgomery,394,Dayton OH
+39141,Ross,393,Columbus OH
+22061,Lincoln,229,Rest of LA
+28027,Coahoma,280,Mississippi
+46083,Lincoln,460,South Dakota
+46105,Perkins,460,South Dakota
+19003,Adams,190,Iowa
+19051,Davis,190,Iowa
+19085,Harrison,190,Iowa
+40051,Grady,401,Oklahoma City OK
+41013,Crook,419,Rest of OR
+29071,Franklin,292,St. Louis MO-IL (MO Part)
+31007,Banner,319,Rest of NE
+47067,Hancock,479,Rest of TN
+48121,Denton,484,Dallas-Fort Worth TX-OK (TX Part)
+48133,Eastland,489,Rest of TX
+19129,Mills,190,Iowa
+20047,Edwards,209,Rest of KS
+36001,Albany,361,Albany NY  CFS Area
+42057,Fulton,429,Rest of PA
+42093,Montour,429,Rest of PA
+42131,Wyoming,429,Rest of PA
+36083,Rensselaer,361,Albany NY  CFS Area
+40025,Cimarron,409,Rest of OK
+48269,King,489,Rest of TX
+48327,Menard,489,Rest of TX
+48447,Throckmorton,489,Rest of TX
+48501,Yoakum,489,Rest of TX
+50001,Addison,500,Vermont
+36035,Fulton,361,Albany NY  CFS Area
+37067,Forsyth,372,Greensboro--Winston-Salem--High Point NC
+37157,Rockingham,372,Greensboro--Winston-Salem--High Point NC
+51670,Hopewell,511,Richmond VA
+51800,Suffolk,512,Virginia Beach-Norfolk VA-NC (VA Part)
+54069,Ohio,540,West Virginia
+41067,Washington,411,Portland OR-WA (OR Part)
+46025,Clark,460,South Dakota
+51035,Carroll,519,Rest of VA
+51660,Harrisonburg,519,Rest of VA
+54029,Hancock,540,West Virginia
+37195,Wilson,379,Rest of NC
+38073,Ransom,380,North Dakota
+39055,Geauga,392,Cleveland OH
+54105,Wirt,540,West Virginia
+55117,Sheboygan,559,Rest of WI
+55109,St. Croix,559,Rest of WI
+72139,Trujillo Alto,,
+26105,Mason,269,Rest of MI
+54091,Taylor,540,West Virginia
+55035,Eau Claire,559,Rest of WI
+55099,Price,559,Rest of WI
+56009,Converse,560,Wyoming
+39093,Lorain,392,Cleveland OH
+40029,Coal,409,Rest of OK
+40063,Hughes,409,Rest of OK
+56021,Laramie,560,Wyoming
+05087,Madison,050,Arkansas
+08087,Morgan,089,Rest of CO
+22019,Calcasieu,222,Lake Charles-Jennings LA
+23001,Androscoggin,230,Maine
+72009,Aibonito,,
+72027,Camuy,,
+40147,Washington,402,Tulsa OK
+27037,Dakota,271,Minneapolis-St. Paul MN-WI (MN Part)
+28009,Benton,280,Mississippi
+28131,Stone,280,Mississippi
+16017,Bonner,160,Idaho
+46031,Corson,460,South Dakota
+26127,Oceana,269,Rest of MI
+26145,Saginaw,269,Rest of MI
+27003,Anoka,271,Minneapolis-St. Paul MN-WI (MN Part)
+72049,Culebra,,
+72067,Hormigueros,,
+28093,Marshall,280,Mississippi
+29049,Clinton,291,Kansas City MO-KS (MO Part)
+18081,Johnson,182,Indianapolis IN
+30041,Hill,300,Montana
+31005,Arthur,319,Rest of NE
+31087,Hitchcock,319,Rest of NE
+31117,McPherson,319,Rest of NE
+31155,Saunders,311,Omaha NE-IA (NE Part)
+33011,Hillsborough,331,Boston MA-RI-NH-CT (NH Part)
+01055,Etowah,019,Rest of AL
+02180,Nome,020,Alaska
+06003,Alpine,069,Rest of CA
+06057,Nevada,062,Sacramento CA
+08083,Montezuma,089,Rest of CO
+12055,Highlands,129,Rest of FL
+12127,Volusia,123,Orlando FL
+13141,Hancock,139,Rest of GA
+13271,Telfair,139,Rest of GA
+16025,Camas,160,Idaho
+17043,DuPage,171,Chicago IL-IN-WI (IL Part)
+21007,Ballard,219,Rest of KY
+21131,Leslie,219,Rest of KY
+22011,Beauregard,229,Rest of LA
+22081,Red River,229,Rest of LA
+24033,Prince George's,242,Washington DC-VA-MD-WV (MD Part)
+26163,Wayne,261,Detroit MI
+28007,Attala,280,Mississippi
+30077,Powell,300,Montana
+34023,Middlesex,341,New York NY-NJ-CT-PA (NJ Part)
+36081,Queens,363,New York NY-NJ-CT-PA (NY Part)
+37083,Halifax,379,Rest of NC
+37155,Robeson,379,Rest of NC
+41005,Clackamas,411,Portland OR-WA (OR Part)
+42111,Somerset,429,Rest of PA
+45063,Lexington,459,Rest of SC
+47005,Benton,479,Rest of TN
+47097,Lauderdale,479,Rest of TN
+48025,Bee,489,Rest of TX
+48151,Fisher,489,Rest of TX
+49011,Davis,491,Salt Lake City UT
+51037,Charlotte,519,Rest of VA
+51109,Louisa,519,Rest of VA
+51177,Spotsylvania,513,Washington DC-VA-MD-WV (VA Part)
+53015,Cowlitz,532,Portland OR-WA (WA Part)
+54021,Gilmer,540,West Virginia
+54103,Wetzel,540,West Virginia
+69110,Saipan,,
+72115,Quebradillas,,
+01107,Pickens,019,Rest of AL
+02158,Kusilvak,020,Alaska
+01089,Madison,019,Rest of AL
+02282,Yakutat,020,Alaska
+05139,Union,050,Arkansas
+06019,Fresno,065,Fresno CA
+06081,San Mateo,064,San Francisco CA
+08077,Mesa,089,Rest of CO
+12031,Duval,121,Jacksonville FL-GA  CFS Area (FL Part)
+12131,Walton,129,Rest of FL
+13121,Fulton,131,Atlanta GA
+13209,Montgomery,139,Rest of GA
+13315,Wilcox,139,Rest of GA
+18147,Spencer,189,Rest of IN
+20025,Clark,209,Rest of KS
+21093,Hardin,212,Louisville KY-IN (KY Part)
+21189,Owsley,219,Rest of KY
+22009,Avoyelles,229,Rest of LA
+22047,Iberville,221,Baton Rouge LA
+22099,St. Martin,229,Rest of LA
+25007,Dukes,259,Rest of MA
+28055,Issaquena,280,Mississippi
+05109,Pike,050,Arkansas
+06059,Orange,061,Los Angeles CA
+08019,Clear Creek,081,Denver CO
+09007,Middlesex,091,Hartford CT
+12053,Hernando,124,Tampa FL
+21125,Laurel,219,Rest of KY
+21205,Rowan,219,Rest of KY
+22077,Pointe Coupee,221,Baton Rouge LA
+13133,Greene,139,Rest of GA
+13217,Newton,131,Atlanta GA
+17161,Rock Island,179,Rest of IL
+36025,Delaware,369,Rest of NY
+37023,Burke,379,Rest of NC
+37099,Jackson,379,Rest of NC
+38071,Ramsey,380,North Dakota
+27061,Itasca,279,Rest of MN
+27161,Waseca,279,Rest of MN
+30001,Beaverhead,300,Montana
+30069,Petroleum,300,Montana
+32001,Churchill,329,Rest of NV
+34015,Gloucester,342,Philadelphia PA-NJ-DE-MD (NJ Part)
+29057,Dade,299,Rest of MO
+34041,Warren,341,New York NY-NJ-CT-PA (NJ Part)
+36029,Erie,362,Buffalo NY  CFS Area
+36047,Kings,363,New York NY-NJ-CT-PA (NY Part)
+37007,Anson,379,Rest of NC
+37127,Nash,379,Rest of NC
+38085,Sioux,380,North Dakota
+41033,Josephine,419,Rest of OR
+41061,Union,419,Rest of OR
+42075,Lebanon,429,Rest of PA
+46123,Tripp,460,South Dakota
+47063,Hamblen,473,Knoxville TN
+47173,Union,473,Knoxville TN
+48073,Cherokee,489,Rest of TX
+48199,Hardin,482,Beaumont TX
+49015,Emery,499,Rest of UT
+51001,Accomack,519,Rest of VA
+35045,San Juan,350,New Mexico
+42027,Centre,429,Rest of PA
+42095,Northampton,423,New York NY-NJ-CT-PA (PA Part)
+45013,Beaufort,459,Rest of SC
+51127,New Kent,511,Richmond VA
+51735,Poquoson,512,Virginia Beach-Norfolk VA-NC (VA Part)
+54031,Hardy,540,West Virginia
+54085,Ritchie,540,West Virginia
+55078,Menominee,559,Rest of WI
+56027,Niobrara,560,Wyoming
+45061,Lee,459,Rest of SC
+51125,Nelson,519,Rest of VA
+51161,Roanoke,519,Rest of VA
+53043,Lincoln,539,Rest of WA
+54047,McDowell,540,West Virginia
+04012,La Paz,049,Rest of AZ
+05045,Faulkner,050,Arkansas
+06051,Mono,069,Rest of CA
+06083,Santa Barbara,069,Rest of CA
+08055,Huerfano,089,Rest of CO
+13039,Camden,139,Rest of GA
+21139,Livingston,219,Rest of KY
+21197,Powell,219,Rest of KY
+22055,Lafayette,229,Rest of LA
+22117,Washington,223,New Orleans LA-MS (LA Part)
+17081,Jefferson,179,Rest of IL
+36103,Suffolk,363,New York NY-NJ-CT-PA (NY Part)
+37043,Clay,379,Rest of NC
+37091,Hertford,379,Rest of NC
+28011,Bolivar,280,Mississippi
+53057,Skagit,531,Seattle WA
+46057,Hamlin,460,South Dakota
+47123,Monroe,479,Rest of TN
+47185,White,479,Rest of TN
+48091,Comal,488,San Antonio TX
+48229,Hudspeth,485,El Paso TX-NM (TX Part)
+48343,Morris,489,Rest of TX
+48407,San Jacinto,489,Rest of TX
+48443,Terrell,489,Rest of TX
+49047,Uintah,499,Rest of UT
+51033,Caroline,511,Richmond VA
+51095,James City,512,Virginia Beach-Norfolk VA-NC (VA Part)
+16049,Idaho,160,Idaho
+37029,Camden,379,Rest of NC
+48313,Madison,489,Rest of TX
+08057,Jackson,089,Rest of CO
+37051,Cumberland,379,Rest of NC
+27103,Nicollet,279,Rest of MN
+54095,Tyler,540,West Virginia
+01047,Dallas,019,Rest of AL
+08111,San Juan,089,Rest of CO
+20149,Pottawatomie,209,Rest of KS
+01001,Autauga,019,Rest of AL
+02130,Ketchikan Gateway,020,Alaska
+06033,Lake,069,Rest of CA
+08053,Hinsdale,089,Rest of CO
+12119,Sumter,123,Orlando FL
+13183,Long,132,Savannah GA
+16023,Butte,160,Idaho
+18003,Allen,183,Fort Wayne IN
+20135,Ness,209,Rest of KS
+21239,Woodford,219,Rest of KY
+22087,St. Bernard,223,New Orleans LA-MS (LA Part)
+26153,Schoolcraft,269,Rest of MI
+28143,Tunica,280,Mississippi
+29143,New Madrid,299,Rest of MO
+30047,Lake,300,Montana
+12125,Union,129,Rest of FL
+47189,Wilson,472,Nashville TN
+48063,Camp,489,Rest of TX
+48311,McMullen,489,Rest of TX
+49033,Rich,499,Rest of UT
+51009,Amherst,519,Rest of VA
+51047,Culpeper,513,Washington DC-VA-MD-WV (VA Part)
+22015,Bossier,229,Rest of LA
+25027,Worcester,251,Boston MA-RI-NH-CT (MA Part)
+36061,New York,363,New York NY-NJ-CT-PA (NY Part)
+48323,Maverick,489,Rest of TX
+16013,Blaine,160,Idaho
+20203,Wichita,209,Rest of KS
+55111,Sauk,559,Rest of WI
+47119,Maury,472,Nashville TN
+49057,Weber,491,Salt Lake City UT
+16003,Adams,160,Idaho
+21051,Clay,219,Rest of KY
+49037,San Juan,499,Rest of UT
+51113,Madison,519,Rest of VA
+08117,Summit,089,Rest of CO
+22097,St. Landry,229,Rest of LA
+13309,Wheeler,139,Rest of GA
+24029,Kent,249,Rest of MD
+27173,Yellow Medicine,279,Rest of MN
+34031,Passaic,341,New York NY-NJ-CT-PA (NJ Part)
+37159,Rowan,371,Charlotte NC-SC (NC Part)
+42049,Erie,429,Rest of PA
+47135,Perry,479,Rest of TN
+23025,Somerset,230,Maine
+30089,Sanders,300,Montana
+45031,Darlington,459,Rest of SC
+08007,Archuleta,089,Rest of CO
+04007,Gila,049,Rest of AZ
+12013,Calhoun,129,Rest of FL
+17153,Pulaski,179,Rest of IL
+12057,Hillsborough,124,Tampa FL
+22101,St. Mary,229,Rest of LA
+53077,Yakima,539,Rest of WA
+46071,Jackson,460,South Dakota
+48433,Stonewall,489,Rest of TX
+31113,Logan,319,Rest of NE
+36053,Madison,369,Rest of NY
+37087,Haywood,379,Rest of NC
+40079,Le Flore,409,Rest of OK
+41055,Sherman,419,Rest of OR
+45019,Charleston,451,Charleston SC
+47001,Anderson,473,Knoxville TN
+48007,Aransas,483,Corpus Christi TX
+48241,Jasper,489,Rest of TX
+48403,Sabine,489,Rest of TX
+49043,Summit,491,Salt Lake City UT
+51133,Northumberland,519,Rest of VA
+53025,Grant,539,Rest of WA
+54081,Raleigh,540,West Virginia
+01063,Greene,019,Rest of AL
+02090,Fairbanks North Star,020,Alaska
+05103,Ouachita,050,Arkansas
+06079,San Luis Obispo,069,Rest of CA
+08065,Lake,089,Rest of CO
+12037,Franklin,129,Rest of FL
+27067,Kandiyohi,279,Rest of MN
+45067,Marion,459,Rest of SC
+48389,Reeves,489,Rest of TX
+01097,Mobile,012,Mobile AL
+06077,San Joaquin,064,San Francisco CA
+23023,Sagadahoc,230,Maine
+18145,Shelby,182,Indianapolis IN
+21229,Washington,219,Rest of KY
+22113,Vermilion,229,Rest of LA
+26033,Chippewa,269,Rest of MI
+13105,Elbert,139,Rest of GA
+13221,Oglethorpe,131,Atlanta GA
+19009,Audubon,190,Iowa
+36123,Yates,364,Rochester NY
+37161,Rutherford,379,Rest of NC
+39047,Fayette,393,Columbus OH
+29099,Jefferson,292,St. Louis MO-IL (MO Part)
+29197,Schuyler,299,Rest of MO
+30083,Richland,300,Montana
+41065,Wasco,419,Rest of OR
+42103,Pike,423,New York NY-NJ-CT-PA (PA Part)
+13049,Charlton,139,Rest of GA
+47151,Scott,479,Rest of TN
+48051,Burleson,489,Rest of TX
+48301,Loving,489,Rest of TX
+48411,San Saba,489,Rest of TX
+50017,Orange,500,Vermont
+51083,Halifax,519,Rest of VA
+51087,Henrico,511,Richmond VA
+29019,Boone,299,Rest of MO
+05119,Pulaski,050,Arkansas
+51105,Lee,519,Rest of VA
+06027,Inyo,069,Rest of CA
+21027,Breckinridge,219,Rest of KY
+39115,Morgan,399,Rest of OH
+48465,Val Verde,489,Rest of TX
+54025,Greenbrier,540,West Virginia
+30003,Big Horn,300,Montana
+51119,Middlesex,519,Rest of VA
+48237,Jack,489,Rest of TX
+01033,Colbert,019,Rest of AL
+12129,Wakulla,129,Rest of FL
+29227,Worth,299,Rest of MO
+08005,Arapahoe,081,Denver CO
+24039,Somerset,249,Rest of MD
+45021,Cherokee,452,Greenville SC
+48099,Coryell,489,Rest of TX
+12105,Polk,129,Rest of FL
+53045,Mason,531,Seattle WA
+49017,Garfield,499,Rest of UT
+19163,Scott,190,Iowa
+27145,Stearns,271,Minneapolis-St. Paul MN-WI (MN Part)
+37069,Franklin,373,Raleigh-Durham NC
+48317,Martin,489,Rest of TX
+54107,Wood,540,West Virginia
+13269,Taylor,139,Rest of GA
+01003,Baldwin,012,Mobile AL
