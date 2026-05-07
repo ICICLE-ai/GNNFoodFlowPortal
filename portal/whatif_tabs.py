@@ -1,7 +1,7 @@
 """Embeddable multi-task what-if tabs for the GNN Food Flow Portal.
 
 This module intentionally does not call st.set_page_config(). It loads the
-vendored Plan D demo engine/artifacts from portal/whatif_demo so the portal can
+vendored demo engine/artifacts from portal/whatif_demo so the portal can
 be packaged and deployed without depending on sibling workspace folders.
 """
 

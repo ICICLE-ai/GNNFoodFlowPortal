@@ -17,9 +17,6 @@ Public API:
   - county_opts()               : sorted display strings for dropdown
   - fips_from_display(s)        : FIPS from dropdown string
 
-Zone-level methods (predict_baseline, predict_with_overrides, get_zone_*) are
-retained for backward compatibility but the demo now uses county methods.
-
 Designed for @st.cache_resource — load() called once per server process.
 """
 
@@ -94,59 +91,34 @@ class WhatifEngine:
             self._node_scaler = pickle.load(f)
         with open(os.path.join(ARTIFACTS, "node_pca.pkl"), "rb") as f:
             self._node_pca = pickle.load(f)
-        self._X_raw          = np.load(os.path.join(ARTIFACTS, "X_raw.npy"))           # (132, 333)
-        self._X_pca_baseline = np.load(os.path.join(ARTIFACTS, "X_pca_baseline.npy")) # (132, 30)
         with open(os.path.join(ARTIFACTS, "feature_cols.json")) as f:
             self._feature_cols = json.load(f)
-        # O(1) lookup: feature_name -> column index in X_raw
-        self._feat_col_to_idx = {col: i for i, col in enumerate(self._feature_cols)}
 
         # ── edge artifacts ─────────────────────────────────────────────────────
         with open(os.path.join(ARTIFACTS, "edge_scaler.pkl"), "rb") as f:
             self._edge_scaler = pickle.load(f)
-        self._dist_matrix = np.load(os.path.join(ARTIFACTS, "dist_matrix.npy"))  # (132, 132)
 
-        # ── baseline embeddings ────────────────────────────────────────────────
-        self._baseline_emb = np.load(os.path.join(ARTIFACTS, "baseline_embeddings.npy"))  # (132, 128)
-
-        # ── zone metadata ──────────────────────────────────────────────────────
-        with open(os.path.join(ARTIFACTS, "zone_metadata.json")) as f:
-            self._zone_metadata = json.load(f)
-        with open(os.path.join(ARTIFACTS, "zone_to_idx.json")) as f:
-            self._zone_to_idx = json.load(f)
-        self._faf_zones = list(self._zone_to_idx.keys())
-
-        # ── predictions CSV (baseline fast lookup) ─────────────────────────────
+        # ── FAF-zone predicted tons used as the county-level scale anchor ──────
         preds_df = pd.read_csv(os.path.join(WEBAPP_DIR, "predictions.csv"))
         preds_df["orig"] = preds_df["orig"].astype(str).str.zfill(3)
         preds_df["dest"] = preds_df["dest"].astype(str).str.zfill(3)
-        self._preds_df    = preds_df
-        self._pred_lookup = {(r.orig, r.dest): i for i, r in preds_df.iterrows()}
 
-        # Plan A: zone commodity-mix lookup for hybrid anchoring.
-        # (95th percentile winsorisation removed to preserve total volume conservation)
         sctg_cols = [f"sctg{k}_tons" for k in range(1, 8)]
 
-        self._zone_sctg_mix  = {}
         self._zone_tons_capped = {}
         for _, row in preds_df.iterrows():
             key  = (row.orig, row.dest)
             tons = np.array([float(row[c]) for c in sctg_cols], dtype=np.float32)
-            total = tons.sum()
-            if total > 0:
-                self._zone_sctg_mix[key]   = tons / total
+            if tons.sum() > 0:
                 self._zone_tons_capped[key] = tons
 
         # ── County cross-scale artifacts ───────────────────────────────────────
         self._county_X_raw          = np.load(os.path.join(ARTIFACTS, "county_X_raw.npy"))
-        self._county_X_pca_baseline = np.load(os.path.join(ARTIFACTS, "county_X_pca.npy"))
         self._county_embeddings     = np.load(os.path.join(ARTIFACTS, "county_embeddings.npy"))
-        # Plan D: zone-centering adjustment (x_c_adj = x_c + adj, then scaler+PCA)
+        # Zone-centering adjustment (x_c_adj = x_c + adj, then scaler+PCA)
         _adj_path = os.path.join(ARTIFACTS, "county_zone_adj.npy")
         self._county_zone_adj = (np.load(_adj_path) if os.path.exists(_adj_path)
                                  else np.zeros_like(self._county_X_raw))
-        self._county_sei            = torch.load(os.path.join(ARTIFACTS, "county_sei.pt"),
-                                                  map_location=self._device)
         with open(os.path.join(ARTIFACTS, "county_to_idx.json")) as f:
             self._county_to_idx = json.load(f)
         self._idx_to_fips = {v: k for k, v in self._county_to_idx.items()}
@@ -177,7 +149,7 @@ class WhatifEngine:
             for fips, row in self._county_meta_df.iterrows()
         }
 
-        # ── Zone mapping + zone population totals (Plan A) ───────────────────
+        # ── Zone mapping + SCTG-specific county gravity totals ────────────────
         _ctf_path = os.path.join(WEBAPP_DIR, "county_to_faf.csv")
         if os.path.exists(_ctf_path):
             _ctf = pd.read_csv(_ctf_path, dtype=str)
@@ -235,28 +207,6 @@ class WhatifEngine:
     #             self._county_meta_df.loc[fips, "lat"] = coords["lat"]
     #             self._county_meta_df.loc[fips, "lon"] = coords["lon"]
 
-    # ── Zone helpers ───────────────────────────────────────────────────────────
-
-    def get_zone_meta(self, zone: str) -> dict:
-        """Return {name, lat, lon, population, has_port} for a FAF zone."""
-        z = str(zone).zfill(3)
-        return self._zone_metadata.get(z, {
-            "name": f"Zone {z}", "lat": 39.5, "lon": -98.0,
-            "population": 0.0, "has_port": False,
-        })
-
-    def get_zone_features(self, zone: str) -> dict:
-        """Return dict of all raw feature values for a FAF zone."""
-        z = str(zone).zfill(3)
-        idx = self._zone_to_idx.get(z)
-        if idx is None:
-            return {}
-        return {col: float(self._X_raw[idx, i]) for i, col in enumerate(self._feature_cols)}
-
-    def faf_zones(self) -> list:
-        """Return sorted list of FAF zone codes."""
-        return list(self._faf_zones)
-
     # ── County metadata helpers ────────────────────────────────────────────────
 
     def county_opts(self) -> list:
@@ -266,10 +216,6 @@ class WhatifEngine:
     def fips_from_display(self, display: str) -> Optional[str]:
         """Return FIPS from display string. Returns None if not found."""
         return self._display_to_fips.get(display)
-
-    def county_to_zone(self, fips: str) -> Optional[str]:
-        """Legacy: FAF zone for a county. Only used for backward compat."""
-        return self._fips_to_zone.get(str(fips).zfill(5))
 
     def get_county_meta(self, fips: str) -> dict:
         """Return {name, lat, lon, population, has_port} for a county FIPS."""
@@ -296,271 +242,6 @@ class WhatifEngine:
             return {}
         return {col: float(self._county_X_raw[idx, i])
                 for i, col in enumerate(self._feature_cols)}
-
-    # ── Baseline prediction (CSV lookup) ──────────────────────────────────────
-
-    def predict_baseline(self, orig_zone: str, dest_zone: str) -> list:
-        """
-        Fast baseline lookup from precomputed predictions.csv.
-
-        Returns list of 7 dicts:
-          {sctg, label, flow_exists, value_tons}
-
-        Returns all-zero dicts if pair not in edge set.
-        """
-        o = str(orig_zone).zfill(3)
-        d = str(dest_zone).zfill(3)
-
-        # Same zone: model doesn't predict self-flows
-        if o == d:
-            return self._zero_result()
-
-        key = (o, d)
-        if key not in self._pred_lookup:
-            return self._zero_result()
-
-        row = self._preds_df.iloc[self._pred_lookup[key]]
-        return [
-            {
-                "sctg":        k,
-                "label":       SCTG_LABELS[k],
-                "flow_exists": float(row[f"sctg{k}_tons"]) > 0,
-                "value_tons":  float(row[f"sctg{k}_tons"]),
-            }
-            for k in range(1, 8)
-        ]
-
-    def _zero_result(self) -> list:
-        return [
-            {"sctg": k, "label": SCTG_LABELS[k], "flow_exists": False, "value_tons": 0.0}
-            for k in range(1, 8)
-        ]
-
-    # ── Fan / all-partner predictions ─────────────────────────────────────────
-
-    def predict_baseline_fan(self, fixed_zone: str, mode: str) -> pd.DataFrame:
-        """
-        Return baseline flows between fixed_zone and all partner zones.
-
-        mode = 'origin' → fixed_zone is origin, return flows to all dest zones
-        mode = 'dest'   → fixed_zone is dest,   return flows from all orig zones
-
-        Returns DataFrame columns:
-          zone, zone_name, lat, lon, sctg1_tons..sctg7_tons, total_tons
-        Sorted descending by total_tons.
-        """
-        fixed = str(fixed_zone).zfill(3)
-        sctg_cols = [f"sctg{k}_tons" for k in range(1, 8)]
-
-        if mode == "origin":
-            subset = self._preds_df[self._preds_df["orig"] == fixed].copy()
-            partner_col = "dest"
-        else:
-            subset = self._preds_df[self._preds_df["dest"] == fixed].copy()
-            partner_col = "orig"
-
-        result = []
-        for _, row in subset.iterrows():
-            z = row[partner_col]
-            meta = self.get_zone_meta(z)
-            entry = {
-                "zone":      z,
-                "zone_name": meta["name"],
-                "lat":       meta["lat"],
-                "lon":       meta["lon"],
-            }
-            for col in sctg_cols:
-                entry[col] = float(row[col])
-            entry["total_tons"] = float(sum(row[col] for col in sctg_cols))
-            result.append(entry)
-
-        return pd.DataFrame(result).sort_values("total_tons", ascending=False)
-
-    def predict_whatif_fan(
-        self,
-        fixed_zone: str,
-        mode: str,
-        fixed_overrides: dict,
-    ) -> pd.DataFrame:
-        """
-        Run what-if inference for fixed_zone vs all partner zones.
-
-        fixed_overrides: feature overrides applied to the fixed zone only.
-
-        mode = 'origin' → fixed_zone is origin, return flows to all dest zones
-        mode = 'dest'   → fixed_zone is dest,   return flows from all orig zones
-
-        Returns same schema as predict_baseline_fan:
-          zone, zone_name, lat, lon, sctg1_tons..sctg7_tons, total_tons
-        Sorted descending by total_tons.
-        """
-        fixed = str(fixed_zone).zfill(3)
-        f_idx = self._zone_to_idx[fixed]
-
-        # Step 1: GCN (only re-run if overrides exist)
-        if fixed_overrides:
-            X_pca = self._X_pca_baseline.copy()
-            x_raw = self._X_raw[f_idx].copy()
-            for feat, val in fixed_overrides.items():
-                col_idx = self._feat_col_to_idx.get(feat)
-                if col_idx is not None:
-                    x_raw[col_idx] = float(val)
-            x_scaled = self._node_scaler.transform(x_raw.reshape(1, -1))
-            X_pca[f_idx] = self._node_pca.transform(x_scaled)[0]
-            x_t = torch.tensor(X_pca, dtype=torch.float).to(self._device)
-            sei = self._model.sparse_edge_index
-            with torch.no_grad():
-                h = F.leaky_relu(self._model.bn1(self._model.conv1(x_t, sei)), 0.01)
-                h = F.leaky_relu(self._model.bn2(self._model.conv2(h, sei)), 0.01)
-            h_np = h.cpu().numpy()
-        else:
-            h_np = self._baseline_emb
-
-        # Step 2: edge MLP for all partner zones
-        result = []
-        for z, z_idx in self._zone_to_idx.items():
-            if z == fixed:
-                continue
-            if mode == "origin":
-                o_idx, d_idx = f_idx, z_idx
-                orig_ov, dest_ov = fixed_overrides, {}
-            else:
-                o_idx, d_idx = z_idx, f_idx
-                orig_ov, dest_ov = {}, fixed_overrides
-
-            edge_attr = self._compute_edge_attr(o_idx, d_idx, orig_ov, dest_ov)
-            h_o = torch.tensor(h_np[o_idx], dtype=torch.float).unsqueeze(0).to(self._device)
-            h_d = torch.tensor(h_np[d_idx], dtype=torch.float).unsqueeze(0).to(self._device)
-            e_t = torch.tensor(edge_attr, dtype=torch.float).to(self._device)
-
-            with torch.no_grad():
-                enc      = self._model.edge_encoder(e_t)
-                combined = torch.cat([h_o, h_d, enc], dim=1)
-                shared   = self._model.edge_mlp(combined)
-                logits, values = [], []
-                for head in self._model.heads:
-                    lg, vl = head(shared)
-                    logits.append(lg)
-                    values.append(vl)
-                prob  = torch.sigmoid(torch.cat(logits, dim=1)).cpu().numpy()[0]
-                value = torch.cat(values, dim=1).cpu().numpy()[0]
-
-            tons = np.where(prob > 0.5, np.expm1(np.clip(value, 0, 20)), 0.0)
-            meta = self.get_zone_meta(z)
-            entry = {
-                "zone":      z,
-                "zone_name": meta["name"],
-                "lat":       meta["lat"],
-                "lon":       meta["lon"],
-            }
-            for k in range(1, 8):
-                entry[f"sctg{k}_tons"] = float(tons[k - 1])
-            entry["total_tons"] = float(tons.sum())
-            result.append(entry)
-
-        return pd.DataFrame(result).sort_values("total_tons", ascending=False)
-
-    # ── What-if prediction (live inference) ───────────────────────────────────
-
-    def predict_with_overrides(
-        self,
-        orig_zone: str,
-        dest_zone: str,
-        orig_overrides: dict,
-        dest_overrides: dict,
-    ) -> list:
-        """
-        Run inference with feature overrides applied to orig_zone and/or dest_zone.
-
-        orig_overrides / dest_overrides: flat dict {feature_name: new_value}
-          e.g. {"population": 5_000_000, "has_port": 1, "CORN_value": 50000}
-
-        Returns list of 7 dicts:
-          {sctg, label, flow_exists, exist_prob, value_tons}
-        """
-        o = str(orig_zone).zfill(3)
-        d = str(dest_zone).zfill(3)
-
-        if o == d:
-            return [
-                {"sctg": k, "label": SCTG_LABELS[k],
-                 "flow_exists": False, "exist_prob": 0.0, "value_tons": 0.0}
-                for k in range(1, 8)
-            ]
-
-        o_idx = self._zone_to_idx.get(o)
-        d_idx = self._zone_to_idx.get(d)
-        if o_idx is None or d_idx is None:
-            return [
-                {"sctg": k, "label": SCTG_LABELS[k],
-                 "flow_exists": False, "exist_prob": 0.0, "value_tons": 0.0}
-                for k in range(1, 8)
-            ]
-
-        # ── Step 1: Recompute node embeddings if node features changed ─────────
-        has_node_changes = bool(orig_overrides) or bool(dest_overrides)
-
-        if has_node_changes:
-            X_pca = self._X_pca_baseline.copy()   # 16 KB copy, not 179 KB
-            for zone_code, overrides in [(o, orig_overrides), (d, dest_overrides)]:
-                if not overrides:
-                    continue
-                z_idx = self._zone_to_idx[zone_code]
-                x_raw_row = self._X_raw[z_idx].copy()   # (333,) single row
-                for feat_name, val in overrides.items():
-                    col_idx = self._feat_col_to_idx.get(feat_name)   # O(1)
-                    if col_idx is not None:
-                        x_raw_row[col_idx] = float(val)
-                # Scale and PCA on 1 row only (not all 132)
-                x_scaled = self._node_scaler.transform(x_raw_row.reshape(1, -1))
-                X_pca[z_idx] = self._node_pca.transform(x_scaled)[0]
-
-            x_t = torch.tensor(X_pca, dtype=torch.float).to(self._device)
-            sei = self._model.sparse_edge_index
-            with torch.no_grad():
-                h  = F.leaky_relu(self._model.bn1(self._model.conv1(x_t, sei)), 0.01)
-                h  = F.leaky_relu(self._model.bn2(self._model.conv2(h, sei)), 0.01)
-            h_np = h.cpu().numpy()
-        else:
-            h_np = self._baseline_emb   # skip GCN entirely
-
-        # ── Step 2: Compute edge features (may use overridden pop / has_port) ──
-        edge_attr_scaled = self._compute_edge_attr(o_idx, d_idx,
-                                                    orig_overrides, dest_overrides)
-
-        # ── Step 3: Run edge MLP + HurdleHeads for single OD pair ─────────────
-        h_orig = torch.tensor(h_np[o_idx], dtype=torch.float).unsqueeze(0).to(self._device)  # (1, 128)
-        h_dest = torch.tensor(h_np[d_idx], dtype=torch.float).unsqueeze(0).to(self._device)  # (1, 128)
-        edge_t = torch.tensor(edge_attr_scaled, dtype=torch.float).to(self._device)           # (1, 7)
-
-        with torch.no_grad():
-            edge_enc = self._model.edge_encoder(edge_t)                        # (1, 64)
-            combined  = torch.cat([h_orig, h_dest, edge_enc], dim=1)           # (1, 320)
-            shared    = self._model.edge_mlp(combined)                          # (1, 64)
-
-            logits, values = [], []
-            for head in self._model.heads:
-                lg, vl = head(shared)
-                logits.append(lg)
-                values.append(vl)
-
-            logit = torch.cat(logits, dim=1)   # (1, 7)
-            value = torch.cat(values, dim=1)   # (1, 7)
-
-        prob  = torch.sigmoid(logit).cpu().numpy()[0]   # (7,)
-        value = value.cpu().numpy()[0]                   # (7,)
-        tons  = np.where(prob > 0.5, np.expm1(np.clip(value, 0, 20)), 0.0)
-
-        return [
-            {
-                "sctg":        k,
-                "label":       SCTG_LABELS[k],
-                "flow_exists": bool(prob[k - 1] > 0.5),
-                "exist_prob":  float(prob[k - 1]),
-                "value_tons":  float(tons[k - 1]),
-            }
-            for k in range(1, 8)
-        ]
 
     # ── County cross-scale inference ──────────────────────────────────────────
 
@@ -871,7 +552,7 @@ class WhatifEngine:
                             orig_overrides: dict = None,
                             dest_overrides: dict = None):
         """
-        Plan A: return (zone_tons[7], o_pop_share, d_pop_share) for hybrid anchoring.
+        Return (zone_tons[7], o_share[7], d_share[7]) for county-level anchoring.
         Returns None when zone mapping or zone prediction is unavailable.
 
         orig_overrides / dest_overrides: if population is overridden, pop_share
@@ -924,14 +605,14 @@ class WhatifEngine:
         """Run edge encoder + shared MLP + HurdleHeads for a single county OD pair."""
         prob, raw_value_tons = self._edge_head_outputs(h_o, h_d, edge_attr)
 
-        # Plan C: Dynamic sparsity / Top-K approximation via SCTG-specific threshold
+        # Dynamic sparsity / Top-K approximation via SCTG-specific threshold.
         # SCTG 1-4 (Ag) are extremely sparse, SCTG 5-7 (Processing) are relatively broad.
         HURDLE_THRESH_ARRAY = np.array([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5])
 
         valid_mask = prob > HURDLE_THRESH_ARRAY
         county_raw = np.where(valid_mask, raw_value_tons * prob, 0.0)
 
-        # Plan D+ calibrated county tonnage:
+        # calibrated county tonnage:
         # FAF-zone tons × SCTG-aligned county gravity shares provide the plausible
         # county-level scale. Scenario runs also use the freshly re-run GNN value
         # head as a bounded response ratio against the baseline raw GNN value.
@@ -1000,41 +681,3 @@ class WhatifEngine:
              "flow_exists": False, "exist_prob": 0.0, "value_tons": 0.0}
             for k in range(1, 8)
         ]
-
-    # ── Legacy zone-level edge attr (kept for zone predict_with_overrides) ─────
-
-    def _compute_edge_attr(
-        self,
-        o_idx: int,
-        d_idx: int,
-        orig_overrides: dict,
-        dest_overrides: dict,
-    ) -> np.ndarray:
-        """
-        Compute scaled edge features for (o_idx → d_idx) with optional overrides.
-        Returns (1, 7) float32 array.
-        """
-        dist = float(self._dist_matrix[o_idx, d_idx])
-
-        # Get population (use override if provided)
-        pop_o = float(orig_overrides.get("population",
-                                          self._X_raw[o_idx, self._feat_col_to_idx["population"]]))
-        pop_d = float(dest_overrides.get("population",
-                                          self._X_raw[d_idx, self._feat_col_to_idx["population"]]))
-
-        # Get port flags (use override if provided)
-        port_idx = self._feat_col_to_idx.get("has_port")
-        port_o = float(orig_overrides.get("has_port",
-                                           self._X_raw[o_idx, port_idx] if port_idx is not None else 0))
-        port_d = float(dest_overrides.get("has_port",
-                                           self._X_raw[d_idx, port_idx] if port_idx is not None else 0))
-
-        log_dist    = np.log1p(dist)
-        inv_dist    = 1.0 / (dist + 1.0)
-        gravity     = (pop_o * pop_d) / (dist ** 2 + 1e-8)
-        log_gravity = np.log1p(gravity)
-
-        edge_raw = np.array([[dist, log_dist, inv_dist,
-                               gravity, log_gravity,
-                               port_o, port_d]], dtype=np.float32)
-        return self._edge_scaler.transform(edge_raw).astype(np.float32)
