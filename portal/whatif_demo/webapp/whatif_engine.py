@@ -674,6 +674,14 @@ class WhatifEngine:
 
         edge_attr   = self._compute_county_edge_attr(o, d, orig_overrides, dest_overrides)
         zone_anchor = self._zone_anchor_params(o, d, orig_overrides, dest_overrides)
+        baseline_raw_value_tons = None
+        if orig_overrides or dest_overrides:
+            base_edge_attr = self._compute_county_edge_attr(o, d, {}, {})
+            _, baseline_raw_value_tons = self._edge_head_outputs(
+                self._county_embeddings[o_idx],
+                self._county_embeddings[d_idx],
+                base_edge_attr,
+            )
 
         # Has non-population feature overrides? → lower zone weight so GNN mix shows through
         _non_pop_keys = {"population"}
@@ -685,6 +693,7 @@ class WhatifEngine:
             h_o, h_d, edge_attr,
             zone_anchor=zone_anchor,
             has_feature_overrides=_has_feat_ov,
+            baseline_raw_value_tons=baseline_raw_value_tons,
         )
 
     def predict_county_fan(
@@ -910,8 +919,61 @@ class WhatifEngine:
         edge_attr: np.ndarray,
         zone_anchor=None,
         has_feature_overrides: bool = False,
+        baseline_raw_value_tons: Optional[np.ndarray] = None,
     ) -> list:
         """Run edge encoder + shared MLP + HurdleHeads for a single county OD pair."""
+        prob, raw_value_tons = self._edge_head_outputs(h_o, h_d, edge_attr)
+
+        # Plan C: Dynamic sparsity / Top-K approximation via SCTG-specific threshold
+        # SCTG 1-4 (Ag) are extremely sparse, SCTG 5-7 (Processing) are relatively broad.
+        HURDLE_THRESH_ARRAY = np.array([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5])
+
+        valid_mask = prob > HURDLE_THRESH_ARRAY
+        county_raw = np.where(valid_mask, raw_value_tons * prob, 0.0)
+
+        # Plan D+ calibrated county tonnage:
+        # FAF-zone tons × SCTG-aligned county gravity shares provide the plausible
+        # county-level scale. Scenario runs also use the freshly re-run GNN value
+        # head as a bounded response ratio against the baseline raw GNN value.
+
+        if zone_anchor is not None:
+            zone_tons, o_pop_share, d_pop_share = zone_anchor
+            base_tons = zone_tons * o_pop_share * d_pop_share
+
+            # Soft gating: below threshold, attenuate by 0.1 rather than hard zero.
+            # Preserves non-linear GNN response while still suppressing low-confidence edges.
+            gate = np.where(prob > HURDLE_THRESH_ARRAY, 1.0, 0.1)
+
+            if baseline_raw_value_tons is not None:
+                safe_ref = np.maximum(baseline_raw_value_tons, 1e-9)
+                response_ratio = raw_value_tons / safe_ref
+                lower, upper, alpha = 0.25, 4.0, 0.25
+                value_modifier = np.power(np.clip(response_ratio, lower, upper), alpha)
+            else:
+                value_modifier = np.ones_like(base_tons, dtype=float)
+
+            tons = base_tons * prob * gate * value_modifier
+        else:
+            tons = county_raw
+
+        return [
+            {
+                "sctg":        k,
+                "label":       SCTG_LABELS[k],
+                "flow_exists": bool(tons[k - 1] > 0),
+                "exist_prob":  float(prob[k - 1]),
+                "value_tons":  float(tons[k - 1]),
+            }
+            for k in range(1, 8)
+        ]
+
+    def _edge_head_outputs(
+        self,
+        h_o: np.ndarray,
+        h_d: np.ndarray,
+        edge_attr: np.ndarray,
+    ) -> tuple[np.ndarray, np.ndarray]:
+        """Return GNN existence probabilities and raw value-head tons."""
         h_orig = torch.tensor(h_o, dtype=torch.float).unsqueeze(0).to(self._device)   # (1, 128)
         h_dest = torch.tensor(h_d, dtype=torch.float).unsqueeze(0).to(self._device)   # (1, 128)
         edge_t = torch.tensor(edge_attr, dtype=torch.float).to(self._device)           # (1, 7)
@@ -929,54 +991,8 @@ class WhatifEngine:
 
             prob  = torch.sigmoid(torch.cat(logits, dim=1)).cpu().numpy()[0]
             value = torch.cat(values, dim=1).cpu().numpy()[0]
-
-        # Plan C: Dynamic sparsity / Top-K approximation via SCTG-specific threshold
-        # SCTG 1-4 (Ag) are extremely sparse, SCTG 5-7 (Processing) are relatively broad.
-        HURDLE_THRESH_ARRAY = np.array([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5])
-
-        valid_mask = prob > HURDLE_THRESH_ARRAY
-        county_raw = np.where(
-            valid_mask,
-            np.expm1(np.clip(value, 0, 20)) * prob,
-            0.0,
-        )
-
-        # Plan D+ calibrated county tonnage:
-        # FAF-zone tons × SCTG-aligned county gravity shares provide the plausible
-        # county-level scale. The GNN value head then enters as a bounded relative
-        # modifier, preserving end-to-end signal without letting OOD county values
-        # dominate absolute tonnage.
-
-        if zone_anchor is not None:
-            zone_tons, o_pop_share, d_pop_share = zone_anchor
-            base_tons = zone_tons * o_pop_share * d_pop_share
-
-            # Soft gating: below threshold, attenuate by 0.1 rather than hard zero.
-            # Preserves non-linear GNN response while still suppressing low-confidence edges.
-            gate = np.where(prob > HURDLE_THRESH_ARRAY, 1.0, 0.1)
-
-            # Boundary-constrained GNN value response. The raw value head is used
-            # before hurdle probability because probability is already applied below.
-            raw_value_tons = np.expm1(np.clip(value, 0, 20))
-            safe_base = np.maximum(base_tons, 1e-9)
-            lower, upper, alpha = 0.25, 4.0, 0.25
-            bounded_value = np.clip(raw_value_tons, safe_base * lower, safe_base * upper)
-            value_modifier = np.power(bounded_value / safe_base, alpha)
-
-            tons = base_tons * prob * gate * value_modifier
-        else:
-            tons = county_raw
-
-        return [
-            {
-                "sctg":        k,
-                "label":       SCTG_LABELS[k],
-                "flow_exists": bool(tons[k - 1] > 0),
-                "exist_prob":  float(prob[k - 1]),
-                "value_tons":  float(tons[k - 1]),
-            }
-            for k in range(1, 8)
-        ]
+        raw_value_tons = np.expm1(np.clip(value, 0, 20))
+        return prob, raw_value_tons
 
     def _county_zero_result(self) -> list:
         return [
