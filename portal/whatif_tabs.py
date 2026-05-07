@@ -288,13 +288,8 @@ def _render_multitask_banner(mode: str) -> None:
     st.markdown(
         f"""
         <div class="multitask-banner">
-            <div class="multitask-pill">GNNFoodFlow Multi-task</div>
+            <div class="multitask-pill">Multi-task Model</div>
             <h2>{mode}</h2>
-            <p>
-                Seven SCTG commodity heads are evaluated together through the
-                multi-task county scenario engine. These controls are independent
-                from the classic map sidebar filters.
-            </p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -712,7 +707,7 @@ def render_one_to_many_tab() -> None:
     meta_cache = _metadata_or_stop()
 
     _render_multitask_banner("One-to-Many What-if Portal")
-    st.caption("Fix one county and estimate flows to or from many partner counties.")
+    st.caption("Focus one county and estimate flows to or from many partner counties.")
     _render_notice()
 
     county_opts = meta_cache["county_opts"]
