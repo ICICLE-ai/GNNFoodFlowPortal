@@ -612,7 +612,7 @@ class WhatifEngine:
         valid_mask = prob > HURDLE_THRESH_ARRAY
         county_raw = np.where(valid_mask, raw_value_tons * prob, 0.0)
 
-        # calibrated county tonnage:
+        #   calibrated county tonnage:
         # FAF-zone tons × SCTG-aligned county gravity shares provide the plausible
         # county-level scale. Scenario runs also use the freshly re-run GNN value
         # head as a bounded response ratio against the baseline raw GNN value.
