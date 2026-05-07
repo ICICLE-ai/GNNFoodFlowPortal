@@ -129,7 +129,7 @@ st.markdown("""
     background-clip: text;
     margin-bottom: 1rem;
     text-align: center;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 
   h2 {
@@ -168,7 +168,7 @@ st.markdown("""
     background-clip: text;
     margin-bottom: 1rem;
     text-shadow: none;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     line-height: 1.1;
     max-width: 24ch; /* keep to ~2 lines */
     margin-left: auto;
@@ -235,12 +235,29 @@ st.markdown("""
 
   /* Card styling */
   .metric-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    border: 1px solid rgba(255,255,255,0.8);
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.1rem;
+    box-shadow: 0 1px 4px rgba(15,23,42,0.06);
+    border: 1px solid #e5e7eb;
     margin-bottom: 1rem;
+  }
+
+  .portal-title-wrap {
+    margin: .2rem auto 1rem auto;
+    max-width: 980px;
+    text-align: center;
+  }
+
+  .portal-title-wrap h1 {
+    margin-bottom: .35rem;
+  }
+
+  .portal-title-wrap p {
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
   }
 
   /* Expander styling */
@@ -342,15 +359,99 @@ st.markdown("""
   }
 
   .parallel-model-banner {
-    background: linear-gradient(135deg, #eef6ff 0%, #f8fafc 100%);
-    border: 1px solid #bfdbfe;
-    border-left: 5px solid #2563eb;
-    border-radius: 10px;
-    color: #1e3a8a;
+    background: linear-gradient(135deg, #14213d 0%, #1f6f5b 58%, #c8a900 100%);
+    border-radius: 14px;
+    color: #ffffff;
+    margin: 0 0 .8rem;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .parallel-model-banner h2 {
+    color: #ffffff !important;
+    font-size: 1.55rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .parallel-model-banner p {
+    color: rgba(255,255,255,.86) !important;
     font-size: .9rem;
+    margin: .35rem 0 0;
+  }
+
+  .parallel-pill {
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    margin-bottom: .5rem;
+    padding: .25rem .65rem;
+    text-transform: uppercase;
+  }
+
+  .parallel-notice {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 10px;
+    color: #78350f;
+    font-size: .86rem;
     line-height: 1.55;
-    margin: -.5rem 0 1.2rem;
+    margin: .75rem 0 1rem;
     padding: .75rem 1rem;
+  }
+
+  .parallel-context-card,
+  .parallel-download-card,
+  .parallel-info-card,
+  .parallel-guide-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(15,23,42,.06);
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .parallel-context-card h3,
+  .parallel-download-card h4,
+  .parallel-info-card h3,
+  .parallel-guide-card h3 {
+    color: #0f172a;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0 0 .35rem;
+  }
+
+  .parallel-context-card p,
+  .parallel-download-card p,
+  .parallel-info-card p,
+  .parallel-guide-card p,
+  .parallel-guide-card li {
+    color: #475569;
+    font-size: .92rem;
+    line-height: 1.6;
+  }
+
+  .parallel-kicker {
+    color: #64748b;
+    display: block;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    margin-bottom: .25rem;
+    text-transform: uppercase;
+  }
+
+  .parallel-section-title {
+    color: #0f172a;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: .75rem 0 .75rem;
   }
 
   div[data-testid="stSegmentedControl"] {
@@ -608,6 +709,23 @@ def convert_sctg_to_trip(sctg_df, meta_df):
         "dest": sctg_df["dest"].tolist(),
         "predicted_value_original": sctg_df["predicted_value_original"].tolist()
     })
+
+def render_parallel_banner(title: str, description: str) -> None:
+    st.markdown(
+        f"""
+        <div class="parallel-model-banner">
+            <div class="parallel-pill">Parallel Model</div>
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </div>
+        <div class="parallel-notice">
+            <strong>Static precomputed results.</strong>
+            These tabs show outputs from parallel SCTG-specific models for map exploration,
+            guidance, and downloads. They are not interactive scenario simulations.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Welcome Screen or Main App
 if not st.session_state['app_started']:
@@ -1320,9 +1438,9 @@ else:
     page = st.session_state.get("portal_page", PAGE_OPTIONS[0])
 
     st.markdown("""
-    <div style="text-align: center; margin-bottom: 1rem;">
-        <h1>🌾 GNN Food Flow Portal</h1>
-        <p style="color: #6b7280; font-size: 1.1rem; margin-top: -0.5rem;">
+    <div class="portal-title-wrap">
+        <h1>GNN Food Flow Portal</h1>
+        <p>
             Parallel model results plus GNNFoodFlow Multi-task what-if scenario portals
         </p>
     </div>
@@ -1456,23 +1574,16 @@ else:
             st.caption("The GNNFoodFlow Multi-task scenario tabs use their own controls in the main panel. Parallel model filters are hidden here to avoid unnecessary data loading.")
 
     if page == "Parallel Model Map":
-        st.markdown(
-            """
-            <div class="parallel-model-banner">
-                <strong>Parallel model results.</strong>
-                This tab visualizes precomputed county flow outputs from the original parallel model.
-            </div>
-            """,
-            unsafe_allow_html=True,
+        render_parallel_banner(
+            "Parallel Model Map",
+            "Explore precomputed county-to-county food-flow predictions for one SCTG category at a time.",
         )
         st.markdown(f"""
-        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-                    padding: 1.5rem;
-                    border-radius: 16px;
-                    border: 1px solid #bae6fd;
-                    margin-bottom: 1.5rem;">
-            <p style="margin: 0; color: #0369a1; font-size: 1.1rem; font-weight: 500;">
-                Food Flows from <strong>{origin_lbl}</strong> to <strong>{dest_lbl}</strong>
+        <div class="parallel-context-card">
+            <span class="parallel-kicker">Current View</span>
+            <h3>Food Flows</h3>
+            <p style="margin:0;">
+                From <strong>{origin_lbl}</strong> to <strong>{dest_lbl}</strong>
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -1623,112 +1734,70 @@ else:
             unsafe_allow_html=True
         )
     elif page == "Parallel Model Guide":
-        st.markdown(
-            """
-            <div class="parallel-model-banner">
-                <strong>Parallel model results guide.</strong>
-                These instructions describe the precomputed parallel model map and downloads,
-                not the GNNFoodFlow Multi-task what-if scenario portals.
-            </div>
-            """,
-            unsafe_allow_html=True,
+        render_parallel_banner(
+            "Parallel Model Guide",
+            "Use this guide for the static parallel model map and download workflow.",
         )
-        st.markdown("## How to Use the Food Flow Portal")
+        st.markdown('<div class="parallel-section-title">How to Use the Food Flow Portal</div>', unsafe_allow_html=True)
 
         st.markdown("""
-        ### Welcome to the FAF Food Flows Dashboard!
+        <div class="parallel-guide-card">
+        <h3>Welcome to the Parallel Model Results</h3>
 
-        This interactive dashboard allows you to explore food transportation patterns across the United States using advanced Graph Neural Network predictions.
+        <p>This dashboard lets you explore static, precomputed food transportation patterns across the United States using parallel SCTG-specific model outputs.</p>
 
-        ### Getting Started
+        <h3>Getting Started</h3>
 
-        1. **Select Food Category**: Choose from 7 different food categories in the sidebar, refer to this [link](https://bhs.econ.census.gov/bhsphpext/brdsearch/scs_code.html) for detailed description of each category.
-           - 01 - Live Animals/Fish
-           - 02 - Cereal Grains
-           - 03 -Other Agricultural Products
-           - 04 - Animal Feed
-           - 05 - Meat/Seafood
-           - 06 - Milled Grain Products
-           - 07 - Other Foodstuffs
+        <ol>
+            <li><strong>Select Food Category:</strong> Choose one of the 7 SCTG food categories in the sidebar. See the <a href="https://bhs.econ.census.gov/bhsphpext/brdsearch/scs_code.html" target="_blank">SCTG reference</a> for category descriptions.</li>
+            <li><strong>Filter by Location:</strong> Select origin and destination counties, or use All to see broader origin/destination patterns.</li>
+            <li><strong>Explore the Map:</strong> View county-to-county flows, hover for details, and adjust how many top links are rendered.</li>
+            <li><strong>Analyze and Export:</strong> Review trip summary metrics and download filtered results for further analysis.</li>
+        </ol>
 
-        2. **Filter by Location**:
-           - **Origin County**: Select where food shipments originate from
-           - **Destination County**: Select where food shipments are going to
-           - Use "All" to see all origins or destinations
+        <h3>Interactive Features</h3>
+        <ul>
+            <li><strong>Swap Origin/Destination:</strong> Quickly reverse the current OD selection.</li>
+            <li><strong>Zoom & Pan:</strong> Navigate the map to focus on specific regions.</li>
+            <li><strong>Hover Effects:</strong> Inspect origin, destination, FIPS codes, and predicted kilotons.</li>
+            <li><strong>Filter Combinations:</strong> Mix SCTG category and county filters to isolate relationships.</li>
+        </ul>
 
-        3. **Explore the Map**:
-           - Interactive 3D map shows food flow trips between counties
-           - Watch flows move dynamically from origin to destination
-           - Hover over flows to see origin and destination details
-           - Adjust the number of top links to display (1-300)
-
-        4. **Analyze Data**:
-           - View trip summary metrics in the sidebar
-           - See top origins or destinations in the expandable table
-           - Download filtered data for further analysis
-
-        ### Interactive Features
-
-        - **Swap Origin/Destination**: Quickly reverse your analysis
-        - **Zoom & Pan**: Navigate the map to focus on specific regions
-        - **Hover Effects**: Get detailed information about each flow
-        - **Filter Combinations**: Mix and match categories and locations
-
-        ### Understanding the Data
-
-        - **Predicted Value**: Estimated kilotons of food shipped (based on GNN predictions)
-        - **Existence Probability**: Confidence level of the predicted flow
-        - **FIPS Codes**: Federal Information Processing Standards county identifiers
-
-        ### Tips for Best Experience
-
-        - Start with "All" origins to see major food flow patterns
-        - Focus on specific counties for detailed local analysis
-        - Use different food categories to understand supply chains
-        - Combine filters to isolate specific trade relationships
-        - Observe the arc flows to understand movement patterns
-        """)
+        <h3>Understanding the Data</h3>
+        <ul>
+            <li><strong>Predicted Value:</strong> Estimated kilotons of food shipped from the parallel model output.</li>
+            <li><strong>Existence Probability:</strong> Confidence that the predicted flow exists.</li>
+            <li><strong>FIPS Codes:</strong> Federal county identifiers for origin and destination counties.</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
 
 
     elif page == "Parallel Model Download":
-        st.markdown(
-            """
-            <div class="parallel-model-banner">
-                <strong>Parallel model results download.</strong>
-                These exports come from the original precomputed parallel model output.
-                Multi-task what-if exports are available inside the two GNNFoodFlow Multi-task tabs.
-            </div>
-            """,
-            unsafe_allow_html=True,
+        render_parallel_banner(
+            "Parallel Model Download",
+            "Export filtered parallel model rows or OD-level summary statistics for the current SCTG category.",
         )
         st.markdown("""
-        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-                    padding: 1.5rem;
-                    border-radius: 16px;
-                    border: 1px solid #bbf7d0;
-                    margin-bottom: 2rem;">
-            <h2 style="margin: 0 0 0.5rem 0; color: #166534;">Download Data</h2>
-            <p style="margin: 0; color: #15803d; font-size: 1.1rem;">
+        <div class="parallel-context-card">
+            <span class="parallel-kicker">Exports</span>
+            <h3>Download Data</h3>
+            <p style="margin: 0;">
                 Export your filtered data in various formats for further analysis
             </p>
         </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("### 📥 Download Options")
+        st.markdown('<div class="parallel-section-title">Download Options</div>', unsafe_allow_html=True)
 
         # Create download butkilotons for different data formats
         col1, col3 = st.columns(2)
 
         with col1:
             st.markdown("""
-            <div style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-                        padding: 1.5rem;
-                        border-radius: 12px;
-                        border: 1px solid #e5e7eb;
-                        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-                        height: 100%;">
-                <h4 style="margin: 0 0 0.75rem 0; color: #1f2937;">Current Filtered Data</h4>
-                <p style="margin: 0 0 1.5rem 0; color: #6b7280; font-size: 0.9rem;">
+            <div class="parallel-download-card">
+                <h4>Current Filtered Data</h4>
+                <p style="margin: 0 0 1.5rem 0;">
                     Download the data being used for the map based on your selected filters.
                 </p>
             """, unsafe_allow_html=True)
@@ -1750,14 +1819,9 @@ else:
 
         with col3:
             st.markdown("""
-            <div style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-                        padding: 1.5rem;
-                        border-radius: 12px;
-                        border: 1px solid #e5e7eb;
-                        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-                        height: 100%;">
-                <h4 style="margin: 0 0 0.75rem 0; color: #1f2937;">Summary Statistics</h4>
-                <p style="margin: 0 0 1.5rem 0; color: #6b7280; font-size: 0.9rem;">
+            <div class="parallel-download-card">
+                <h4>Summary Statistics</h4>
+                <p style="margin: 0 0 1.5rem 0;">
                     Download the flow information for the current food category.
                 </p>
             """, unsafe_allow_html=True)
@@ -1783,19 +1847,15 @@ else:
                 st.warning("No data available for summary")
             st.markdown("</div>", unsafe_allow_html=True)
 
-        st.markdown("---")
+        st.markdown("<div style='height: .5rem;'></div>", unsafe_allow_html=True)
         # --- Data Description Card ---
         st.markdown(
             """
-            <div style="background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
-                        padding: 1.5rem;
-                        border-radius: 12px;
-                        border: 1px solid #fde68a;
-                        margin-bottom: 1.5rem;">
-                <h3 style="margin: 0 0 1rem 0; color: #92400e;">Data Description</h3>
+            <div class="parallel-info-card">
+                <h3>Data Description</h3>
                 <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">Food Flow Data Fields:</h4>
-                    <table style="color: #78350f; font-size: 0.98rem; border-collapse: collapse;">
+                    <h4 style="color: #0f172a; margin-bottom: 0.5rem;">Food Flow Data Fields</h4>
+                    <table style="color: #475569; font-size: 0.94rem; border-collapse: collapse;">
                         <tr><td style="padding: 2px 8px;"><code>origin</code></td><td>Origin county FIPS code</td></tr>
                         <tr><td style="padding: 2px 8px;"><code>dest</code></td><td>Destination county FIPS code</td></tr>
                         <tr><td style="padding: 2px 8px;"><code>origin_x</code>, <code>origin_y</code></td><td>Origin county coordinates</td></tr>
@@ -1806,8 +1866,8 @@ else:
                     </table>
                 </div>
                 <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">Flow Information Fields:</h4>
-                    <table style="color: #78350f; font-size: 0.98rem; border-collapse: collapse;">
+                    <h4 style="color: #0f172a; margin-bottom: 0.5rem;">Flow Information Fields</h4>
+                    <table style="color: #475569; font-size: 0.94rem; border-collapse: collapse;">
                         <tr><td style="padding: 2px 8px;"><code>Origin_FIPS</code></td><td>Origin county FIPS code</td></tr>
                         <tr><td style="padding: 2px 8px;"><code>Origin_County</code></td><td>Origin county name</td></tr>
                         <tr><td style="padding: 2px 8px;"><code>Origin_State</code></td><td>Origin state name</td></tr>
@@ -1817,10 +1877,10 @@ else:
                         <tr><td style="padding: 2px 8px;"><code>kilotons_Shipped</code></td><td>Total kilotons shipped (summed over all trips between origin and destination)</td></tr>
                     </table>
                 </div>
-                <p style="color: #78350f; margin: 0; font-weight: 500;">
+                <p style="margin: 0; font-weight: 600;">
                     <strong>Data Source:</strong> FAF (Freight Analysis Framework) 2017 with Graph Neural Network predictions
                 </p>
-                <p style="color: #78350f; margin: 0.5rem 0 0 0; font-weight: 500;">
+                <p style="margin: 0.5rem 0 0 0; font-weight: 600;">
                     <strong>Note:</strong> Self-loops (origin = destination) have been filtered out to show only inter-county flows.
                 </p>
             </div>
@@ -1831,14 +1891,11 @@ else:
         # --- Filter Information Card ---
         st.markdown(
             f"""
-            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-                        padding: 1.5rem;
-                        border-radius: 12px;
-                        border: 1px solid #bae6fd;">
-                <h3 style="margin: 0 0 1rem 0; color: #0c4a6e;">Filter Information</h3>
-                <div style="color: #0369a1; line-height: 1.6;">
+            <div class="parallel-info-card">
+                <h3>Filter Information</h3>
+                <div style="color: #475569; line-height: 1.6;">
                     <p style="margin: 0 0 0.5rem 0;"><strong>Current Filters Applied:</strong></p>
-                    <table style="margin: 0; padding-left: 0; color: #0369a1; font-size: 1rem;">
+                    <table style="margin: 0; padding-left: 0; color: #475569; font-size: .94rem;">
                         <tr>
                             <td style="padding: 2px 12px 2px 0;"><strong>Food Category:</strong></td>
                             <td>{cat}</td>
