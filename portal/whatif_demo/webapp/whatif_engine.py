@@ -941,11 +941,11 @@ class WhatifEngine:
             0.0,
         )
 
-        # Physics-informed gravity shielding (Plan D Enhancement):
-        # We exclusively rely on the SCTG-aligned Gravity Model (`base_tons`) for structuring
-        # what-if analysis magnitudes because the Multitask GNN PCA inherently suffers from
-        # extreme feature-entanglement (OOD hallucinations) when evaluating overridden
-        # county-level inputs. The GNN is purely utilized for structural flow vetoing (valid_mask).
+        # Plan D+ calibrated county tonnage:
+        # FAF-zone tons × SCTG-aligned county gravity shares provide the plausible
+        # county-level scale. The GNN value head then enters as a bounded relative
+        # modifier, preserving end-to-end signal without letting OOD county values
+        # dominate absolute tonnage.
 
         if zone_anchor is not None:
             zone_tons, o_pop_share, d_pop_share = zone_anchor
@@ -954,7 +954,16 @@ class WhatifEngine:
             # Soft gating: below threshold, attenuate by 0.1 rather than hard zero.
             # Preserves non-linear GNN response while still suppressing low-confidence edges.
             gate = np.where(prob > HURDLE_THRESH_ARRAY, 1.0, 0.1)
-            tons = base_tons * prob * gate
+
+            # Boundary-constrained GNN value response. The raw value head is used
+            # before hurdle probability because probability is already applied below.
+            raw_value_tons = np.expm1(np.clip(value, 0, 20))
+            safe_base = np.maximum(base_tons, 1e-9)
+            lower, upper, alpha = 0.25, 4.0, 0.25
+            bounded_value = np.clip(raw_value_tons, safe_base * lower, safe_base * upper)
+            value_modifier = np.power(bounded_value / safe_base, alpha)
+
+            tons = base_tons * prob * gate * value_modifier
         else:
             tons = county_raw
 

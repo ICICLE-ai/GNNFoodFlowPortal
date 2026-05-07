@@ -62,9 +62,13 @@ TOP_CROPS = [
 CROP_LABELS = {col: col.replace("_value", "").title() for col in TOP_CROPS}
 
 CROSS_SCALE_NOTICE = (
-    "County-level values are cross-scale estimates from a model trained at the "
-    "FAF-zone level. Use totals as directional magnitudes for ranking and "
-    "scenario comparison; absolute county-level values may be inflated."
+    "<strong>Note:</strong> "
+    "County-level data are reference estimates derived from a larger regional model. "
+    "We recommend using these totals for trend analysis, ranking, and comparing different "
+    "scenarios, rather than as precise absolute statistics, as individual county values may be inflated. "
+    "<br><strong>How it works:</strong> Our model uses multi-task AI model (GNN) to capture broad trends, "
+    "then distributes regional totals based on county-specific weights. This ensures the outputs "
+    "respond effectively to changes while staying within a realistic scale."
 )
 
 
@@ -393,7 +397,7 @@ def _pct_row(label: str, base_val: float, key: str) -> Optional[float]:
             modes,
             index=0,
             key=mode_key,
-            help="No Python rerun happens while editing this form; values are applied when you click Run.",
+            help="Sometimes single value might not lead to significant change in results. Change multiple relevant values to see more changes. And destination side change will be more responsive to the food transportation due to changes in its demand.",
         )
 
     if mode in pct_by_mode:
