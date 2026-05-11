@@ -217,33 +217,35 @@ def _inject_styles() -> None:
         .whatif-delta.up { background: #dcfce7; color: #166534; }
         .whatif-delta.down { background: #fee2e2; color: #991b1b; }
         .multitask-banner {
-            background: linear-gradient(135deg, #14213d 0%, #006b3c 55%, #c8a900 100%);
-            border-radius: 14px;
-            color: white;
-            margin-bottom: 1rem;
-            padding: 1.1rem 1.25rem;
+            background: transparent;
+            border-bottom: 1px solid #e5e7eb;
+            color: #0f172a;
+            margin: 0 0 .85rem;
+            padding: .25rem 0 .85rem;
         }
         .multitask-banner h2 {
-            color: white !important;
-            font-size: 1.55rem;
+            color: #0f172a !important;
+            font-size: 1.45rem;
+            font-weight: 800;
             line-height: 1.2;
             margin: 0;
         }
         .multitask-banner p {
-            color: rgba(255,255,255,.86) !important;
+            color: #64748b !important;
             font-size: .9rem;
+            font-weight: 600;
             margin: .35rem 0 0;
         }
         .multitask-pill {
-            background: rgba(255,255,255,.16);
-            border: 1px solid rgba(255,255,255,.28);
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
             border-radius: 999px;
-            color: white;
+            color: #166534;
             display: inline-flex;
             font-size: .72rem;
             font-weight: 800;
             letter-spacing: .08em;
-            margin-bottom: .5rem;
+            margin-bottom: .45rem;
             padding: .25rem .65rem;
             text-transform: uppercase;
         }
