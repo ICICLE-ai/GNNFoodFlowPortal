@@ -19,9 +19,12 @@ import streamlit as st
 
 
 PORTAL_DIR = Path(__file__).resolve().parent
-WORKSPACE_DIR = PORTAL_DIR.parents[2]
 VENDORED_WEBAPP_DIR = PORTAL_DIR / "whatif_demo" / "webapp"
-LEGACY_DEMO_WEBAPP_DIR = WORKSPACE_DIR / "FoodFlow_multitask_planD_demo" / "webapp"
+LEGACY_DEMO_WEBAPP_DIR = (
+    PORTAL_DIR.parents[2] / "FoodFlow_multitask_planD_demo" / "webapp"
+    if len(PORTAL_DIR.parents) > 2
+    else PORTAL_DIR / "FoodFlow_multitask_planD_demo" / "webapp"
+)
 
 
 SCTG_LABELS = {

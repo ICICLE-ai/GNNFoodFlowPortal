@@ -1,38 +1,33 @@
-FROM python:3.11-slim
+FROM python:3.11-slim-bookworm
 
-# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# Set work directory
 WORKDIR /app
 
-# Install system dependencies for geopandas and pyproj
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    gdal-bin \
-    libgdal-dev \
-    libproj-dev \
-    python3-dev \
-    python3-pip \
-    ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+        gdal-bin \
+        libgdal-dev \
+        libproj-dev \
+        libsqlite3-dev \
+        ca-certificates \
+    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Install Python dependencies
 COPY requirements.txt ./
 RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt && \
+    find /usr/local/lib/python3.11 -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null; \
+    find /usr/local/lib/python3.11 -name "*.pyc" -delete 2>/dev/null; \
+    rm -rf /root/.cache/pip
 
-# Copy the rest of the application
 COPY . .
 
-# Expose Streamlit default port
 EXPOSE 8501
 
-# Streamlit needs this to avoid running as root error
 ENV STREAMLIT_SERVER_HEADLESS=true \
     STREAMLIT_SERVER_PORT=8501 \
-    STREAMLIT_SERVER_ENABLECORS=false
+    STREAMLIT_SERVER_ENABLECORS=false \
+    STREAMLIT_BROWSER_GATHER_USAGE_STATS=false \
+    STREAMLIT_LOG_LEVEL=error
 
-# Entrypoint to run the Streamlit app
 CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8501"]

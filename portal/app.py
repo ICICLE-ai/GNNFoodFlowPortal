@@ -637,13 +637,8 @@ FAF_FILES = {
 @st.cache_data
 def load_sctg_data(file_name: str) -> pd.DataFrame:
     local_path = Path("cleaned_data") / file_name
-    fallback_path = (
-        Path(__file__).resolve().parents[3]
-        / "GNNFoodFlowPortal"
-        / "portal"
-        / "cleaned_data"
-        / file_name
-    )
+    app_dir = Path(__file__).resolve().parent
+    fallback_path = app_dir / "cleaned_data" / file_name
     try:
         df = pd.read_parquet(local_path)
     except Exception:
@@ -1421,7 +1416,7 @@ if not st.session_state['app_started']:
         st.markdown(
             """
             <div style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:1rem;">
-                &copy; 2025 ICICLE Democratizing AI. All rights reserved.
+                &copy; 2026 ICICLE Democratizing AI. All rights reserved.
             </div>
             """,
             unsafe_allow_html=True
@@ -1726,7 +1721,7 @@ else:
         st.markdown(
             """
             <div style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:1rem;">
-                &copy; 2025 ICICLE Democratizing AI. All rights reserved.
+                &copy; 2026 ICICLE Democratizing AI. All rights reserved.
             </div>
             """,
             unsafe_allow_html=True

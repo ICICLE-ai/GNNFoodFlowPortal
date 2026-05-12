@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+*.pyo
+.DS_Store
+.git
+.gitattributes
+.dockerignore
+Dockerfile
+data/data.ipynb
+files/

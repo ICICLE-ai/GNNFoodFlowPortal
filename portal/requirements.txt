@@ -7,7 +7,7 @@ charset-normalizer==3.4.1
 click==8.1.8
 geopandas==1.0.1
 gitdb==4.0.12
-GitPython==3.1.44
+GitPython==3.1.50
 idna==3.10
 Jinja2==3.1.6
 jsonschema==4.23.0
@@ -17,7 +17,7 @@ narwhals==1.29.1
 numpy==2.2.3
 packaging==24.2
 pandas==2.2.3
-pillow==11.1.0
+pillow==12.2.0
 protobuf==5.29.3
 pyarrow==19.0.1
 pydeck==0.9.1
@@ -31,14 +31,15 @@ rpds-py==0.23.1
 shapely==2.0.7
 six==1.17.0
 smmap==5.0.2
-streamlit==1.43.0
+streamlit==1.57.0
 tenacity==9.0.0
 toml==0.10.2
-tornado==6.4.2
+tornado==6.5.5
 typing_extensions==4.12.2
 tzdata==2025.1
-urllib3==2.3.0
+urllib3==2.7.0
 matplotlib>=3.7.2
 scikit-learn>=1.5.0
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch>=2.3.0
 torch-geometric>=2.5.0
